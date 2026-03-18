@@ -5,7 +5,7 @@ nav_order: 5
 
 # Agent Behavioral Patterns
 
-A reference for practitioners. These are patterns observed in working with LLM agents — what they do, why, and how the [method](method.md) works with each one. The patterns are features of how current models reason, and the method is designed around them.
+Patterns observed in working with LLM agents — what they do, why, and how the [method](method.md) works with each one.
 
 ## Locality bias
 
@@ -15,7 +15,9 @@ Agents anchor to what's in their current context. Information outside the contex
 
 **Why it happens:** The agent can only reason over what's in its context. It doesn't know what it hasn't seen, so it can't assess whether the answer is within reach. The bias is toward escalating rather than investigating — the safer default from the agent's perspective.
 
-**What to do about it:** Push back on escalations. Before accepting "needs human judgment," consider whether the agent could answer the question from available data — version history, dependency patterns, usage spread. Direct the agent to investigate rather than accepting the escalation at face value. See [calibration](method.md#the-human-role).
+**What to do about it:** Push back on escalations. Before accepting "needs human judgment," consider whether the agent could answer the question from available data — version history, dependency patterns, usage spread.
+
+See [calibration](method.md#the-human-role).
 
 ## Temporal locality bias
 
@@ -23,7 +25,13 @@ Over multiple revision cycles, agents treat the artifact's current shape as incr
 
 **What it looks like:** Early review rounds produce structural feedback ("this section should be reorganized," "this abstraction is wrong"). Later rounds produce only surface-level feedback ("minor wording change," "add a comment here") even when structural problems remain.
 
-**Why it happens:** Multiple reinforcing mechanisms. LLMs favor text that resembles their own output, and this self-preference amplifies over iterations. Sycophancy increases with conversation length — even context filling alone increases agreement. RLHF training structurally rewards agreement with premises in context. Self-correction effectiveness decays sharply after 2-3 iterations. These mechanisms are individually documented in AI research; the composite effect in human-in-the-loop editing is observed in practice but not yet studied as a unified phenomenon.
+**Why it happens:** Multiple reinforcing mechanisms:
+- LLMs favor text that resembles their own output, and this self-preference amplifies over iterations
+- Sycophancy increases with conversation length — even context filling alone increases agreement
+- RLHF training structurally rewards agreement with premises in context
+- Self-correction effectiveness decays sharply after 2-3 iterations
+
+These mechanisms are individually documented in AI research; the composite effect in human-in-the-loop editing is observed in practice but not yet studied as a unified phenomenon.
 
 **What to do about it:** Spin up fresh reviewer agents for later review rounds. A new agent has no history with the artifact and evaluates its current state without anchoring to prior versions. The method's multi-perspective review structure is partly designed around this — each perspective is a fresh entry point. See [convergence in review](workflows/review.md#convergence).
 
@@ -85,4 +93,6 @@ Agents are biased toward completing their assigned task rather than stopping to 
 
 **Why it happens:** Training rewards task completion. An agent that produces output is more likely to receive positive feedback than one that questions the premise. The agent also can't easily distinguish "this is hard" from "this is wrong."
 
-**What to do about it:** Establish halt authority — tell the agent it can and should stop if the task is misconceived. "If this approach cannot work, say so and explain why rather than producing a partial result." Monitor for agents that are struggling without surfacing the struggle — an agent that's producing low-quality output on a well-defined task may be working around a fundamental problem.
+**What to do about it:** Establish halt authority — tell the agent it can and should stop if the task is misconceived: "If this approach cannot work, say so and explain why rather than producing a partial result."
+
+Monitor for agents that are struggling without surfacing the struggle — low-quality output on a well-defined task may mean the agent is working around a fundamental problem.

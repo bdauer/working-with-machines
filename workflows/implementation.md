@@ -6,11 +6,11 @@ nav_order: 3
 
 # Workflow: Code Implementation
 
-The [method](../method.md) applied to building software — feature development, refactoring, bug fixes, infrastructure changes. Implementation is where agent autonomy is highest: every implementation contains its own cycles of research, planning, and review as the work reveals things the plan didn't anticipate.
+The [method](../method.md) applied to building software — feature development, refactoring, bug fixes, infrastructure changes. Implementation is where agent autonomy is highest, and where the work most often reveals things the plan didn't anticipate.
 
 ## The full cycle
 
-Implementation follows a lifecycle: understand the task, research the codebase, design the approach, build, review, and ship. Each stage feeds the next, and any stage can loop back to an earlier one.
+Implementation follows a lifecycle: understand the task, research the codebase, design the approach, build, review, and ship.
 
 The research and design stages are applications of the [research](research.md) and [planning](planning.md) phases described in the method. What's specific to implementation is what happens once building starts — and the review cycle that follows.
 
@@ -24,13 +24,17 @@ Design — the [planning phase](planning.md) applied to implementation — follo
 
 Once the plan is agreed, agents execute with higher autonomy. Parallel agents working on independent streams — each in an isolated copy of the repository — are the default for non-trivial changes. Each agent gets the plan, the design constraints, and clear boundaries for its scope.
 
-Implementation produces knowledge alongside code. As agents work, they encounter things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These discoveries flow back to the orchestration level at the [breakpoints described in the method](../method.md#implement) — load-bearing findings and things cheap to verify now. A discovery logged during building becomes a finding that may reshape the plan, trigger additional research, or change how review is scoped.
+Implementation produces knowledge alongside code. As agents work, they encounter things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice.
+
+These discoveries flow back to the orchestration level at the [breakpoints described in the method](../method.md#implement) — load-bearing findings and things cheap to verify now. A discovery logged during building becomes a finding that may reshape the plan, trigger additional research, or change how review is scoped.
 
 Testing is continuous — tests are written alongside the code they cover, run after each meaningful change, not deferred to a separate phase. The test suite is the first signal that something the plan assumed doesn't hold.
 
 ## When implementation reveals design problems
 
-Surprises during building are a signal, not a failure. An agent that encounters unexpected coupling, invalidates an assumption, or discovers that the approach can't work as designed should stop and surface the problem rather than working around it — see [scope completion bias](../agent-patterns.md#scope-completion-bias) for why agents tend toward the opposite. The cost of re-planning is lower than the cost of completing a flawed implementation and discovering it during review.
+Surprises during building are a signal, not a failure. An agent that encounters unexpected coupling, invalidates an assumption, or discovers that the approach can't work as designed should stop and surface the problem rather than working around it — see [scope completion bias](../agent-patterns.md#scope-completion-bias) for why agents tend toward the opposite.
+
+The cost of re-planning is lower than the cost of completing a flawed implementation and discovering it during review.
 
 Scope creep during implementation — each change revealing another necessary change — often signals that the design phase was insufficient. The right response is to stop, reassess the design, and restart building from a revised plan. Pushing through accumulates technical debt and produces code that review will flag anyway.
 
@@ -50,6 +54,10 @@ The question at this stage: does each piece of complexity earn its place? An abs
 
 ## Shipping
 
-The human gates the final output. Before shipping, verify: does what was built match what was intended? What was manually verified that automated tests don't cover? What assumptions were validated, and which remain unvalidated (and why)? What should someone deploying this change know?
+The human gates the final output. Before shipping, verify:
+- Does what was built match what was intended?
+- What was manually verified that automated tests don't cover?
+- What assumptions were validated, and which remain unvalidated?
+- What should someone deploying this change know?
 
-Architectural findings from the implementation — coupling not in the design, assumptions invalidated, patterns discovered — should be captured in project documentation after the change lands. Implementation is a research activity; what it discovers shouldn't be lost when the branch merges.
+What implementation discovers — coupling not in the design, assumptions invalidated, patterns found — should be captured in project documentation after the change lands.

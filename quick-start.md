@@ -5,7 +5,7 @@ nav_order: 2
 
 # Quick Start
 
-Concrete techniques from the [method](method.md), extracted for practitioners who want to start applying them immediately. Each links to the full treatment. For the behavioral patterns behind many of these techniques, see [agent patterns](agent-patterns.md).
+Concrete techniques from the [method](method.md). Each links to the full treatment. For the behavioral patterns behind many of these techniques, see [agent patterns](agent-patterns.md).
 
 ## Directing agents
 
@@ -13,7 +13,7 @@ Concrete techniques from the [method](method.md), extracted for practitioners wh
 
 **Scope agent context to what the task needs.** Give each agent the specific context it needs — not more, not less. Unnecessary context creates anchoring; insufficient context creates blind spots. A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. → [Context scoping](method.md#working-with-how-agents-reason)
 
-**Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The agent's attempt — even when it misses — gives that inarticulate sense something concrete to push against. The correction often crystallizes a sharper distinction than either of you started with. → [Productive friction](formation.md#what-the-method-taught-back)
+**Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The agent's attempt — even when it misses — gives that inarticulate sense something concrete to push against. The correction often crystallizes a sharper distinction than either of you started with. → [Productive friction](formation.md)
 
 **Invite the agent to push back.** Explicitly ask the agent to counter your intuitions, find weaknesses in your direction, or challenge your assumptions. The exchange is more productive when bidirectional, and the human controls when to open that space. → [Friction by invitation](method.md#the-human-role)
 

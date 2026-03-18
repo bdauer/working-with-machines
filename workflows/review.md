@@ -6,7 +6,7 @@ nav_order: 4
 
 # Workflow: Review
 
-The [method](../method.md) applied to evaluating artifacts — code, documents, plans, research outputs. Review is where the method's iterative character is most explicit: each pass changes the artifact, so subsequent passes operate on different material.
+The [method](../method.md) applied to evaluating artifacts — code, documents, plans, research outputs. Each pass changes the artifact, so subsequent passes operate on different material.
 
 Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes; [implementation](implementation.md) includes multi-round code review. This document describes review as a general practice and as the pattern those phases draw from.
 
@@ -47,11 +47,11 @@ A finding's nature determines where it routes. Not every finding is a fix to the
 - A scope question gets surfaced to the human for a decision about whether to expand or defer
 - An inconsistency with another artifact becomes a cross-document review concern
 
-The broader point: review's generative role — surfacing findings that reshape the plan, reopen research, or reveal cross-artifact gaps — is as important as its evaluative role.
+Review also surfaces findings that reshape the plan, reopen research, or reveal cross-artifact gaps.
 
 ## The investigative character
 
-Review shares DNA with [research](research.md). Both are investigative — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
+Review is investigative, like [research](research.md) — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
 
 This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence. These findings don't mean the research phase failed — they mean the artifact made gaps visible that weren't apparent before the material took shape.
 
@@ -59,12 +59,16 @@ This means review can surface findings that the original research missed. A revi
 
 [Convergence](../method.md#convergence) in review has specific indicators: findings shifting from structural to minor, perspectives agreeing with each other, the artifact stabilizing across rounds.
 
-The review-specific risk is mistaking fatigue for convergence. A reviewer who has been through several rounds may produce fewer findings because they're tired, not because the artifact is complete. Agents have their own version of this — [temporal locality bias](../agent-patterns.md#temporal-locality-bias). After many rounds, agents anchor to the artifact's current shape and produce fewer structural suggestions, independent of whether the structure is right. Fresh perspectives are the defense — if a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
+The review-specific risk is mistaking fatigue for convergence. A reviewer who has been through several rounds may produce fewer findings because they're tired, not because the artifact is complete.
 
-Once passes are producing minor findings only, stop. The goal is an artifact that holds up under scrutiny, not a perfect one.
+Agents have their own version of this — [temporal locality bias](../agent-patterns.md#temporal-locality-bias). After many rounds, agents anchor to the artifact's current shape and produce fewer structural suggestions, independent of whether the structure is right.
+
+Fresh perspectives are the defense — if a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
+
+Once passes are producing minor findings only, stop.
 
 ## The human gate
 
 The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review, and plan review alike.
 
-The human also decides which discussion findings to accept, defer, or dismiss. Not every legitimate concern warrants action — some are noted for future work, some are acceptable trade-offs, some are outside the current scope. The reviewer surfaces the question; the human holds the context to answer it.
+The human also decides which discussion findings to accept, defer, or dismiss. The reviewer surfaces the question; the human holds the context to answer it.

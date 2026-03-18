@@ -6,13 +6,13 @@ nav_order: 1
 
 # Workflow: Research
 
-The [method](../method.md) applied to investigation tasks — architecture evaluations, vendor assessments, codebase analysis, any work where the primary deliverable is understanding.
+The [method](../method.md) applied to investigation tasks — architecture evaluations, vendor assessments, codebase analysis, any work where the goal is to understand something.
 
 Research is also the opening phase of most other workflows. The [documentation workflow](documentation.md) begins with gathering context; [implementation](implementation.md) begins with codebase research. This document describes research as a standalone activity and as the general pattern those phases draw from.
 
 ## Starting conditions
 
-Research starts with directed attention — sometimes a specific question, sometimes an open area that needs mapping. The starting posture matters: it shapes which agents to launch, how to scope them, and when to stop.
+Research starts with directed attention — sometimes a specific question, sometimes an open area that needs mapping. How you start matters: it shapes which agents to launch, how to scope them, and when to stop.
 
 A specific question ("why does this service timeout under load?") produces a focused investigation with clear convergence criteria. An open question ("what does our authentication architecture look like?") produces a mapping exercise where the shape of the answer emerges from the research itself. Both follow the same loop; they differ in how you recognize when the research is sufficient.
 
@@ -28,29 +28,36 @@ For large investigations (epic-scale evaluations, cross-system analysis), layer 
 
 Research builds two tracked artifacts:
 
-**Findings** carry their context — provenance, interpretation, what they assumed. As described in the method's [knowledge accumulation](../method.md#knowledge-accumulation) section, findings without provenance lose value over time. In research specifically, interpretation matters alongside data: raw observations are necessary, but what they mean for the work at hand is what drives decisions.
+**Findings** carry their context — provenance, interpretation, what they assumed. Findings without provenance lose value over time. In research specifically, interpretation matters alongside data: what the observations mean for the work at hand is what drives decisions.
 
-**Assumptions** are tracked across their lifecycle. Each assumption has a risk level and a verification method. Some are confirmed during research, some are invalidated, some are deferred because the cost of being wrong is bounded. Assumption triage keeps the work focused: investigate what's load-bearing or foundational, defer what's non-blocking and cheap to revisit, skip what's low-impact — but record even skipped assumptions so they aren't lost.
+**Assumptions** are tracked across their lifecycle. Each assumption has a risk level and a verification method. Assumption triage keeps the work focused:
+- Investigate what's load-bearing or foundational
+- Defer what's non-blocking and cheap to revisit
+- Skip what's low-impact — but record even skipped assumptions so they aren't lost
 
-The human and agent both identify gaps. The human recognizes where evidence is shallow or where a domain is underexplored. The agent surfaces patterns in the data — inconsistencies across sources, areas where findings don't cohere. Directing the agent to look for what's missing is often more productive than asking for more of what's already been found.
+The human and agent both identify gaps. The human recognizes where evidence is shallow or where a domain is underexplored. The agent surfaces inconsistencies across sources and areas where findings don't cohere.
+
+Directing the agent to look for what's missing is often more productive than asking for more of what's already been found.
 
 ## Synthesis
 
 Parallel findings need integration. This happens at the orchestration level — the human or orchestrating agent reads across agent outputs and identifies where findings connect, conflict, or leave gaps.
 
-Synthesis is where the human's domain knowledge matters most. The agents produce findings; the human recognizes which connections are significant and which are noise. Two agents may independently surface related observations without recognizing the relationship — the human sees the pattern because they hold the broader context.
+The agents produce findings; the human recognizes which connections are significant and which are noise. Two agents may independently surface related observations without recognizing the relationship — the human sees the pattern because they hold the broader context.
 
-When accumulated knowledge gets heavy, condense it. Condensation should preserve specificity — a summary that loses the reasoning behind a finding is worse than carrying the original. The human notices when condensation is needed; the agent helps identify what can be condensed without loss.
+When accumulated knowledge gets heavy, condense it — but preserve specificity. A summary that loses the reasoning behind a finding is worse than carrying the original.
 
 ## The dialogical loop
 
-Research is a conversation between the human's directed attention and the agent's associative reach. The human often has an intuition about where to look or what matters but isn't an expert in every area the research touches. The agent fills domain knowledge gaps. What the agent finds recalibrates the human's intuitions; the human's intuitions sharpen what the agent investigates next.
+Research is a conversation between the human's directed attention and the agent's associative reach. The human often has an intuition about where to look or what matters but isn't an expert in every area the research touches. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
 
-This loop is where the method's [productive friction](../formation.md#what-the-method-taught-back) operates. The agent's attempt to characterize a finding, even when it misses, gives the human something to push against. The correction often crystallizes a sharper distinction than either started with.
+This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against.
 
 ## Convergence
 
-Research follows the general [convergence](../method.md#convergence) pattern — new passes confirm rather than extend. What's specific to research: convergence can also mean the scope doesn't warrant going deeper. The question is answered well enough for the work at hand. An architecture investigation supporting a single feature doesn't need the same depth as a strategic evaluation.
+Research follows the general [convergence](../method.md#convergence) pattern — new passes confirm rather than extend.
+
+What's specific to research: convergence can also mean the scope doesn't warrant going deeper. An architecture investigation supporting a single feature doesn't need the same depth as a strategic evaluation.
 
 Sometimes the research itself produces the plan — see [when planning is implicit](planning.md#when-planning-is-implicit).
 

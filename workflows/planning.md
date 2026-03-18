@@ -6,7 +6,7 @@ nav_order: 2
 
 # Workflow: Planning
 
-The [method](../method.md) applied to decomposition tasks — breaking down what research surfaced into steps that can be executed. Planning is where accumulated understanding meets decomposition — turning what research surfaced into steps that can be executed. The transition is rarely clean. See [formation](../formation.md#the-synthesis) for more on how these modes interact.
+The [method](../method.md) applied to decomposition — turning what research surfaced into steps that can be executed.
 
 Planning is also a phase within every other workflow. [Implementation](implementation.md) includes a design stage; [documentation](documentation.md#draft-and-shape) includes structure negotiation. This document describes planning as a standalone activity and as the general pattern those phases draw from.
 
@@ -22,7 +22,7 @@ Planning is itself a loop. A decomposition that looks clean on first pass often 
 
 When a decomposition doesn't hold, the response depends on why. If the research was insufficient — the plan reveals questions that should have been answered already — loop back to [research](research.md) for targeted investigation. If the scope is wrong — structuring reveals the task is larger or differently shaped than expected — reshape scope with the human before continuing. If the steps just need reordering or regrouping, iterate on the decomposition itself.
 
-The human's role during planning is recognizing which of these is happening. An agent may keep trying to force a decomposition that doesn't hold rather than surfacing that the inputs are insufficient — an instance of [scope completion bias](../agent-patterns.md#scope-completion-bias). Noticing when the planning is struggling because of an upstream gap — not because the decomposition is hard — is a significant part of the work.
+The human's role during planning is recognizing which of these is happening. An agent may keep trying to force a decomposition that doesn't hold rather than surfacing that the inputs are insufficient — an instance of [scope completion bias](../agent-patterns.md#scope-completion-bias).
 
 ## What a plan contains
 
@@ -38,13 +38,13 @@ The level of detail scales with the work. A plan for a one-file change doesn't n
 
 ## Planning as conversation
 
-Planning is a conversation, not a presentation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational knowledge matters most — constraints that aren't in the code, deployment considerations, team dynamics, priorities that aren't written down.
+Planning is a conversation, not a presentation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational knowledge matters — constraints that aren't in the code, deployment considerations, team dynamics, priorities that aren't written down.
 
 The agent contributes structural thinking — identifying dependencies, spotting parallelization opportunities, flagging where scope might creep. The human contributes judgment about what actually matters and what can be deferred.
 
-Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously via spikes, or having agents draft competing decompositions when the best approach isn't clear. The human evaluates which decomposition holds rather than iterating a single draft to convergence.
+Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously via spikes, or having agents draft competing decompositions when the best approach isn't clear.
 
-Multiple rounds of planning are normal, not a sign of failure. Each round sharpens the decomposition. The plan is ready when the human is confident enough to commit resources to executing it — not when every uncertainty is resolved, but when the remaining uncertainties are bounded and the plan accounts for them.
+The plan is ready when the remaining uncertainties are bounded and the plan accounts for them.
 
 ## When planning is implicit
 
