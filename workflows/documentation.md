@@ -22,13 +22,13 @@ Sometimes the document's scope is clear from the start. Sometimes it emerges fro
 
 ## Draft and shape
 
-Negotiate structure first. Propose a skeleton — sections, ordering, what goes where — and iterate before committing to prose. The structure negotiation is cheap to change; paragraphs are expensive. Course-correct here, not after three thousand words exist.
+Course-correct on structure early — structural changes before editorial polish are cheap; after, they waste the polish. Sometimes you propose a specific structure; sometimes you give the agent constraints (doc type, audience, qualities) and let it determine structure from those; sometimes you give it a free hand.
 
-Drafting surfaces gaps that gathering didn't. A section that seemed well-supported turns out to rest on a single source. A transition between sections reveals a logical dependency that hadn't been mapped.
+When your instinct says a structure doesn't fit but you can't articulate why, ask the agent to evaluate the choice against the content. Agents won't reliably volunteer structural objections, but they're good at evaluating a specific proposal when asked. The result is often something neither of you started with — productive friction applied to structure.
 
-These are signals to loop back to research for targeted fills — specific questions the draft raised, not a restart of the research phase.
+Drafting surfaces gaps that gathering didn't. A section that seemed well-supported turns out to rest on a single source. A transition between sections reveals a logical dependency that hadn't been mapped. These are signals to loop back to research for targeted fills — specific questions the draft raised, not a restart of the research phase.
 
-The human drives quality during drafting. The agent produces volume and coverage; the human evaluates whether the structure actually serves the reader, whether the level of detail is right, whether the document is earning its length. This is where batch feedback is most productive — accumulate observations across the draft, then deliver them together so the agent sees the pattern.
+The human drives quality during drafting. The agent produces volume and coverage; the human evaluates whether the structure serves the reader, whether the level of detail is right, whether the document is earning its length. This is where [batch feedback](../method.md#the-human-role) is most productive — accumulate observations across the draft, then deliver them together so the agent sees the pattern.
 
 ## Review and refine
 

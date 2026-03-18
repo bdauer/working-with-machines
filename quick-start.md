@@ -33,9 +33,9 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Review
 
-**Classify findings by what they demand.** Agent reviewers can recognize trade-offs they can't resolve — they know the limits of their context. Must-fix findings get addressed immediately. Discussion findings get surfaced to the human because the right response depends on context the agent doesn't have. Minor findings accumulate for a cleanup pass or get skipped. → [Findings](workflows/review.md#findings)
+**Classify findings by what they demand.** Must-fix findings get addressed immediately. Discussion findings get surfaced to the human — the right response depends on context the agent doesn't have. Minor findings accumulate for a cleanup pass or get skipped. The classification helps the human focus attention where it matters rather than reviewing everything equally. → [Findings](workflows/review.md#findings)
 
-**Route findings to the right phase.** Agent reviewers surface findings that reshape the broader work — gaps in evidence go back to research, structural problems go back to planning, scope questions go to the human. This generative role is distinct from catching bugs. → [Where findings go](workflows/review.md#where-findings-go)
+**Let findings drive phase transitions.** A review finding that reveals a gap in evidence is a signal to reenter research. A structural problem reopens planning. A scope question goes to the human. Review doesn't just catch bugs — it surfaces things that change what phase the work needs next. → [Where findings go](workflows/review.md#where-findings-go)
 
 **Use fresh agents for later review rounds.** After many revision cycles, agents treat the artifact's current shape as fixed — producing fewer structural suggestions even when structural changes are warranted. Spin up fresh reviewer agents for later rounds to counteract this. → [Convergence in review](workflows/review.md#convergence)
 
@@ -43,7 +43,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Documentation
 
-**Negotiate structure before prose.** Agents produce volume cheaply, which makes restructuring after prose exists expensive. Propose a skeleton — sections, ordering, what goes where — and iterate before the agent commits to paragraphs. → [Draft and shape](workflows/documentation.md#draft-and-shape)
+**Course-correct on structure early.** Structural changes before editorial polish are cheap; after, they waste the polish. You can propose a structure, give the agent constraints and let it determine structure, or give it a free hand. When your instinct says a structure doesn't fit but you can't articulate why, ask the agent to evaluate the choice against the content — it won't reliably volunteer objections, but it's good at evaluating a specific proposal when asked. → [Draft and shape](workflows/documentation.md#draft-and-shape)
 
 **Batch your feedback.** Accumulate observations across a draft and deliver them together so the agent sees the full pattern, not individual corrections. This produces better revisions than piecemeal feedback. → [Batch feedback](method.md#the-human-role)
 
