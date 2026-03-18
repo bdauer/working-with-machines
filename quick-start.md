@@ -27,15 +27,9 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Planning
 
-**Make assumptions visible in the plan.** Under-specifying creates ambiguity that agents resolve inconsistently — each fills gaps with different assumptions. Making assumptions explicit gives parallel agents shared premises. → [What a plan contains](workflows/planning.md#what-a-plan-contains)
-
-**Skip planning when it's implicit.** If structuring the steps would produce a document that says what everyone already knows, skip it. If the work involves coordination, unknown dependencies, or expandable scope, make the plan explicit. → [When planning is implicit](workflows/planning.md#when-planning-is-implicit)
+**Have agents surface their assumptions.** Agents fill ambiguity with assumptions silently. Tell them to surface the assumptions they're making so you can investigate the ones that matter and catch the ones that are wrong before they're baked into the work. → [What a plan contains](workflows/planning.md#what-a-plan-contains)
 
 ## Review
-
-**Classify findings by what they demand.** Must-fix findings get addressed immediately. Discussion findings get surfaced to the human — the right response depends on context the agent doesn't have. Minor findings accumulate for a cleanup pass or get skipped. The classification helps the human focus attention where it matters rather than reviewing everything equally. → [Findings](workflows/review.md#findings)
-
-**Let findings drive phase transitions.** A review finding that reveals a gap in evidence is a signal to reenter research. A structural problem reopens planning. A scope question goes to the human. Review doesn't just catch bugs — it surfaces things that change what phase the work needs next. → [Where findings go](workflows/review.md#where-findings-go)
 
 **Use fresh agents for later review rounds.** After many revision cycles, agents treat the artifact's current shape as fixed — producing fewer structural suggestions even when structural changes are warranted. Spin up fresh reviewer agents for later rounds to counteract this. → [Convergence in review](workflows/review.md#convergence)
 
@@ -51,9 +45,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 **Track findings and assumptions as shared artifacts.** Findings and assumptions serve as context passed between agents and across context boundaries. Provenance matters because agents can't reconstruct what produced a finding once it leaves their context. Both need triage — investigate what's load-bearing, defer what's non-blocking. → [What accumulates](workflows/research.md#what-accumulates)
 
-**Check data before escalating.** Before accepting that a question requires human domain expertise, check whether available evidence could resolve it. Only escalate when the question genuinely depends on context the agent doesn't have. → [Data-first resolution](workflows/research.md#data-first-resolution)
-
-**Condense when knowledge gets heavy.** When accumulated findings and assumptions become unwieldy, condense them — but preserve the reasoning behind each finding. A summary that loses specificity is worse than the original. → [Knowledge accumulation](method.md#knowledge-accumulation)
+**Condense to keep agents focused.** As findings and assumptions accumulate, agents spend more effort processing noise than doing useful work. Periodically condense — simplify, reduce noise, highlight the larger overarching concerns — so agents operate on a cleaner signal. Preserve the reasoning behind each finding; a fresh agent needs that to work with the material. → [Knowledge accumulation](method.md#knowledge-accumulation)
 
 ## Knowing when to stop
 

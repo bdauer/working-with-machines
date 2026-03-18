@@ -26,7 +26,7 @@ The human's role during planning is recognizing which of these is happening. An 
 
 ## What a plan contains
 
-Under-specifying a complex task creates ambiguity that agents resolve inconsistently — each agent fills gaps with different assumptions. A useful plan makes its assumptions visible so agents share the same premises.
+Agents fill ambiguity with assumptions silently. A useful plan has the agents surface the assumptions they're making so the human can investigate the ones that matter and catch the ones that are wrong before they're baked into the work.
 
 ## Planning as conversation
 
