@@ -11,7 +11,7 @@ Patterns observed in working with LLM agents — what they do, why, and how the 
 
 Agents anchor to what's in their current context. Information outside the context window doesn't exist for the agent, and information near the edges of context gets less weight than what's recent and prominent.
 
-**What it looks like:** The agent flags a question as "needs human judgment" when its tools could resolve it. It treats the files it's read as the full picture. It misses connections to code or data it hasn't been shown.
+**What it looks like:** The agent flags a question as "needs human judgment" when its tools could resolve it. It treats the files it's read as the full picture, missing connections to code or data it hasn't been shown.
 
 **Why it happens:** The agent can only reason over what's in its context. It doesn't know what it hasn't seen, so it can't assess whether the answer is within reach. The bias is toward escalating rather than investigating — the safer default from the agent's perspective.
 
@@ -39,7 +39,7 @@ These mechanisms are individually documented in AI research; the composite effec
 
 Agents default to surfacing decisions rather than making them, even when the decision is within their competence.
 
-**What it looks like:** The agent presents four options and asks which one to pursue when the evidence clearly favors one. It defers to the human on technical questions it could resolve. It flags "this needs discussion" for straightforward engineering tradeoffs.
+**What it looks like:** The agent presents four options and asks which one to pursue when the evidence clearly favors one. It defers to the human on technical questions and straightforward engineering tradeoffs it could resolve from available evidence.
 
 **Why it happens:** A combination of locality bias (the agent doesn't realize it has enough information) and training incentives (human preference data rewards deference over confidence in ambiguous situations). The agent's uncertainty about what the human cares about makes escalation feel safer than deciding.
 
@@ -89,7 +89,7 @@ Agents' ability to meaningfully critique and improve their own output drops shar
 
 Agents are biased toward completing their assigned task rather than stopping to report that the task is misconceived.
 
-**What it looks like:** The agent produces output for a task that should have been questioned, restructured, or abandoned. It works around obstacles rather than surfacing that the approach isn't working. It delivers something rather than nothing, even when nothing (plus an explanation) would be more useful.
+**What it looks like:** The agent produces output for a task that should have been questioned or abandoned — delivering something even when an explanation of why the task is misconceived would be more useful. It works around obstacles rather than surfacing that the approach isn't working.
 
 **Why it happens:** Training rewards task completion. An agent that produces output is more likely to receive positive feedback than one that questions the premise. The agent also can't easily distinguish "this is hard" from "this is wrong."
 

@@ -11,7 +11,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 **Push back on "needs human judgment."** Agents anchor to what's in their current context and escalate questions their tools could resolve. Before accepting an escalation, check whether the agent could answer its own question from available data — version history, dependency patterns, usage spread. Most of the time, directed investigation resolves it. → [Calibration](method.md#the-human-role)
 
-**Scope agent context to what the task needs.** Give each agent the specific context it needs — not more, not less. Unnecessary context creates anchoring; insufficient context creates blind spots. A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. → [Context scoping](method.md#working-with-how-agents-reason)
+**Scope agent context to what the task needs.** Give each agent the specific context it needs — exactly what it needs. Unnecessary context creates anchoring; insufficient context creates blind spots. A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. → [Context scoping](method.md#working-with-how-agents-reason)
 
 **Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The agent's attempt — even when it misses — gives that inarticulate sense something concrete to push against. The correction often crystallizes a sharper distinction than either of you started with. → [Productive friction](formation.md)
 

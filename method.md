@@ -90,7 +90,7 @@ The pattern is available at every scale — a months-long investigation and a pa
 
 The workflow is structured to leverage how agents reason in practice — making connections across their context in ways that don't follow linear paths. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
-- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task — not more, not less.
+- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task — exactly what it needs.
   - Unnecessary context creates anchoring — a reviewer evaluating code quality shouldn't see the implementation plan, because it shifts evaluation from what the code does to whether it matches intent.
   - Insufficient context creates blind spots.
 - **Letting findings accumulate before structuring.** Research and early review give agents room to surface unexpected connections before planning and implementation impose structure.
@@ -102,8 +102,8 @@ Earlier understanding stays visible alongside new findings — annotated, revisi
 
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (must/should/skip/defer) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — loses value over time.
-- **Condensation is a joint act.** When the accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed.
-  - What's condensed should preserve the specificity and nuance of what it replaces — a summary that loses the reasoning behind a finding is worse than the original.
+
+When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed. What's condensed should preserve the specificity and nuance of what it replaces — a summary that loses the reasoning behind a finding is worse than the original.
 
 ## The human role
 
@@ -117,7 +117,7 @@ The human brings domain knowledge, experience, and organizational context. The c
 - **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption.
   - The method is more productive when the exchange is bidirectional, and the human controls when to open that space.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
-- **Batch feedback.** Accumulating observations and delivering them together at multiple scales rather than correcting piecemeal.
+- **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.
 
 ## Convergence

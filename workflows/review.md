@@ -53,7 +53,7 @@ Review also surfaces findings that reshape the plan, reopen research, or reveal 
 
 Review is investigative, like [research](research.md) — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
 
-This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence. These findings don't mean the research phase failed — they mean the artifact made gaps visible that weren't apparent before the material took shape.
+This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence. The artifact made gaps visible that weren't apparent before the material took shape.
 
 ## Convergence
 

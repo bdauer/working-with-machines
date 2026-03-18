@@ -38,7 +38,7 @@ The level of detail scales with the work. A plan for a one-file change doesn't n
 
 ## Planning as conversation
 
-Planning is a conversation, not a presentation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational knowledge matters — constraints that aren't in the code, deployment considerations, team dynamics, priorities that aren't written down.
+Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational knowledge matters — constraints that aren't in the code, deployment considerations, team dynamics, priorities that aren't written down.
 
 The agent contributes structural thinking — identifying dependencies, spotting parallelization opportunities, flagging where scope might creep. The human contributes judgment about what actually matters and what can be deferred.
 

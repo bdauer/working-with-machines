@@ -14,7 +14,7 @@ What makes documentation distinct: the act of drafting is itself a structuring a
 
 This is the method's [research phase](../method.md#research) with documentation-specific starting conditions. The output is a written artifact — a known constraint that shapes what to gather and how.
 
-Start with what exists. Point agents at source material — existing docs, code, conversations, external references — and let them report back. Parallel agents are the default here: each enters one area deeply, and synthesis happens at the orchestration level. One agent reads the codebase for how something actually works; another reads existing documentation for what's been said about it; a third surveys external approaches to the same problem.
+Start with what exists. Point agents at source material — existing docs, code, conversations, external references — and let them report back. Parallel agents are the default here: each enters one area deeply, and synthesis happens at the orchestration level. One agent reads the codebase for how something actually works; another reads existing documentation for what's been said about it.
 
 Sometimes the document's scope is clear from the start. Sometimes it emerges from what the research surfaces. The [dialogical loop](research.md#the-dialogical-loop) handles either.
 
@@ -32,7 +32,7 @@ The human drives quality during drafting. The agent produces volume and coverage
 
 ## Review and refine
 
-The [review workflow](review.md) applies here — multiple passes from different angles, each perspective entered deeply. Spin up reviewer agents with specific briefs (conciseness, technical accuracy, structural coherence) rather than asking one agent to evaluate everything.
+The [review workflow](review.md) applies here — multiple passes from different angles, each perspective entered deeply. Spin up reviewer agents with specific briefs (e.g., conciseness, technical accuracy) rather than asking one agent to evaluate everything.
 
 Review is done when passes produce diminishing findings — the document has [converged](../method.md#convergence). Once findings are minor, stop. Targeted fixes at this stage; don't reopen structure.
 
