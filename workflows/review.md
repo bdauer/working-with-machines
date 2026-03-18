@@ -71,4 +71,4 @@ Once passes are producing minor findings only, stop.
 
 The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review, and plan review alike.
 
-The human also decides which discussion findings to accept, defer, or dismiss. The reviewer surfaces the question; the human holds the context to answer it.
+The human also decides which discussion findings to accept, defer, or dismiss. The reviewer surfaces the question; the human holds the context to answer it. When delivering feedback on review findings, [batch it](../method.md#the-human-role) — the agent produces better revisions when it sees the full pattern rather than individual corrections.

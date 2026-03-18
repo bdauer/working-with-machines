@@ -11,7 +11,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 **Push back on "needs human judgment."** Agents anchor to what's in their current context and escalate questions their tools could resolve. Before accepting an escalation, check whether the agent could answer its own question from available data — version history, dependency patterns, usage spread. Most of the time, directed investigation resolves it. → [Calibration](method.md#the-human-role)
 
-**Scope agent context to what the task needs.** Give each agent the specific context it needs — exactly what it needs. Unnecessary context creates anchoring; insufficient context creates blind spots. A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. → [Context scoping](method.md#working-with-how-agents-reason)
+**Scope agent context to what the task needs.** Unnecessary context creates anchoring; insufficient context creates blind spots. A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. → [Context scoping](method.md#working-with-how-agents-reason)
 
 **Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The agent's attempt — even when it misses — gives that inarticulate sense something concrete to push against. The correction often crystallizes a sharper distinction than either of you started with. → [Productive friction](formation.md)
 
@@ -27,15 +27,15 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Planning
 
-**Validate assumptions with spikes before committing.** A spike is a minimal, throwaway test that proves an assumption — a 5-line script, a quick API check, a config verification. If a spike fails, it changes the plan. Only spike assumptions where being wrong requires a different approach. → [What a plan contains](workflows/planning.md#what-a-plan-contains)
+**Make assumptions visible in the plan.** Under-specifying creates ambiguity that agents resolve inconsistently — each fills gaps with different assumptions. Making assumptions explicit gives parallel agents shared premises. → [What a plan contains](workflows/planning.md#what-a-plan-contains)
 
 **Skip planning when it's implicit.** If structuring the steps would produce a document that says what everyone already knows, skip it. If the work involves coordination, unknown dependencies, or expandable scope, make the plan explicit. → [When planning is implicit](workflows/planning.md#when-planning-is-implicit)
 
 ## Review
 
-**Classify findings by what they demand.** Must-fix (changes behavior, introduces errors), discussion (right response depends on human judgment), minor (style, naming). Must-fix gets addressed immediately. Discussion gets surfaced to the human. Minor accumulates for a cleanup pass or gets skipped. → [Findings](workflows/review.md#findings)
+**Classify findings by what they demand.** Agent reviewers can recognize trade-offs they can't resolve — they know the limits of their context. Must-fix findings get addressed immediately. Discussion findings get surfaced to the human because the right response depends on context the agent doesn't have. Minor findings accumulate for a cleanup pass or get skipped. → [Findings](workflows/review.md#findings)
 
-**Route findings to the right phase.** A gap in evidence goes back to research. A structural problem goes back to planning. A scope question goes to the human. Review's generative role — surfacing findings that reshape the broader work — is as important as finding bugs. → [Where findings go](workflows/review.md#where-findings-go)
+**Route findings to the right phase.** Agent reviewers surface findings that reshape the broader work — gaps in evidence go back to research, structural problems go back to planning, scope questions go to the human. This generative role is distinct from catching bugs. → [Where findings go](workflows/review.md#where-findings-go)
 
 **Use fresh agents for later review rounds.** After many revision cycles, agents treat the artifact's current shape as fixed — producing fewer structural suggestions even when structural changes are warranted. Spin up fresh reviewer agents for later rounds to counteract this. → [Convergence in review](workflows/review.md#convergence)
 
@@ -43,15 +43,15 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Documentation
 
-**Negotiate structure before prose.** Propose a skeleton — sections, ordering, what goes where — and iterate before committing to paragraphs. Structure is cheap to change; prose is expensive. → [Draft and shape](workflows/documentation.md#draft-and-shape)
+**Negotiate structure before prose.** Agents produce volume cheaply, which makes restructuring after prose exists expensive. Propose a skeleton — sections, ordering, what goes where — and iterate before the agent commits to paragraphs. → [Draft and shape](workflows/documentation.md#draft-and-shape)
 
 **Batch your feedback.** Accumulate observations across a draft and deliver them together so the agent sees the full pattern, not individual corrections. This produces better revisions than piecemeal feedback. → [Batch feedback](method.md#the-human-role)
 
 ## Research
 
-**Track findings and assumptions explicitly.** Research builds two artifacts: findings (what's been observed, with provenance) and assumptions (what's been taken as given, with risk levels). Both accumulate and both need triage — investigate what's load-bearing, defer what's non-blocking and cheap to revisit. → [What accumulates](workflows/research.md#what-accumulates)
+**Track findings and assumptions as shared artifacts.** Findings and assumptions serve as context passed between agents and across context boundaries. Provenance matters because agents can't reconstruct what produced a finding once it leaves their context. Both need triage — investigate what's load-bearing, defer what's non-blocking. → [What accumulates](workflows/research.md#what-accumulates)
 
-**Check data before escalating.** Before accepting that a question requires human domain expertise, look for signals in available evidence — co-change patterns, dependency direction, usage spread, change frequency. Only escalate when the question is genuinely about business intent or strategic direction. → [Data-first resolution](workflows/research.md#data-first-resolution)
+**Check data before escalating.** Before accepting that a question requires human domain expertise, check whether available evidence could resolve it. Only escalate when the question genuinely depends on context the agent doesn't have. → [Data-first resolution](workflows/research.md#data-first-resolution)
 
 **Condense when knowledge gets heavy.** When accumulated findings and assumptions become unwieldy, condense them — but preserve the reasoning behind each finding. A summary that loses specificity is worse than the original. → [Knowledge accumulation](method.md#knowledge-accumulation)
 

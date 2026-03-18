@@ -33,11 +33,11 @@ stateDiagram-v2
 *Each phase contains this same cycle at a smaller scale.*
 {: .note }
 
-The human brings domain knowledge and organizational context. The agent brings speed and coverage. The [workflow docs](workflows/) are reference material for when you're starting a specific type of work — not required reading after this page.
+The human brings domain knowledge and organizational context. The [workflow docs](workflows/) are reference material for when you're starting a specific type of work — not required reading after this page.
 
 ### Research
 
-Gather material, notice patterns, let the structure emerge. Research starts with directed attention — sometimes a clear picture of what's needed, sometimes an open question — and lets findings accumulate until the shape is clear.
+Gather material, notice patterns, let the structure emerge. Research starts with directed attention — sometimes a clear picture of what's needed, sometimes an open question.
 
 Parallel agents are a natural fit. Each agent enters deeply into a limited area and the human and orchestrating agent synthesize across them.
 
@@ -56,25 +56,21 @@ Sometimes the research itself produces the plan — the investigation reveals th
 
 Decompose what research surfaced into steps. The human provides direction, the agent drafts, and they iterate until the decomposition holds.
 
-Planning is itself a loop. What looked like a clean decomposition often shifts when the steps are structured, which can reopen research or reshape scope.
+Planning is where the fractal structure is most visible — the plan determines what the other phases look like at the next scale down. What looked like a clean decomposition often shifts when the steps are structured, which can reopen research or reshape scope.
 
 ### Implement
 
 Execute the plan. Implementation has higher agent autonomy, but it contains its own cycles of research, planning, and review as the work reveals things the plan didn't anticipate.
 
-Implementation produces knowledge alongside output. As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These findings need to flow back to the orchestration level. The agent surfaces what it's found at defined breakpoints:
+As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These findings need to flow back to the orchestration level. The agent surfaces what it's found at defined breakpoints:
 
 - When something is **load-bearing** — the plan depends on it, or other decisions cascade from it
 - When it's **cheap to verify now** and expensive to fix later
 
-> Surprises during implementation are a signal that review needs to be thorough, not an excuse to skip it.
+> Surprises during implementation are a signal to widen the review scope — what else did the plan miss?
 {: .important }
 
-Scope creep during implementation often signals that planning was insufficient.
-
 ### Review
-
-Examine the output against expectations. Look for gaps and inconsistencies — areas where the depth of evidence is uneven, where conclusions aren't supported, or where something that should be addressed is missing.
 
 Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual, or shaped by something specific the process surfaced. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
 
@@ -84,26 +80,24 @@ Review can also surface findings that reshape the plan or reopen research — th
 
 ## Scale and judgment
 
-The pattern is available at every scale — a months-long investigation and a paragraph revision both follow it — but it's not mandatory. At a given scale, some phases may not be needed: a well-understood task might skip research, a clear diagnosis might make planning implicit. Sometimes review sends you back to research; sometimes moving forward is the right call. The judgment is the human's.
+At a given scale, some phases may not be needed: a well-understood task might skip research, a clear diagnosis might make planning implicit. Sometimes review sends you back to research; sometimes moving forward is the right call. The judgment is the human's.
 
 ## Working with how agents reason
 
 The workflow is structured to leverage how agents reason in practice — making connections across their context in ways that don't follow linear paths. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
-- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task — exactly what it needs.
-  - Unnecessary context creates anchoring — a reviewer evaluating code quality shouldn't see the implementation plan, because it shifts evaluation from what the code does to whether it matches intent.
-  - Insufficient context creates blind spots.
+- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task. Unnecessary context creates anchoring; insufficient context creates blind spots.
 - **Letting findings accumulate before structuring.** Research and early review give agents room to surface unexpected connections before planning and implementation impose structure.
 - **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings cross-pollinate at synthesis time in ways sequential execution misses.
 
 ## Knowledge accumulation
 
-Earlier understanding stays visible alongside new findings — annotated, revisited, carried forward.
+Findings and assumptions need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
 
-- **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (must/should/skip/defer) keeps the signal-to-noise ratio manageable.
-- **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — loses value over time.
+- **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
+- **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.
 
-When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed. What's condensed should preserve the specificity and nuance of what it replaces — a summary that loses the reasoning behind a finding is worse than the original.
+When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
 
 ## The human role
 
@@ -114,8 +108,7 @@ The human brings domain knowledge, experience, and organizational context. The c
 - **Calibration.** Agents are biased toward what's local — what's visible in their current context.
   - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
   - This bias has a temporal dimension: the more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
-- **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption.
-  - The method is more productive when the exchange is bidirectional, and the human controls when to open that space.
+- **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
 - **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.

@@ -12,9 +12,9 @@ Research is also the opening phase of most other workflows. The [documentation w
 
 ## Starting conditions
 
-Research starts with directed attention — sometimes a specific question, sometimes an open area that needs mapping. How you start matters: it shapes which agents to launch, how to scope them, and when to stop.
+Research starts with directed attention — sometimes a specific question, sometimes an open area that needs mapping. How you start shapes which agents to launch, how to scope them, and when to stop.
 
-A specific question ("why does this service timeout under load?") produces a focused investigation with clear convergence criteria. An open question ("what does our authentication architecture look like?") produces a mapping exercise where the shape of the answer emerges from the research itself. Both follow the same loop; they differ in how you recognize when the research is sufficient.
+A specific question produces a focused investigation with clear convergence criteria. An open question produces a mapping exercise where the shape of the answer emerges from the research itself. They differ in how you recognize when the research is sufficient.
 
 ## Parallel investigation
 
@@ -28,7 +28,7 @@ For large investigations (epic-scale evaluations, cross-system analysis), layer 
 
 Research builds two tracked artifacts:
 
-**Findings** carry their context — provenance, interpretation, what they assumed. Findings without provenance lose value over time. In research specifically, interpretation matters alongside data: what the observations mean for the work at hand is what drives decisions.
+**Findings** carry their context — provenance, interpretation, what they assumed.
 
 **Assumptions** are tracked across their lifecycle. Each assumption has a risk level and a verification method. Assumption triage keeps the work focused:
 - Investigate what's load-bearing or foundational
@@ -45,13 +45,13 @@ Parallel findings need integration. This happens at the orchestration level — 
 
 The agents produce findings; the human recognizes which connections are significant and which are noise. Two agents may independently surface related observations without recognizing the relationship — the human sees the pattern because they hold the broader context.
 
-When accumulated knowledge gets heavy, condense it — but preserve specificity. A summary that loses the reasoning behind a finding is worse than carrying the original.
+When accumulated knowledge gets heavy, [condense it](../method.md#knowledge-accumulation) — but preserve the reasoning. A fresh agent needs that reasoning to work with the material.
 
 ## The dialogical loop
 
 Research is a conversation between the human's directed attention and the agent's associative reach. The human often has an intuition about where to look or what matters but isn't an expert in every area the research touches. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
 
-This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against.
+This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition.
 
 ## Convergence
 
@@ -63,4 +63,4 @@ Sometimes the research itself produces the plan — see [when planning is implic
 
 ## Data-first resolution
 
-The method's [calibration principle](../method.md#the-human-role) has specific techniques in research: before escalating a question that appears to require domain expertise, look for signals in available evidence — co-change patterns in version history, dependency direction, usage spread, change frequency. Only escalate when the question is genuinely about business intent or strategic direction that data can't reveal, or when data signals conflict with each other.
+The method's [calibration principle](../method.md#the-human-role) applied to research: before escalating a question that appears to require domain expertise, check whether available evidence could resolve it. Only escalate when the question genuinely depends on context the agent doesn't have.

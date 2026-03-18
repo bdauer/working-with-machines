@@ -18,7 +18,7 @@ Start with what exists. Point agents at source material — existing docs, code,
 
 Sometimes the document's scope is clear from the start. Sometimes it emerges from what the research surfaces. The [dialogical loop](research.md#the-dialogical-loop) handles either.
 
-Two things accumulate during this phase: **findings** (what's been observed) and **assumptions** (what's been taken as given). What's expected but missing becomes the next round of directed research. The phase is done when the material is sufficient for drafting — [convergence](../method.md#convergence).
+[Findings and assumptions](../method.md#research) accumulate. What's expected but missing becomes the next round of directed research. The phase is done when the material is sufficient for drafting — [convergence](../method.md#convergence).
 
 ## Draft and shape
 
@@ -34,12 +34,12 @@ The human drives quality during drafting. The agent produces volume and coverage
 
 The [review workflow](review.md) applies here — multiple passes from different angles, each perspective entered deeply. Spin up reviewer agents with specific briefs (e.g., conciseness, technical accuracy) rather than asking one agent to evaluate everything.
 
+Agent-drafted prose has characteristic patterns worth watching for during review — [triadic lists and contrast constructions](../agent-patterns.md#triadic-lists) in particular.
+
 Review is done when passes produce diminishing findings — the document has [converged](../method.md#convergence). Once findings are minor, stop. Targeted fixes at this stage; don't reopen structure.
 
 ## Building a collection
 
-When the artifact is multiple documents, sequencing matters. Draft foundational documents first — they inform the vocabulary and framing of everything that follows. Later documents can cross-reference earlier ones without re-explaining shared concepts.
+When the artifact is multiple documents, draft foundational documents first — they inform the vocabulary and framing of everything that follows.
 
-Cross-document consistency is its own review concern. After individual documents stabilize, a pass that reads across them catches contradictions, redundant explanations, and gaps in coverage that no single document reveals.
-
-The collection doesn't need to be read sequentially. Each document should be self-sufficient for its scope, with cross-references that let a reader follow threads without requiring a particular reading order.
+After individual documents stabilize, spin up an agent to read across the collection. A cross-document reviewer catches contradictions, redundant explanations, and gaps in coverage that no single-document reviewer sees — each document's agent worked in bounded context and couldn't observe the full picture.

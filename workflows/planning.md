@@ -26,25 +26,13 @@ The human's role during planning is recognizing which of these is happening. An 
 
 ## What a plan contains
 
-A useful plan makes its assumptions visible:
-
-- **Steps** with enough specificity that an agent can execute without ambiguity about what's expected
-- **Dependencies** between steps — what must complete before what, and what can run in parallel
-- **Scope boundaries** — what's explicitly included and excluded. Boundaries prevent scope creep during execution.
-- **Assumptions the plan depends on** — things taken as given that, if wrong, would require a different approach. Some of these may need validation through spikes (minimal throwaway tests) before execution begins.
-- **Risk areas** — where the plan is most likely to break, and what the fallback is
-
-The level of detail scales with the work. A plan for a one-file change doesn't need the same structure as a plan for a cross-system refactor. Over-specifying a simple task adds ceremony without value; under-specifying a complex one creates ambiguity that agents resolve inconsistently.
+Under-specifying a complex task creates ambiguity that agents resolve inconsistently — each agent fills gaps with different assumptions. A useful plan makes its assumptions visible so agents share the same premises.
 
 ## Planning as conversation
 
-Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational knowledge matters — constraints that aren't in the code, deployment considerations, team dynamics, priorities that aren't written down.
+Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
 
-The agent contributes structural thinking — identifying dependencies, spotting parallelization opportunities, flagging where scope might creep. The human contributes judgment about what actually matters and what can be deferred.
-
-Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously via spikes, or having agents draft competing decompositions when the best approach isn't clear.
-
-The plan is ready when the remaining uncertainties are bounded and the plan accounts for them.
+Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously, or having agents draft competing decompositions when the best approach isn't clear.
 
 ## When planning is implicit
 
