@@ -60,7 +60,3 @@ Research follows the general [convergence](../method.md#convergence) pattern —
 What's specific to research: convergence can also mean the scope doesn't warrant going deeper. An architecture investigation supporting a single feature doesn't need the same depth as a strategic evaluation.
 
 Sometimes the research itself produces the plan — see [when planning is implicit](planning.md#when-planning-is-implicit).
-
-## Data-first resolution
-
-The method's [calibration principle](../method.md#the-human-role) applied to research: before escalating a question that appears to require domain expertise, check whether available evidence could resolve it. Only escalate when the question genuinely depends on context the agent doesn't have.

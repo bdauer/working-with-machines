@@ -43,7 +43,7 @@ Agents default to surfacing decisions rather than making them, even when the dec
 
 **Why it happens:** A combination of locality bias (the agent doesn't realize it has enough information) and training incentives (human preference data rewards deference over confidence in ambiguous situations). The agent's uncertainty about what the human cares about makes escalation feel safer than deciding.
 
-**What to do about it:** Set expectations in the agent's context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does. See [data-first resolution](workflows/research.md#data-first-resolution).
+**What to do about it:** Set expectations in the agent's context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does. See [calibration](method.md#the-human-role).
 
 ## Triadic lists
 

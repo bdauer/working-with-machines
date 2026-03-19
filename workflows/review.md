@@ -30,13 +30,9 @@ Repeated passes of the same perspective have value. A correctness review applied
 
 ## Findings
 
-Review produces findings, each classified by what it demands:
+Review produces findings — must-fix, discussion, and minor. The standard triage applies: must-fix gets addressed before the next round, minor accumulates for a cleanup pass or gets skipped.
 
-**Must-fix** findings change behavior, introduce errors, or meaningfully harm the artifact's quality. These get addressed before the next round. The reviewer or a separate fixer handles them; the human decides only when the right fix depends on context the agent doesn't have.
-
-**Discussion** findings are legitimate concerns where the right response depends on the human's judgment. The reviewer surfaces the trade-off; the human decides. These don't get auto-fixed — the whole point is that the reviewer recognizes a question it can't answer.
-
-**Minor** findings address style, naming, or small improvements. These accumulate and get addressed in a cleanup pass, or not at all if the cost of another revision outweighs the benefit.
+The critical classification in agentic review is **discussion** — findings where the agent recognizes a question it can't answer. Agents default to resolving everything with high confidence. The valuable behavior is the opposite: surfacing a trade-off the agent can see but can't evaluate, because the right response depends on context outside its window. These don't get auto-fixed. The reviewer surfaces the question; the human holds the context to answer it.
 
 ## Where findings go
 
@@ -46,8 +42,6 @@ A finding's nature determines where it routes. Not every finding is a fix to the
 - A structural problem sends it back to [planning](planning.md) — the decomposition needs revision
 - A scope question gets surfaced to the human for a decision about whether to expand or defer
 - An inconsistency with another artifact becomes a cross-document review concern
-
-Review also surfaces findings that reshape the plan, reopen research, or reveal cross-artifact gaps.
 
 ## The investigative character
 
@@ -71,4 +65,4 @@ Once passes are producing minor findings only, stop.
 
 The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review, and plan review alike.
 
-The human also decides which discussion findings to accept, defer, or dismiss. The reviewer surfaces the question; the human holds the context to answer it. When delivering feedback on review findings, [batch it](../method.md#the-human-role) — the agent produces better revisions when it sees the full pattern rather than individual corrections.
+The human also decides which discussion findings to accept, defer, or dismiss. When delivering feedback on review findings, [batch it](../method.md#the-human-role) — the agent produces better revisions when it sees the full pattern rather than individual corrections.

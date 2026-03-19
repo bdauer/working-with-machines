@@ -28,6 +28,8 @@ The human's role during planning is recognizing which of these is happening. An 
 
 Agents fill ambiguity with assumptions silently. A useful plan has the agents surface the assumptions they're making so the human can investigate the ones that matter and catch the ones that are wrong before they're baked into the work.
 
+Planning both surfaces new assumptions — from the decomposition work itself — and pressure-tests assumptions carried forward from research.
+
 ## Planning as conversation
 
 Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.

@@ -41,10 +41,10 @@ Gather material, notice patterns, let the structure emerge. Research starts with
 
 Parallel agents are a natural fit. Each agent enters deeply into a limited area and the human and orchestrating agent synthesize across them.
 
-Research builds two things explicitly:
+Agents generate assumptions silently as they work — filling gaps in their context with plausible premises. Research makes these visible by tracking two things explicitly:
 
 - **Findings** — what's been observed, with provenance and interpretation
-- **Assumptions** — what's been taken as given, with risk level and verification method
+- **Assumptions** — what's been taken as given, surfaced so the human can investigate what matters and catch what's wrong
 
 Both accumulate as the work progresses. The human and agent both identify gaps — the human recognizing where a domain is underexplored or where evidence is shallow, and directing the agent to look for what's missing — and iterate on the lists together. As the signal-to-noise ratio shifts, findings and assumptions can be [condensed](#knowledge-accumulation).
 
@@ -92,12 +92,12 @@ The workflow is structured to leverage how agents reason in practice — making 
 
 ## Knowledge accumulation
 
-Findings and assumptions need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
+As findings and assumptions accumulate, they create two problems. Agents spend more effort processing noise than doing useful work — accumulated material degrades focus within a session. And findings need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
 
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.
 
-When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
+When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed — simplify, reduce noise, highlight the larger overarching concerns. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
 
 ## The human role
 
