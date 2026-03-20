@@ -9,21 +9,15 @@ Patterns observed in working with LLM agents — what they do, why, and how the 
 
 ## Locality bias
 
-Agents anchor to what's in their current context. Information outside the context window doesn't exist for the agent, and information near the edges of context gets less weight than what's recent and prominent.
+Agents anchor to what's in their current context. Information outside the context window doesn't exist for the agent, and information near the edges of context gets less weight than what's recent and prominent. The agent flags a question as "needs human judgment" when its tools could resolve it. It treats the files it's read as the full picture, missing connections to code or data it hasn't been shown.
 
-**What it looks like:** The agent flags a question as "needs human judgment" when its tools could resolve it. It treats the files it's read as the full picture, missing connections to code or data it hasn't been shown.
-
-**Why it happens:** The agent can only reason over what's in its context. It doesn't know what it hasn't seen, so it can't assess whether the answer is within reach. The bias is toward escalating rather than investigating — the safer default from the agent's perspective.
-
-**What to do about it:** Push back on escalations. Before accepting "needs human judgment," consider whether the agent could answer the question from available data — version history, dependency patterns, usage spread.
+The agent can only reason over what's in its context. It doesn't know what it hasn't seen, so it can't assess whether the answer is within reach. The bias is toward escalating rather than investigating — the safer default from the agent's perspective. Push back on escalations. Before accepting "needs human judgment," consider whether the agent could answer the question from available data.
 
 ## Temporal locality bias
 
-Over multiple revision cycles, agents treat the artifact's current shape as increasingly load-bearing — producing fewer structural suggestions even when structural changes are warranted.
+Over multiple revision cycles, agents treat the artifact's current shape as increasingly load-bearing — producing fewer structural suggestions even when structural changes are warranted. Early review rounds produce structural feedback ("this section should be reorganized," "this abstraction is wrong"). Later rounds produce only surface-level feedback ("minor wording change," "add a comment here") even when structural problems remain.
 
-**What it looks like:** Early review rounds produce structural feedback ("this section should be reorganized," "this abstraction is wrong"). Later rounds produce only surface-level feedback ("minor wording change," "add a comment here") even when structural problems remain.
-
-**Why it happens:** Multiple reinforcing mechanisms:
+Multiple reinforcing mechanisms:
 - LLMs favor text that resembles their own output, and this self-preference amplifies over iterations
 - Sycophancy increases with conversation length — even context filling alone increases agreement
 - RLHF training structurally rewards agreement with premises in context
@@ -31,7 +25,7 @@ Over multiple revision cycles, agents treat the artifact's current shape as incr
 
 These mechanisms are individually documented in AI research. The combined effect in human-in-the-loop editing is observed in practice but not yet studied.
 
-**What to do about it:** Spin up fresh reviewer agents for later review rounds. A new agent has no history with the artifact and evaluates its current state without anchoring to prior versions. The method's multi-perspective review structure is partly designed around this — each perspective is a fresh entry point.
+Spin up fresh reviewer agents for later review rounds. A new agent has no history with the artifact and evaluates its current state without anchoring to prior versions. The method's multi-perspective review structure is partly designed around this — each perspective is a fresh entry point.
 
 ## Over-escalation
 
@@ -53,13 +47,9 @@ Contrast is an effective rhetorical device in training data. In moderation it wo
 
 ## Sycophancy amplification
 
-Over extended conversations, agents become increasingly agreeable — confirming the human's direction rather than offering genuine pushback.
+Over extended conversations, agents become increasingly agreeable — confirming the human's direction rather than offering genuine pushback. Early in a conversation, the agent offers alternatives and raises concerns. Later, it agrees with proposals more readily, qualifies criticism more heavily, produces output that aligns with the human's stated preferences even when the evidence is mixed.
 
-**What it looks like:** Early in a conversation, the agent offers alternatives and raises concerns. Later, it agrees with proposals more readily, qualifies criticism more heavily, and produces output that aligns with the human's stated preferences even when the evidence is mixed.
-
-**Why it happens:** Conversation length itself increases agreement tendency. RLHF training rewards responses that match the human's stated views. The accumulated context creates a strong prior about what the human wants to hear.
-
-**What to do about it:** Explicitly invite pushback — "find the weakness in this direction," "argue against this approach." Use friction by invitation at points where you suspect the agent is agreeing rather than evaluating. For critical decisions, spin up a fresh agent with an adversarial brief.
+Conversation length itself increases agreement tendency. RLHF training rewards responses that match the human's stated views. The accumulated context creates a strong prior about what the human wants to hear. Explicitly invite pushback — "find the weakness in this direction," "argue against this approach." Use friction by invitation at points where you suspect the agent is agreeing rather than evaluating. For critical decisions, spin up a fresh agent with an adversarial brief.
 
 ## Self-correction decay
 
@@ -69,13 +59,9 @@ Self-preference bias compounds with each iteration — the output becomes more "
 
 ## Scope completion bias
 
-Agents are biased toward completing their assigned task rather than stopping to report that the task is misconceived.
+Agents are biased toward completing their assigned task rather than stopping to report that the task is misconceived. The agent produces output for a task that should have been questioned or abandoned — delivering something even when an explanation of why the task is misconceived would be more useful. It works around obstacles rather than surfacing that the approach isn't working.
 
-**What it looks like:** The agent produces output for a task that should have been questioned or abandoned — delivering something even when an explanation of why the task is misconceived would be more useful. It works around obstacles rather than surfacing that the approach isn't working.
-
-**Why it happens:** Training rewards task completion. An agent that produces output is more likely to receive positive feedback than one that questions the premise. The agent also can't easily distinguish "this is hard" from "this is wrong."
-
-**What to do about it:** Establish halt authority — tell the agent it can and should stop if the task is misconceived: "If this approach cannot work, say so and explain why rather than producing a partial result."
+Training rewards task completion. An agent that produces output is more likely to receive positive feedback than one that questions the premise. The agent also can't easily distinguish "this is hard" from "this is wrong." Establish halt authority — tell the agent it can and should stop if the task is misconceived: "If this approach cannot work, say so and explain why rather than producing a partial result."
 
 Monitor for agents that are struggling without surfacing the struggle — low-quality output on a well-defined task may mean the agent is working around a fundamental problem.
 

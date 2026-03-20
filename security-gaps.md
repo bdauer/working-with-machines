@@ -23,8 +23,8 @@ flowchart LR
 
     subgraph Agentic["Agentic Container Security"]
         direction LR
-        B1[Semi-Trusted Agent]:::warning -->|"legitimate access"| B2[Tools: Shell / API / DB]:::threat
-        B2 -->|"results"| B1
+        B2[Tools: Shell / API / DB]:::threat -->|"results"| B1[Semi-Trusted Agent]:::warning
+        B1 -->|"legitimate access"| B2
     end
 
     classDef threat fill:#d32f2f,color:#fff

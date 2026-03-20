@@ -113,6 +113,7 @@ The core of the human role is directing attention:
   - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
   - The more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
 - **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. See [sycophancy amplification](agent-patterns.md#sycophancy-amplification) for why this matters.
+  - Calibration and friction by invitation are two directions of the same exchange. The human pushes back on the agent's anchoring; the agent gives the human's inarticulate sense something to push against.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
 - **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.
