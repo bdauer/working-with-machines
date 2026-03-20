@@ -14,17 +14,17 @@ Container security assumes a boundary between trusted inside and untrusted outsi
 An AI agent inverts this. The workload is semi-trusted. It has legitimate access to tools but may misuse them. Prompt injection through retrieved data can redirect agent behavior. Hallucination can produce unintended tool calls. The failure mode is misuse from within.
 
 ```mermaid
-flowchart TB
+flowchart LR
     subgraph Traditional["Traditional Container Security"]
-        direction LR
+        direction TB
         A3[Trusted Workload]:::safe -->|"protected by"| A2[Container Boundary]:::safe
         A2 -->|"blocks"| A1[External Attacker]:::threat
     end
 
     subgraph Agentic["Agentic Container Security"]
-        direction LR
-        B2[Tools: Shell / API / DB]:::threat -->|"results"| B1[Semi-Trusted Agent]:::warning
-        B1 -->|"legitimate access"| B2
+        direction TB
+        B1[Semi-Trusted Agent]:::warning -->|"legitimate access"| B2[Tools: Shell / API / DB]:::threat
+        B2 -->|"results"| B1
     end
 
     classDef threat fill:#d32f2f,color:#fff
