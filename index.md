@@ -11,8 +11,6 @@ Notes and ramblings from an agentic practitioner.
 
 ## Method
 
-A method for orchestrating complex work with AI agents.
-
 - **[Quick start](quick-start.md)** — Actionable techniques
 - **[Method](method.md)** — The full framework
 - **[Agent patterns](agent-patterns.md)** — Behavioral patterns in LLM agents and how to work with them
