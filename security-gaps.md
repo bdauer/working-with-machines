@@ -17,14 +17,14 @@ An AI agent inverts this. The workload is semi-trusted. It has legitimate access
 flowchart TB
     subgraph Traditional["Traditional Container Security"]
         direction LR
-        A1[External Attacker]:::threat -->|"tries to breach"| A2[Container Boundary]:::safe
-        A2 -->|"blocks"| A3[Trusted Workload]:::safe
+        A3[Trusted Workload]:::safe -->|"protected by"| A2[Container Boundary]:::safe
+        A2 -->|"blocks"| A1[External Attacker]:::threat
     end
 
     subgraph Agentic["Agentic Container Security"]
         direction LR
-        B1[Semi-Trusted Agent]:::warning -->|"legitimate access"| B2[Tools: Shell / API / DB]:::threat
-        B2 -->|"results"| B1
+        B2[Tools: Shell / API / DB]:::threat -->|"results"| B1[Semi-Trusted Agent]:::warning
+        B1 -->|"legitimate access"| B2
     end
 
     classDef threat fill:#d32f2f,color:#fff
@@ -40,10 +40,10 @@ The agent sits at the center with legitimate access flowing outward. The missing
 
 ```mermaid
 flowchart TB
-    Prompt[Prompt / Retrieved Data]:::warning -->|"may contain injection"| Agent[AI Agent]:::warning
-    Agent -->|"tool call"| Gate{Policy Gate?}:::threat
+    Agent[AI Agent]:::warning -->|"tool call"| Gate{Policy Gate?}:::threat
     Gate -->|"no standard exists"| Tools[Shell / API / DB / Files]:::safe
     Tools -->|"results"| Agent
+    Prompt[Prompt / Retrieved Data]:::warning -->|"may contain injection"| Agent
     Agent -->|"may modify"| Config[Own Security Config]:::threat
 
     classDef threat fill:#d32f2f,color:#fff,stroke-dasharray: 5 5
@@ -67,10 +67,18 @@ An agent connected to multiple data sources can be directed, through prompt inje
 
 ```mermaid
 sequenceDiagram
-    participant User
-    participant Agent
-    participant DB as Database
-    participant API as External API
+    box rgb(46, 125, 50) Trusted
+        participant User
+    end
+    box rgb(249, 168, 37) Semi-Trusted
+        participant Agent
+    end
+    box rgb(46, 125, 50) Trusted
+        participant DB as Database
+    end
+    box rgb(211, 47, 47) Threat Vector
+        participant API as External API
+    end
 
     User->>Agent: Query data
     Agent->>DB: SELECT * FROM table
