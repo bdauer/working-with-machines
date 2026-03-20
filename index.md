@@ -11,15 +11,14 @@ Notes and ramblings from an agentic practitioner.
 
 ## Method
 
-A method for orchestrating complex work with AI agents. Every page stands alone.
+A method for orchestrating complex work with AI agents.
 
-- **[Quick start](quick-start.md)** — Actionable techniques, no theory
-- **[Method](method.md)** — The full framework: phases, design principles, the human role
-- **[Background](formation.md)** — How the method developed (optional)
+- **[Quick start](quick-start.md)** — Actionable techniques
+- **[Method](method.md)** — The full framework
 - **[Agent patterns](agent-patterns.md)** — Behavioral patterns in LLM agents and how to work with them
 - **[Workflows](workflows/)** — Reference material for specific types of work
 
 ## Articles
 
-- **[What's changing](whats-changing.md)** — How agentic work reshapes engineering roles, processes, and what human attention is for.
-- **[The security gap in agentic tooling](security-gaps.md)** — Published standards weren't built for AI agents with tool access. Where they fall short.
+- **[What's changing](whats-changing.md)** — How agentic work reshapes engineering roles and processes.
+- **[The security gap in agentic tooling](security-gaps.md)** — The gaps in securing AI agents with tool access.
