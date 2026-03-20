@@ -67,16 +67,16 @@ An agent connected to multiple data sources can be directed, through prompt inje
 
 ```mermaid
 sequenceDiagram
-    box rgb(46, 125, 50) Trusted
+    box rgba(46, 125, 50, 0.1) Trusted
         participant User
     end
-    box rgb(249, 168, 37) Semi-Trusted
+    box rgba(249, 168, 37, 0.15) Semi-Trusted
         participant Agent
     end
-    box rgb(46, 125, 50) Trusted
+    box rgba(46, 125, 50, 0.1) Trusted
         participant DB as Database
     end
-    box rgb(211, 47, 47) Threat Vector
+    box rgba(211, 47, 47, 0.15) Threat Vector
         participant API as External API
     end
 
