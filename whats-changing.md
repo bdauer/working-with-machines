@@ -1,6 +1,6 @@
 ---
 title: What's changing
-nav_order: 8
+nav_order: 7
 ---
 
 # What's changing
@@ -9,7 +9,7 @@ nav_order: 8
 
 As engineers become more agentic, orchestrating multiple agents across multiple projects simultaneously, the role starts to resemble a principal or staff engineer consulting across teams. The constraint moves from how fast you can write code to how many concurrent workstreams you can hold in your head and direct well.
 
-Code review, approval chains, change management. These were designed for a world where one person writes code, another reads it line by line, and progress is sequential. When an engineer is directing parallel agents across several projects, waiting for synchronous person-to-person review on each one creates a bottleneck that didn't exist before.
+Code review, approval chains. These were designed for a world where one person writes code, another reads it line by line, and progress is sequential. When an engineer is directing parallel agents across several projects, waiting for synchronous person-to-person review on each one creates a bottleneck that didn't exist before.
 
 I think existing processes are breaking down. But their shape hints at the outline of what replaces them — the procedural steps that can be codified into agentic workflows, and the human touchpoints that remain because they require human judgment.
 
@@ -25,7 +25,7 @@ The gates shift up. The human focuses on bigger-picture concerns: does this fit,
 
 This creates a per-peer calibration problem. How much hands-off is correct depends on the person — their judgment, their experience with agentic workflows, their track record with the specific codebase.
 
-We don't have frameworks for this yet. Pre-agentic trust was built up by reviewing someone's code over time. Agentic trust is one level removed — evaluating someone's ability to direct and evaluate agents, which is a different skill than writing code directly.
+ Pre-agentic trust was built up by reviewing someone's code over time. Agentic trust is one level removed — evaluating someone's ability to direct and evaluate agents, which is a different skill than writing code directly.
 
 ## Documentation as signal
 

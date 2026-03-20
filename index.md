@@ -21,5 +21,5 @@ A method for orchestrating complex work with AI agents. Every page stands alone.
 
 ## Articles
 
-- **[The security gap in agentic tooling](security-gaps.md)** — Published standards weren't built for AI agents with tool access. Where they fall short.
 - **[What's changing](whats-changing.md)** — How agentic work reshapes engineering roles, processes, and what human attention is for.
+- **[The security gap in agentic tooling](security-gaps.md)** — Published standards weren't built for AI agents with tool access. Where they fall short.

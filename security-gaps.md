@@ -1,6 +1,6 @@
 ---
 title: The security gap in agentic tooling
-nav_order: 7
+nav_order: 8
 ---
 
 # The security gap in agentic tooling
@@ -32,18 +32,18 @@ flowchart LR
     classDef warning fill:#f9a825,color:#000
 ```
 
-No published framework addresses defending against your own workload.
+Defending against your own workload is the problem, and it's not one the existing frameworks were built for.
 
 ## The gaps
 
-The agent sits at the center with legitimate access flowing outward. The missing piece is a policy gate between the agent and its tools, and several other controls that no standard defines.
+The agent sits at the center with legitimate access flowing outward. The missing piece is a policy gate between the agent and its tools, among other controls.
 
 ```mermaid
 flowchart TB
     Prompt[Prompt / Retrieved Data]:::warning -->|"may contain injection"| Agent[AI Agent]:::warning
     Agent -->|"may modify"| Config[Own Security Config]:::threat
     Agent -->|"tool call"| Gate{Policy Gate?}:::threat
-    Gate -->|"no standard exists"| Tools[Shell / API / DB / Files]:::safe
+    Gate -->|"undefined"| Tools[Shell / API / DB / Files]:::safe
     Tools -->|"results"| Agent
 
     classDef threat fill:#d32f2f,color:#fff,stroke-dasharray: 5 5
@@ -53,13 +53,13 @@ flowchart TB
 
 ### Tool-call interception
 
-The agent needs to call tools; some calls should be blocked. A gating layer, something that evaluates each tool call against policy before execution. No standard defines this pattern. No standard describes a mechanism for the decision point between the agent and the tool.
+The agent needs to call tools; some calls should be blocked. A gating layer, something that evaluates each tool call against policy before execution.
 
 ### Credential scoping
 
 An agent connected to multiple services should not have all credentials available to all tool calls. A database query doesn't need the GitHub token.
 
-The default in most agentic setups is that all credentials are environment variables visible to everything. The isolation primitives exist, but nobody has applied them to scoping credentials within a single agent session so that each tool invocation sees only what it needs.
+The default in most agentic setups is that all credentials are environment variables visible to everything. The isolation primitives exist, but they haven't been applied to scoping credentials within a single agent session.
 
 ### Cross-tool data flow
 
@@ -88,13 +88,12 @@ sequenceDiagram
     Agent-->>User: "Here's your summary"
 ```
 
-No framework addresses cross-tool data flow, or the specific vector of injection through one tool leading to misuse of another.
 
 ### Self-modification prevention
 
 The agent's security boundary (hook configurations, firewall rules, permission settings) lives in files the agent can potentially read and write. An agent that can modify its own security configuration can weaken its own sandbox, whether through prompt injection or through an optimization that treats the security layer as an obstacle.
 
-The behavioral patterns that make this dangerous, like [scope completion bias](agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, have security implications that aren't captured anywhere.
+The behavioral patterns that make this dangerous, like [scope completion bias](agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, have security implications.
 
 ### Devcontainer as sandbox
 
@@ -104,8 +103,7 @@ The devcontainer spec provides no security primitives for this use case. No outb
 
 ### Outbound traffic filtering
 
-An agent that can make arbitrary HTTP requests can exfiltrate data. For agentic workloads, allowing the agent to reach its required APIs while blocking everything else is a basic control. No container security standard addresses domain-level outbound filtering.
-
+An agent that can make arbitrary HTTP requests can exfiltrate data. For agentic workloads, allowing the agent to reach its required APIs while blocking everything else is a basic control. 
 ### Supply chain
 
 MCP servers have no supply chain controls. No signing, no provenance, no vulnerability database. Community registries list servers with no security review. A compromised MCP server runs with whatever privileges the agent configuration grants it.
