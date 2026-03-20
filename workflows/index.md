@@ -8,10 +8,9 @@ nav_order: 6
 
 Reference material for practitioners. Each page describes how the method applies to a specific type of work.
 
-- **[Research](research.md)** — Architecture evaluations, vendor assessments, codebase analysis
+- **[Research](research.md)** — Architecture evaluations, vendor assessments, codebase analysis, cross-system investigations
 - **[Planning](planning.md)** — Turning research into executable steps
-- **[Implementation](implementation.md)** — Feature development, refactoring, bug fixes
-- **[Review](review.md)** — Evaluating code, documents, plans
-- **[Documentation](documentation.md)** — Investigation reports, architecture docs, evaluation documents
+- **[Review](review.md)** — Evaluating artifacts through bounded perspectives
+- **[Documentation](documentation.md)** — Investigation reports and architecture docs
 
-These pages expand on the [method](../method.md) for specific contexts. The method page is the prerequisite.
+These pages expand on the [method](../method.md) for specific contexts. The method page is helpful context.

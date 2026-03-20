@@ -45,23 +45,15 @@ Agents default to surfacing decisions rather than making them, even when the dec
 
 ## Triadic lists
 
-Agents default to groups of three when listing items — three examples, three bullet points, three categories.
+Agents default to groups of three when listing items — three examples, three bullet points, three categories. Every paragraph produces a triad: "A, B, and C." Sections accumulate parallel structures. Items get force-fit into three categories when two or four would be more accurate.
 
-**What it looks like:** Every paragraph produces a triad: "A, B, and C." Sections accumulate Oxford-comma-heavy parallel structures. Items get force-fit into three categories when two or four would be more accurate.
-
-**Why it happens:** Training data is saturated with rhetorical triads (rule of three in writing). The pattern is deeply embedded in how the model structures enumerations.
-
-**What to do about it:** Notice when lists feel mechanical rather than accurate. Ask: are there actually three things here, or is one of them padding? Sometimes two items or four are the right number. Call out the pattern explicitly when reviewing — "vary the structure" — and the agent adjusts.
+The pattern is deeply embedded. Training data is saturated with rhetorical triads. Notice when lists feel mechanical or inaccurate. Is one of the items padding?
 
 ## Contrast constructions
 
-Agents frame ideas as "it's not A, it's B" — defining something by what it isn't before stating what it is.
+Agents frame ideas as "it's not A, it's B" — defining something by what it isn't before stating what it is. "This isn't a pipeline — it's a set of activities that refer to each other." "The method doesn't fight non-determinism — it works with it." The negative clause positions against a presumed default, which can read as superior or dismissive.
 
-**What it looks like:** "This isn't a pipeline — it's a set of activities that refer to each other." "The method doesn't fight non-determinism — it works with it." The negative clause positions against a presumed default, which can read as superior or dismissive.
-
-**Why it happens:** Contrast is an effective rhetorical device in training data. The agent uses it to establish distinctiveness. In moderation it works; in accumulation it creates a posture of "you're probably thinking X, but actually Y."
-
-**What to do about it:** Drop the "not A" part and integrate the B directly. "The phases are activities that refer to each other." "The method works with non-determinism." The positive statement is almost always sufficient. Flag the pattern during review and the agent will avoid it in subsequent output.
+Contrast is an effective rhetorical device in training data. In moderation it works; in accumulation it creates a posture of "you're probably thinking X, but actually Y." The fix: drop the "not A" part and integrate the B directly. "The phases are activities that refer to each other." "The method works with non-determinism." The positive statement is almost always sufficient. Flag the pattern during review, though this one is stubborn. Agents reintroduce it even after explicit correction.
 
 ## Sycophancy amplification
 

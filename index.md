@@ -9,10 +9,10 @@ Notes and ramblings from an agentic practitioner.
 
 *Written through the described method.*
 
-## Method
+## Framework
 
 - **[Quick start](quick-start.md)** — Actionable techniques
-- **[Method](method.md)** — The full framework
+- **[Method](method.md)** — The full framework ([background](formation.md))
 - **[Agent patterns](agent-patterns.md)** — Behavioral patterns in LLM agents and how to work with them
 - **[Workflows](workflows/)** — Reference material for specific types of work
 

@@ -8,7 +8,7 @@ nav_order: 1
 
 Investigation tasks — architecture evaluations, vendor assessments, codebase analysis — where the goal is to understand something. Applies the [method](../method.md) with an emphasis on parallel exploration and synthesis.
 
-Research is also the opening phase of most other workflows. The [documentation workflow](documentation.md) begins with gathering context; [implementation](implementation.md) begins with codebase research.
+Research is also the opening phase of most other workflows. The [documentation workflow](documentation.md) begins with gathering context.
 
 ## Starting conditions
 
@@ -45,7 +45,7 @@ Parallel findings need integration. This happens at the orchestration level — 
 
 The agents produce findings; the human recognizes which connections are significant and which are noise. Two agents may independently surface related observations without recognizing the relationship — the human sees the pattern because they hold the broader context.
 
-When accumulated knowledge gets heavy, condense it — but preserve the reasoning. A fresh agent needs that reasoning to work with the material.
+When accumulated knowledge gets heavy, [condense it](../method.md#knowledge-accumulation).
 
 ## The dialogical loop
 

@@ -43,7 +43,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 **Hide the implementation plan from evaluative reviewers.** Reviewers checking code quality should see the code and the problem being solved, not the design decisions. The plan creates anchoring — evaluation shifts from what the code does to whether it matches intent.
   - Alignment reviews ("did we build what we planned?") are different — those need the plan.
-  - → [Post-implementation review](workflows/implementation.md#review)
+  - → [Review](method.md#review)
 
 ## Documentation
 

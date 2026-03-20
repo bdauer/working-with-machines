@@ -70,9 +70,13 @@ As the agent works, it encounters things the research didn't surface — edge ca
 > Surprises during implementation are a signal to widen the review scope — what else did the plan miss?
 {: .important }
 
+An agent that encounters fundamental problems should stop and surface them rather than work around them. See [scope completion bias](agent-patterns.md#scope-completion-bias) for why agents tend toward the opposite. What implementation discovers — assumptions invalidated, coupling not in the design — should inform how review is scoped.
+
 ### Review
 
 Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual, or shaped by something specific the process surfaced. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
+
+Evaluative reviewers — those checking quality, correctness, maintainability — should not see the implementation plan. The plan creates anchoring: a reviewer who knows what the code was supposed to do evaluates against intent rather than reality. Alignment reviews ("did we build what we planned?") are different; those need the plan.
 
 Repeated passes of the same type also have value: each review changes the artifact, so the same perspective applied to evolved material yields different results.
 
@@ -94,9 +98,8 @@ The workflow is structured around how agents reason in practice — connecting m
 
 As findings and assumptions accumulate, they create two problems.
 
-Agents spend more effort processing noise than doing useful work — accumulated material degrades focus within a session.
-
-Findings also need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
+- **Focus degradation.** Agents spend more effort processing noise than doing useful work. Accumulated material degrades focus within a session.
+- **Context boundaries.** Findings need to survive being passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
 
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.

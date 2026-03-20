@@ -11,7 +11,7 @@ As engineers become more agentic, orchestrating multiple agents across multiple 
 
 Code review, approval chains. These were designed for a world where one person writes code, another reads it line by line, and progress is sequential. When an engineer is directing parallel agents across several projects, waiting for synchronous person-to-person review on each one creates a bottleneck that didn't exist before.
 
-I think existing processes are breaking down. But their shape hints at the outline of what replaces them — the procedural steps that can be codified into agentic workflows, and the human touchpoints that remain because they require human judgment.
+Existing processes are breaking down. But their shape hints at the outline of what replaces them — the procedural steps that can be codified into agentic workflows and the human touchpoints that remain because they require human judgment.
 
 ## Where the gates move
 
@@ -25,7 +25,7 @@ The gates shift up. The human focuses on bigger-picture concerns: does this fit,
 
 This creates a per-peer calibration problem. How much hands-off is correct depends on the person — their judgment, their experience with agentic workflows, their track record with the specific codebase.
 
- Pre-agentic trust was built up by reviewing someone's code over time. Agentic trust is one level removed — evaluating someone's ability to direct and evaluate agents, which is a different skill than writing code directly.
+Pre-agentic trust was built up by reviewing someone's code over time. The code is still there, but agentic trust develops through the higher-level gated conversations. As trust builds, earlier gates release.
 
 ## Documentation as signal
 
@@ -33,21 +33,21 @@ I've been encouraging people not to read the documentation we produce. Not the h
 
 When a human needs to go deeper, the path is asking an agent to answer a specific question, with the documentation as context. The human goes deeper using an agent, not through direct reading, even when the document is structured so that a human could read it.
 
-This changes what good documentation looks like. Structure still matters, but for agent parseability and retrieval, not sequential human reading. Provenance matters more than prose. The question a finding answered, what it assumed, what produced it. That context is what makes a document useful as signal. The [documentation workflow](workflows/documentation.md) describes the practical approach to producing these artifacts.
+This changes what good documentation looks like. Structure still matters, but for agent parseability and retrieval, not sequential human reading. Provenance matters more than prose. The question a finding answered, what it assumed, what evidence produced it. That context is what makes a document useful as signal.
+
+High-level summaries still need to work for humans. Someone jumping into a project needs an entry point they can read directly. But from there, the path is through an agent: absorbing the larger artifacts and answering specific questions against that context. The detailed documentation becomes a database the human queries through natural language.
+
+The [documentation workflow](workflows/documentation.md) describes the practical approach to producing these artifacts.
 
 ## Skills and individual voice
 
-Skills (reusable workflow abstractions for agentic tools) operate at two levels.
+Skills carry individual voice. Even a ticket-creation skill reflects how a specific person communicates: what gets called out and what context gets included. At the workflow level the variation is larger. Different people direct agents differently, and skills encode those differences.
 
-At a lower level, even something like creating a ticket, people have their own way of communicating and thinking about it. Individual voice, emphasis, what gets called out. A skill that creates tickets should capture the general principles (audience awareness, accessibility, visual aids where applicable, priority signals) while leaving room for individual expression.
-
-At a higher level, workflow skills have more variation. Different people work differently, think differently, and that changes the flow between person and agents. Some shared patterns will emerge, but the actual work happens in the interaction between a specific person and their agents. The dynamic is personal.
-
-I could see a layer of meta-skills: skills for creating skills, informed by general principles. But the diminishing returns hit quickly. The real work is in the in-between.
+Some shared patterns will emerge, but the actual work happens in the interaction between a specific person and their agents. The dynamic is personal.
 
 ## Cognitive demands
 
-This is genuinely hard to keep up with. When multiple workstreams are running in parallel, each producing findings and requiring direction, the person's ability to hold context and make good judgments is the bottleneck.
+This is hard to keep up with. When multiple workstreams are running in parallel, each producing findings and requiring direction, the person's ability to hold context and make good judgments is the bottleneck.
 
 I've found that unstructured time away from the work is part of the process. Days where I do entirely unrelated things, sometimes still agentically, to let the back burner catch up. The conscious mind can't always keep pace with the throughput. The [method](method.md#the-human-role) captures this as sustainability — a necessary part of keeping qualitative attention sharp.
 

@@ -8,7 +8,7 @@ nav_order: 4
 
 Evaluating artifacts — code, documents, plans, research outputs — through bounded perspectives applied in rounds. Applies the [method](../method.md) with the key distinction that each pass changes the artifact, so subsequent passes operate on different material.
 
-Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes; [implementation](implementation.md) includes multi-round code review.
+Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes.
 
 ## Perspectives
 

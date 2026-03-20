@@ -36,7 +36,7 @@ Defending against your own workload is the problem, and it's not one the existin
 
 ## The gaps
 
-The agent sits at the center with legitimate access flowing outward. The missing piece is a policy gate between the agent and its tools, among other controls.
+The agent sits at the center with legitimate access flowing outward. The missing piece is a policy gate between the agent and its tools.
 
 ```mermaid
 flowchart TB
@@ -103,7 +103,8 @@ The devcontainer spec provides no security primitives for this use case. No outb
 
 ### Outbound traffic filtering
 
-An agent that can make arbitrary HTTP requests can exfiltrate data. For agentic workloads, allowing the agent to reach its required APIs while blocking everything else is a basic control. 
+An agent that can make arbitrary HTTP requests can exfiltrate data. Allowlisting the specific endpoints an agent needs and blocking everything else is a basic control, but most agentic setups don't implement it. Container-level network policies, DNS-based filtering, or proxy configurations can enforce this — the primitives exist, but applying them per-agent rather than per-container requires configuration that current tooling doesn't streamline.
+
 ### Supply chain
 
 MCP servers have no supply chain controls. No signing, no provenance, no vulnerability database. Community registries list servers with no security review. A compromised MCP server runs with whatever privileges the agent configuration grants it.
