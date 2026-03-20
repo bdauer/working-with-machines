@@ -2,8 +2,8 @@ title: Working With Machines
 description: Writing on working with AI agents — method, patterns, and where this is heading
 remote_theme: just-the-docs/just-the-docs
 
-url: https://bdauer.github.io
-baseurl: "/working-with-machines"
+url: https://workingwithmachines.dev
+baseurl: ""
 
 mermaid:
   version: "10.9.0"
