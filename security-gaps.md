@@ -5,7 +5,7 @@ nav_order: 7
 
 # The security gap in agentic tooling
 
-I needed to secure AI agents running in containers with access to shells, file systems, APIs, and databases. There's published guidance for each of those surfaces individually. But the gaps I kept hitting were in the intersection, where an agent with legitimate tool access becomes the threat, and nothing I found addresses that.
+I needed to secure AI agents running in containers with access to shells, file systems, APIs, and databases. I ran into gaps. The security standards that exist weren't designed for this.
 
 ## The problem underneath
 
@@ -32,7 +32,7 @@ flowchart TB
     classDef warning fill:#f9a825,color:#000
 ```
 
-I couldn't find a published framework that addresses defending against your own workload. So I started mapping where the specific gaps were.
+No published framework addresses defending against your own workload.
 
 ## The gaps
 
@@ -53,7 +53,7 @@ flowchart TB
 
 ### Tool-call interception
 
-This was the first gap I hit. The agent needs to call tools; some calls should be blocked. A gating layer, something that evaluates each tool call against policy before execution. No standard defines this pattern. Existing container security covers what a container can do at the runtime level (capabilities, seccomp). LLM security guidance says "limit tool scope." Neither describes a mechanism for the decision point between the agent and the tool.
+The agent needs to call tools; some calls should be blocked. A gating layer, something that evaluates each tool call against policy before execution. No standard defines this pattern. No standard describes a mechanism for the decision point between the agent and the tool.
 
 ### Credential scoping
 
@@ -88,13 +88,13 @@ sequenceDiagram
     Agent-->>User: "Here's your summary"
 ```
 
-No framework addresses cross-tool data flow. Tool-calling protocols treat each server connection independently. Prompt injection is recognized as a risk, but not the specific vector of injection through one tool leading to misuse of another.
+No framework addresses cross-tool data flow, or the specific vector of injection through one tool leading to misuse of another.
 
 ### Self-modification prevention
 
 The agent's security boundary (hook configurations, firewall rules, permission settings) lives in files the agent can potentially read and write. An agent that can modify its own security configuration can weaken its own sandbox, whether through prompt injection or through an optimization that treats the security layer as an obstacle.
 
-The behavioral patterns that make this dangerous, like [scope completion bias](agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, are well-documented in how agents reason. The security implications aren't captured anywhere.
+The behavioral patterns that make this dangerous, like [scope completion bias](agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, have security implications that aren't captured anywhere.
 
 ### Devcontainer as sandbox
 
@@ -114,6 +114,6 @@ Agent configurations themselves (system prompts, skill definitions, hook files, 
 
 ## Where this leaves me
 
-I ended up building solutions for each of these gaps from parts that weren't designed to work together. Container isolation, capability dropping, secrets management, outbound filtering as building blocks, but the assembly is entirely custom. The controls with no standard to reference are the ones I spent the most time on.
+I ended up building solutions for each of these gaps from parts that weren't designed to work together. Container isolation, capability dropping, secrets management, outbound filtering as building blocks, but the assembly is entirely custom.
 
 Whether the patterns emerging from practice inform the standards that get written is an open question.
