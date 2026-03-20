@@ -44,9 +44,9 @@ Parallel agents are a natural fit. Each agent focuses on a limited area and the 
 Agents generate assumptions silently as they work — filling gaps in their context with plausible premises. Research makes these visible by tracking two things explicitly:
 
 - **Findings** — what's been observed, with provenance and interpretation
-- **Assumptions** — what's been taken as given, surfaced so the human can investigate what matters and catch what's wrong
+- **Assumptions** — what's been taken as given, exposed so the human can investigate what matters
 
-Both accumulate as the work progresses. The human and agent both identify gaps — the human recognizing where a domain is underexplored or where evidence is shallow, and directing the agent to look for what's missing — and iterate on the lists together. As the signal-to-noise ratio shifts, findings and assumptions can be [condensed](#knowledge-accumulation).
+As findings and assumptions accumulate, they can be [condensed](#knowledge-accumulation).
 
 **Research is done when findings stop surprising.** It can also end because the scope doesn't warrant going deeper — the question is answered well enough for the work at hand.
 
@@ -54,7 +54,7 @@ Sometimes the research itself produces the plan — the investigation reveals th
 
 ### Plan
 
-Decompose what research surfaced into steps. The human provides direction, the agent drafts, and they iterate until the decomposition holds.
+Decompose what research found into steps. The human provides direction, the agent drafts, and they iterate until the decomposition holds.
 
 Planning is where the fractal structure is most visible — the plan determines what the other phases look like at the next scale down. What looked like a clean decomposition often shifts when the steps are structured, which can reopen research or reshape scope.
 
@@ -62,7 +62,7 @@ Planning is where the fractal structure is most visible — the plan determines 
 
 Execute the plan. Implementation has higher agent autonomy, but it contains its own cycles of research, planning and review as the work reveals things the plan didn't anticipate.
 
-As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. The agent surfaces what it's found at defined breakpoints:
+As the agent works, it encounters things the research missed — edge cases, unexpected couplings, assumptions that don't hold in practice. The agent reports what it's found at defined breakpoints:
 
 - When something is **load-bearing** — the plan depends on it, or other decisions cascade from it
 - When it's **cheap to verify now** and expensive to fix later
@@ -74,7 +74,7 @@ An agent that encounters fundamental problems should stop and surface them rathe
 
 ### Review
 
-Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual or shaped by something specific the process surfaced. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
+Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual or shaped by something specific the process revealed. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
 
 Evaluative reviewers — those checking quality, correctness, maintainability — should not see the implementation plan. The plan creates anchoring: a reviewer who knows what the code was supposed to do evaluates against intent rather than reality. Alignment reviews ("did we build what we planned?") are different; those need the plan.
 
@@ -91,7 +91,7 @@ At a given scale, some phases may not be needed: a well-understood task might sk
 The workflow is structured around how agents reason in practice — connecting material across their context non-linearly. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
 - **Scoping agent context deliberately.** Each agent gets what it needs for its task. Unnecessary context creates anchoring, insufficient context creates blind spots. Scoping also has a security dimension — agents with unnecessary context have unnecessary access.
-- **Letting findings accumulate before structuring.** Research and early review give agents room to surface unexpected connections before planning and implementation impose structure.
+- **Letting findings accumulate before structuring.** Research and early review give agents room to find unexpected connections before planning and implementation impose structure.
 - **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings connect at synthesis time in ways sequential execution misses.
 
 ## Knowledge accumulation
@@ -111,14 +111,14 @@ The core of the human role is directing attention:
   - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. See [background](formation.md) for more on how this attention develops.
 - **Calibration.** Agents are biased toward what's local — what's visible in their current context. See [locality bias](agent-patterns.md#locality-bias) and [over-escalation](agent-patterns.md#over-escalation) for why.
   - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
-  - This bias has a temporal dimension: the more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
+  - The more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
 - **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. See [sycophancy amplification](agent-patterns.md#sycophancy-amplification) for why this matters.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
 - **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.
 - **Sustainability.** Directing attention across multiple parallel workstreams degrades judgment when the human can't keep pace with the throughput. Unstructured time away from the work — letting the back burner process what's accumulated — is part of keeping that attention sharp.
 
-The method is scoped to a single practitioner and their agents. It doesn't address how the practitioner's judgment is evaluated by others, how trust is established within a team, or how the method interacts with organizational process gates. These are open questions — see [what's changing](whats-changing.md) for one perspective.
+The method is scoped to a single practitioner and their agents. It doesn't address how the practitioner's judgment is evaluated by others, how trust is established within a team or how the method interacts with organizational process gates. These are open questions — see [what's changing](whats-changing.md) for one perspective.
 
 ## Convergence
 

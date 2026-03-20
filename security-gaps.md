@@ -16,13 +16,13 @@ An AI agent inverts this. The workload is semi-trusted. It has legitimate access
 ```mermaid
 flowchart LR
     subgraph Traditional["Traditional Container Security"]
-        direction TB
+        direction LR
         A3[Trusted Workload]:::safe -->|"protected by"| A2[Container Boundary]:::safe
         A2 -->|"blocks"| A1[External Attacker]:::threat
     end
 
     subgraph Agentic["Agentic Container Security"]
-        direction TB
+        direction LR
         B1[Semi-Trusted Agent]:::warning -->|"legitimate access"| B2[Tools: Shell / API / DB]:::threat
         B2 -->|"results"| B1
     end

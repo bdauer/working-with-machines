@@ -49,7 +49,7 @@ When accumulated knowledge gets heavy, [condense it](../method.md#knowledge-accu
 
 ## The dialogical loop
 
-Research is a conversation between the human's directed attention and the agent's ability to find connections across large bodies of material. The human often has an intuition about where to look or what matters but isn't an expert in every area the research touches. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
+Research is a conversation between the human's directed attention and the agent's ability to find connections across large bodies of material. The human often has an intuition about where to look or what matters. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
 
 This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition. The correction sharpens both sides.
 

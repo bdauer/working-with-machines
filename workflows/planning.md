@@ -6,7 +6,7 @@ nav_order: 2
 
 # Workflow: Planning
 
-Turning what research surfaced into steps that can be executed. The emphasis is on assumption surfacing and iterative refinement — the [method's](../method.md) planning phase applied to decomposition work.
+Turning what research found into steps that can be executed. The emphasis is on assumption surfacing and iterative refinement.
 
 Planning is also a phase within every other workflow.
 

@@ -47,7 +47,7 @@ The pattern is deeply embedded. Training data is saturated with rhetorical triad
 
 ## Contrast constructions
 
-Agents frame ideas as "it's not A, it's B" — defining something by what it isn't before stating what it is. "This isn't a pipeline — it's a set of activities that refer to each other." "The method doesn't fight non-determinism — it works with it." The negative clause positions against a presumed default, which can read as superior or dismissive.
+Agents frame ideas as "it's not A, it's B" — defining something by what it isn't before stating what it is. "This isn't a pipeline — it's a set of activities that refer to each other." "The method doesn't fight non-determinism — it works with it." The negative clause positions against a presumed default, which reads as superior or dismissive.
 
 Contrast is an effective rhetorical device in training data. In moderation it works; in accumulation it creates a posture of "you're probably thinking X, but actually Y." The fix: drop the "not A" part and integrate the B directly. "The phases are activities that refer to each other." "The method works with non-determinism." The positive statement is almost always sufficient. Flag the pattern during review, though this one is stubborn. Agents reintroduce it even after explicit correction.
 

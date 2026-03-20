@@ -11,13 +11,13 @@ As engineers become more agentic, orchestrating multiple agents across multiple 
 
 Code review, approval chains. These were designed for a world where one person writes code, another reads it line by line, and progress is sequential. When an engineer is directing parallel agents across several projects, waiting for synchronous person-to-person review on each one creates a bottleneck that didn't exist before.
 
-Existing processes are breaking down. But their shape hints at the outline of what replaces them — the procedural steps that can be codified into agentic workflows and the human touchpoints that remain because they require human judgment.
+Existing processes are breaking down. But their shape hints at the outline of what replaces them — the procedural steps that can be codified into agentic workflows and the human touchpoints that remain.
 
 ## Where the gates move
 
 The question is whether a higher-order review process meets the same needs as line-by-line reading. Does reviewing the agent's process, the test coverage, the architectural decisions and the review cascade produce equivalent or better confidence?
 
-I think it does, in many cases. The agent reviews more thoroughly than most humans — it doesn't get tired, it doesn't skim, it can apply multiple specialized perspectives in sequence. What it can't do is judge whether the work should have been done at all, whether it fits the organizational context or whether the tradeoffs reflect the right priorities.
+I think it does, in many cases. The agent reviews more thoroughly than most humans — it doesn't skim, it can apply multiple specialized perspectives in sequence. What it can't do is judge whether the work should have been done at all, whether it fits the organizational context or whether the tradeoffs reflect the right priorities.
 
 The gates shift up. The human focuses on bigger-picture concerns: does this fit, are the tradeoffs right. Trust in the details comes from the agent's review cascade and test coverage, not from a person reading every line.
 

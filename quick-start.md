@@ -19,7 +19,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
   - → [Context scoping](method.md#working-with-how-agents-reason)
 
 **Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem.
-  - The agent's attempt — even when it misses — gives that inarticulate sense something concrete to push against.
+  - The agent's attempt gives that inarticulate sense something concrete to push against.
   - The correction often crystallizes a sharper distinction than either side started with.
   - → [Productive friction](formation.md)
 

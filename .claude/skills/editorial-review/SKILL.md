@@ -14,6 +14,8 @@ Run parallel editorial reviewers against Working With Machines content. Each rev
 
 These texts are agentically generated and may not have been fully vetted by the author. Reviewers should flag anything at odds with the author's voice, structure preferences, or editorial principles — even if it reads "correctly." The agent that wrote it may have imposed its own patterns.
 
+When a finding conflicts with the voice samples, check whether the samples cover that register. If they don't, flag as uncertain rather than definite — the gap may be in the samples, not the content.
+
 ## Scope
 
 Determine what to review from the arguments:
@@ -34,7 +36,7 @@ Determine what to review from the arguments:
 
 ## Reviewers
 
-Spin up three parallel Agent subagents. Each gets:
+Spin up parallel Agent subagents. Always include a voice match reviewer — it produces the most specific findings when calibrated against the samples. Structure and flow catches patterns other reviewers miss (abstract-before-concrete, missing closers, too-smooth flow). Add or swap perspectives based on the focus argument. Each reviewer gets:
 - The files to review (read them directly)
 - Their slice of the editorial guide (extracted below)
 - The full voice samples file
@@ -53,10 +55,11 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > Check each file against the voice rules for its doc type. Flag:
 > - Inflation (register outpacing concept)
 > - Performed hedging or performed confidence
-> - Oxford commas (the author doesn't use them)
+> - Oxford commas where they're agentic defaults (but keep reasonable ones that aid parsing)
 > - Significance claims, presuming reader response
 > - Unverifiable absolutes
 > - Sections that don't sound like the author wrote them
+> - Phrases repeated across multiple files that become tics through repetition
 >
 > For each finding: file, line range, the text, what's wrong, your recommendation. Prioritize voice issues over grammar. Do not "fix" comma splices or parenthetical asides — these are the author's voice. Report findings only, no edits.
 

@@ -6,7 +6,7 @@ nav_order: 5
 
 # Workflow: Producing Documents
 
-Investigation reports, architecture docs, evaluation documents — where the output is a written artifact shaped by research. Drafting and planning overlap here: the draft structures the material, reveals gaps that research didn't surface, shifts the document's shape during writing. A draft is the plan being tested. See the [method](../method.md) for the full cycle.
+Investigation reports, architecture docs, evaluation documents — where the output is a written artifact shaped by research. Drafting and planning overlap here: the draft structures the material, reveals gaps that research didn't surface, shifts the document's shape during writing. A draft is the plan being tested.
 
 ## Gather context
 
@@ -22,8 +22,7 @@ Sometimes the document's scope is clear from the start. Sometimes it emerges fro
 
 Course-correct on structure early — structural changes before editorial polish are cheap; after, they waste the polish. The human can propose a specific structure, provide constraints (doc type, audience, qualities) and let the agent determine structure, or leave it open.
 
-Structuring decisions depend on who will consume the document. A high-level summary meant as a human entry point has different priorities than a detailed investigation report that agents will primarily consume. For human-facing documents, structure serves the reader — earning its length, matching the level of detail to the audience. The existing guidance in this workflow assumes this case.
-
+Structuring decisions depend on who will consume the document. A high-level summary meant as a human entry point has different priorities than a detailed investigation report that agents will primarily consume. For human-facing documents, structure serves the reader — earning its length, matching the level of detail to the audience.
 For agent-consumable documents, structure serves retrieval and parseability. Each finding should carry what question produced it, what was assumed, what evidence supports it — the [provenance](../method.md#knowledge-accumulation) that lets an agent locate and use a specific finding without processing the whole document. Many documents serve both audiences: a human-readable summary layer over detailed findings that agents can dig into. The structural challenge is making both layers work without one degrading the other.
 
 When a structure feels wrong but the reason is hard to articulate, asking the agent to evaluate the choice against the content often resolves it. Agents won't reliably volunteer structural objections, but they're good at evaluating a specific proposal when asked. The result is often something neither party started with — see [productive friction](../formation.md).
