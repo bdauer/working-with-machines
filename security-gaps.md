@@ -40,11 +40,11 @@ The agent sits at the center with legitimate access flowing outward. The missing
 
 ```mermaid
 flowchart TB
-    Agent[AI Agent]:::warning -->|"tool call"| Gate{Policy Gate?}:::threat
+    Prompt[Prompt / Retrieved Data]:::warning -->|"may contain injection"| Agent[AI Agent]:::warning
+    Agent -->|"may modify"| Config[Own Security Config]:::threat
+    Agent -->|"tool call"| Gate{Policy Gate?}:::threat
     Gate -->|"no standard exists"| Tools[Shell / API / DB / Files]:::safe
     Tools -->|"results"| Agent
-    Prompt[Prompt / Retrieved Data]:::warning -->|"may contain injection"| Agent
-    Agent -->|"may modify"| Config[Own Security Config]:::threat
 
     classDef threat fill:#d32f2f,color:#fff,stroke-dasharray: 5 5
     classDef safe fill:#2e7d32,color:#fff
