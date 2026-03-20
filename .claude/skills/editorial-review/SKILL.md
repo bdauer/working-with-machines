@@ -96,9 +96,22 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 
 ## Consolidation
 
-After all three reviewers return:
+After all reviewers return, spin up a consolidation agent. It reads all reviewer outputs and produces a single report:
 
 1. Deduplicate findings that multiple reviewers flagged
-2. Group by file, then by priority (structural/voice first, then tics, then polish)
-3. Present the consolidated findings to the user
-4. Wait for the user to decide what to act on before making any edits
+2. Group by priority: clearly actionable, needs author judgment, structural questions
+3. For each finding, provide a concrete recommendation
+4. Note where reviewers disagreed
+5. Keep it concise — synthesize, don't concatenate
+
+Present the consolidated report to the user. Wait for them to decide what to act on before making any edits.
+
+## Feedback loop
+
+After the user reviews findings and accepts or rejects edits, capture what was learned:
+
+1. **Rejected edits reveal calibration gaps.** If the user rejects a finding ("that's my voice," "this is a reasonable oxford comma"), update the skill's reviewer instructions or the voice samples to prevent the same false positive in future runs.
+2. **Accepted edits confirm the skill is working.** Note which reviewer categories produced the most actionable findings — this informs which perspectives to prioritize in future runs.
+3. **New patterns discovered during editing** (e.g., a repeated phrase across files, a structural tic) should be added to the relevant reviewer's checklist.
+
+Update the skill file, editorial guide, or voice samples as appropriate. The goal is that each run sharpens the next.

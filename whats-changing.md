@@ -25,7 +25,7 @@ The gates shift up. The human focuses on bigger-picture concerns: does this fit,
 
 This creates a per-peer calibration problem. How much hands-off is correct depends on the person — their judgment, their experience with agentic workflows, their track record with the specific codebase.
 
-Pre-agentic trust was built up by reviewing someone's code over time. The code is still there, but agentic trust develops through the higher-level gated conversations. As trust builds, earlier gates release.
+Pre-agentic trust was built up by reviewing someone's code over time. The code is still there, but how agentic trust develops is less clear. Possibly through the higher-level gated conversations, with outputs gradually releasing earlier gates as confidence builds. This needs more thought.
 
 ## Documentation as signal
 
@@ -47,7 +47,9 @@ Some shared patterns will emerge, but the actual work happens in the interaction
 
 ## Cognitive demands
 
-This is hard to keep up with. When multiple workstreams are running in parallel, each producing findings and requiring direction, the person's ability to hold context and make good judgments is the bottleneck.
+This is hard to keep up with.
+
+When multiple workstreams are running in parallel, each producing findings and requiring direction, the person's ability to hold context and make good judgments is the bottleneck.
 
 I've found that unstructured time away from the work is part of the process. Days where I do entirely unrelated things, sometimes still agentically, to let the back burner catch up. The conscious mind can't always keep pace with the throughput. The [method](method.md#the-human-role) captures this as sustainability — a necessary part of keeping qualitative attention sharp.
 

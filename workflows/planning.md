@@ -22,7 +22,7 @@ Planning is itself a loop. A decomposition that looks clean on first pass often 
 
 When a decomposition doesn't hold, the response depends on why. If the research was insufficient — the plan reveals questions that should have been answered already — loop back to [research](research.md) for targeted investigation. If the scope is wrong — structuring reveals the task is larger or differently shaped than expected — reshape scope with the human before continuing. If the steps just need reordering or regrouping, iterate on the decomposition itself.
 
-The human's role during planning is recognizing which of these is happening. An agent may keep trying to force a decomposition that doesn't hold rather than surfacing that the inputs are insufficient — an instance of [scope completion bias](../agent-patterns.md#scope-completion-bias).
+The human's role during planning is recognizing which of these is happening. An agent may keep trying to force a decomposition that isn't working rather than surfacing that the inputs are insufficient — an instance of [scope completion bias](../agent-patterns.md#scope-completion-bias).
 
 ## What a plan contains
 
