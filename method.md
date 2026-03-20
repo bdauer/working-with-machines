@@ -6,15 +6,15 @@ has_children: true
 
 # Method
 
-A method for orchestrating complex work with AI agents. The work runs on the human's qualitative attention — what to notice, when to push. Phases give that attention structure, and judgment determines the transitions.
+A method for orchestrating complex work with AI agents. Research, plan, implement, review — four phases that loop into each other at every scale. What holds them together is the human's qualitative attention (what to notice, when to push).
 
-The method works with how agents reason and is fractal: each phase can contain any other phase, and at every scale choosing what to invoke matters as much as the phases themselves.
+The method works with how agents reason and is fractal: each phase can contain any other phase. Choosing what to use at a given scale matters as much as the phases themselves.
 
 For concrete techniques without the framework, see the [quick start](quick-start.md). For background, see [how this developed](formation.md).
 
 ## Phases
 
-The method has four phases — research, plan, implement, review — that loop into each other. Any phase can loop back to any other, and at any given scale some may not be needed at all. Deciding when to loop back and when to move forward is part of the method. Phases catch mismatches between the human's mental model and reality.
+Any phase can loop back to any other, and at any given scale some may not be needed at all. Deciding when to loop back and when to move forward is part of the method. Phases catch mismatches between the human's mental model and reality.
 
 ```mermaid
 stateDiagram-v2
@@ -39,7 +39,7 @@ The human brings domain knowledge and organizational context. The [workflow docs
 
 Gather material, notice patterns, let the structure emerge. Research starts with directed attention — sometimes a clear picture of what's needed, sometimes an open question.
 
-Parallel agents are a natural fit. Each agent enters deeply into a limited area and the human and orchestrating agent synthesize across them.
+Parallel agents are a natural fit. Each agent focuses on a limited area and the human and orchestrating agent synthesize across them.
 
 Agents generate assumptions silently as they work — filling gaps in their context with plausible premises. Research makes these visible by tracking two things explicitly:
 
@@ -60,9 +60,9 @@ Planning is where the fractal structure is most visible — the plan determines 
 
 ### Implement
 
-Execute the plan. Implementation has higher agent autonomy, but it contains its own cycles of research, planning, and review as the work reveals things the plan didn't anticipate.
+Execute the plan. Implementation has higher agent autonomy, but it contains its own cycles of research, planning and review as the work reveals things the plan didn't anticipate.
 
-As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These findings need to flow back to the human or coordinating agent. The agent surfaces what it's found at defined breakpoints:
+As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. The agent surfaces what it's found at defined breakpoints:
 
 - When something is **load-bearing** — the plan depends on it, or other decisions cascade from it
 - When it's **cheap to verify now** and expensive to fix later
@@ -74,7 +74,7 @@ An agent that encounters fundamental problems should stop and surface them rathe
 
 ### Review
 
-Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual, or shaped by something specific the process surfaced. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
+Review works best with multiple passes from different angles. The angles emerge from the work — technical, structural, contextual or shaped by something specific the process surfaced. What matters is that each pass enters one perspective deeply, and that the perspectives catch different categories of issue.
 
 Evaluative reviewers — those checking quality, correctness, maintainability — should not see the implementation plan. The plan creates anchoring: a reviewer who knows what the code was supposed to do evaluates against intent rather than reality. Alignment reviews ("did we build what we planned?") are different; those need the plan.
 
@@ -90,16 +90,13 @@ At a given scale, some phases may not be needed: a well-understood task might sk
 
 The workflow is structured around how agents reason in practice — connecting material across their context non-linearly. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
-- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task. Unnecessary context creates anchoring; insufficient context creates blind spots. Context scoping also has a security dimension — agents with unnecessary context have unnecessary access.
+- **Scoping agent context deliberately.** Each agent gets what it needs for its task. Unnecessary context creates anchoring, insufficient context creates blind spots. Scoping also has a security dimension — agents with unnecessary context have unnecessary access.
 - **Letting findings accumulate before structuring.** Research and early review give agents room to surface unexpected connections before planning and implementation impose structure.
-- **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings cross-pollinate at synthesis time in ways sequential execution misses.
+- **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings connect at synthesis time in ways sequential execution misses.
 
 ## Knowledge accumulation
 
-As findings and assumptions accumulate, they create two problems.
-
-- **Focus degradation.** Agents spend more effort processing noise than doing useful work. Accumulated material degrades focus within a session.
-- **Context boundaries.** Findings need to survive being passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
+As findings and assumptions accumulate, agents lose focus — spending more effort processing noise than doing useful work. Findings also need to survive context boundaries: passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
 
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.
@@ -108,7 +105,7 @@ When accumulated knowledge gets heavy, the human notices and the agent helps ide
 
 ## The human role
 
-The human brings domain knowledge, experience, and organizational context. The core of the role is directing attention — recognizing where the work needs to go and what's getting in the way:
+The core of the human role is directing attention:
 
 - **Gap recognition.** Noticing what's missing — sometimes as a specific observation, sometimes as a pre-articulable sense that something isn't right.
   - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. See [background](formation.md) for more on how this attention develops.
@@ -125,9 +122,7 @@ The method is scoped to a single practitioner and their agents. It doesn't addre
 
 ## Convergence
 
-**The signal.** New passes confirm rather than extend. Findings stop surprising.
-
-**Recognition.** The practitioner recognizes convergence before they can fully justify it — in the decreasing novelty of each pass and the consistency across angles — then verifies formally.
+**The signal.** New passes confirm rather than extend. Findings stop surprising. The practitioner often recognizes convergence before they can fully justify it — the fifth review comes back with nothing new, different angles are finding the same things — then verifies formally.
 
 **False convergence.** Premature closure happens — fatigue mistaken for completion, or a blind spot that feels like coverage. Multi-angle review is the defense: if convergence holds across several perspectives, it's more likely real. If a new perspective finds significant issues, the work continues.
 

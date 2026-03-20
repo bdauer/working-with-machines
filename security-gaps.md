@@ -5,7 +5,7 @@ nav_order: 8
 
 # The security gap in agentic tooling
 
-I needed to secure AI agents running in containers with access to shells, file systems, APIs, and databases. I ran into gaps. The security standards that exist weren't designed for this.
+I needed to secure AI agents running in containers with access to shells, file systems, APIs and databases. I ran into gaps. The security standards that exist weren't designed for this.
 
 ## The problem underneath
 
@@ -103,7 +103,7 @@ The devcontainer spec provides no security primitives for this use case. No outb
 
 ### Outbound traffic filtering
 
-An agent that can make arbitrary HTTP requests can exfiltrate data. Allowlisting the specific endpoints an agent needs and blocking everything else is a basic control, but most agentic setups don't implement it. Container-level network policies, DNS-based filtering, or proxy configurations can enforce this — the primitives exist, but applying them per-agent rather than per-container requires configuration that current tooling doesn't streamline.
+An agent that can make arbitrary HTTP requests can exfiltrate data. Allowlisting the specific endpoints an agent needs and blocking everything else is a basic control, but most agentic setups don't implement it. Container-level network policies, DNS-based filtering or proxy configurations can enforce this — the primitives exist, but applying them per-agent rather than per-container requires configuration that current tooling doesn't streamline.
 
 ### Supply chain
 

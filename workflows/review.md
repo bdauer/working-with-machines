@@ -6,9 +6,9 @@ nav_order: 4
 
 # Workflow: Review
 
-Evaluating artifacts — code, documents, plans, research outputs — through bounded perspectives applied in rounds. Applies the [method](../method.md) with the key distinction that each pass changes the artifact, so subsequent passes operate on different material.
+Evaluating artifacts (code, documents, plans, research outputs) through focused perspectives, one round at a time. Each pass changes the artifact, so subsequent passes operate on different material. See the [method](../method.md) for how review fits the larger cycle.
 
-Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes.
+Review is also a phase within every other workflow.
 
 ## Perspectives
 
@@ -18,7 +18,7 @@ The perspectives emerge from the work. A change that touches authentication sugg
 
 Each perspective is scoped tightly. A reviewer agent assigned to evaluate test quality doesn't need to assess architectural fit. The bounded scope makes the review more productive — the agent goes deeper into its assigned concern without diluting attention across everything.
 
-One perspective worth calling out: the **cold reader** — a fresh agent simulating someone encountering the artifact for the first time, often with limited patience. Cold readers catch where engagement drops, where explanation is redundant, and where length isn't earning its keep. Particularly valuable for documents and any artifact that will be read by humans, because iterative refinement tends to add material without removing what the additions made obsolete.
+The **cold reader** — a fresh agent simulating someone encountering the artifact for the first time, often with limited patience. Cold readers catch where engagement drops, where explanation is redundant and where the length isn't justified. Particularly valuable for documents and any artifact that will be read by humans, because iterative refinement tends to add material without removing what the additions made obsolete.
 
 ## Multiple rounds
 
@@ -45,9 +45,9 @@ A finding's nature determines where it routes. Not every finding is a fix to the
 
 ## The investigative character
 
-Review is investigative, like research — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
+Review is investigative, like research — looking for what's there, what's missing, what doesn't add up. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
 
-This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence.
+This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified or that two sections draw on contradictory evidence.
 
 ## Convergence
 
@@ -63,7 +63,7 @@ Once passes are producing minor findings only, stop.
 
 ## The human gate
 
-The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review, and plan review alike.
+The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review and plan review alike.
 
 The human also decides which discussion findings to accept, defer, or dismiss. When delivering feedback on review findings, [batch it](../method.md#the-human-role) — the agent produces better revisions when it sees the full pattern rather than individual corrections.
 

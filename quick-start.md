@@ -29,7 +29,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
 
 ## Running parallel agents
 
-**Parallelize by default.** When two investigations don't depend on each other, run them simultaneously. Each agent enters one area deeply with bounded context; synthesis happens at the orchestration level. → [Parallel execution](method.md#working-with-how-agents-reason)
+**Parallelize by default.** When two investigations don't depend on each other, run them simultaneously. Each agent works one area with bounded context; synthesis happens at the orchestration level. → [Parallel execution](method.md#working-with-how-agents-reason)
 
 **Layer agents for large investigations.** One agent per area of concern, plus a broader agent looking at cross-cutting themes. The cross-cutting agent catches dependencies and shared patterns that area-specific agents miss. → [Parallel investigation](workflows/research.md#parallel-investigation)
 

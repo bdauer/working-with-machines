@@ -15,9 +15,9 @@ Existing processes are breaking down. But their shape hints at the outline of wh
 
 ## Where the gates move
 
-The question is whether a higher-order review process meets the same needs as line-by-line reading. Does reviewing the agent's process, the test coverage, the architectural decisions, and the review cascade produce equivalent or better confidence?
+The question is whether a higher-order review process meets the same needs as line-by-line reading. Does reviewing the agent's process, the test coverage, the architectural decisions and the review cascade produce equivalent or better confidence?
 
-I think it does, in many cases. The agent reviews more thoroughly than most humans — it doesn't get tired, it doesn't skim, it can apply multiple specialized perspectives in sequence. What it can't do is judge whether the work should have been done at all, whether it fits the organizational context, or whether the tradeoffs reflect the right priorities.
+I think it does, in many cases. The agent reviews more thoroughly than most humans — it doesn't get tired, it doesn't skim, it can apply multiple specialized perspectives in sequence. What it can't do is judge whether the work should have been done at all, whether it fits the organizational context or whether the tradeoffs reflect the right priorities.
 
 The gates shift up. The human focuses on bigger-picture concerns: does this fit, are the tradeoffs right. Trust in the details comes from the agent's review cascade and test coverage, not from a person reading every line.
 
@@ -33,7 +33,7 @@ I've been encouraging people not to read the documentation we produce. Not the h
 
 When a human needs to go deeper, the path is asking an agent to answer a specific question, with the documentation as context. The human goes deeper using an agent, not through direct reading, even when the document is structured so that a human could read it.
 
-This changes what good documentation looks like. Structure still matters, but for agent parseability and retrieval, not sequential human reading. Provenance matters more than prose. The question a finding answered, what it assumed, what evidence produced it. That context is what makes a document useful as signal.
+This changes what good documentation looks like. Structure still matters, but for agent parseability and retrieval, not sequential human reading. The question a finding answered, what it assumed, what evidence produced it. That context is what makes a document useful as signal.
 
 High-level summaries still need to work for humans. Someone jumping into a project needs an entry point they can read directly. But from there, the path is through an agent: absorbing the larger artifacts and answering specific questions against that context. The detailed documentation becomes a database the human queries through natural language.
 

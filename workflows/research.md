@@ -6,9 +6,9 @@ nav_order: 1
 
 # Workflow: Research
 
-Investigation tasks — architecture evaluations, vendor assessments, codebase analysis — where the goal is to understand something. Applies the [method](../method.md) with an emphasis on parallel exploration and synthesis.
+Architecture evaluations, vendor assessments, codebase analysis, cross-system investigations — where the goal is to understand something. Parallel exploration is the default; synthesis happens at the [orchestration level](../method.md).
 
-Research is also the opening phase of most other workflows. The [documentation workflow](documentation.md) begins with gathering context.
+Research is also the opening phase of most other workflows.
 
 ## Starting conditions
 
@@ -18,7 +18,7 @@ A specific question produces a focused investigation with clear convergence crit
 
 ## Parallel investigation
 
-Parallel agents are the default. Each agent enters deeply into one area — a codebase region, a data source, an external system — without needing to hold the full picture. The human and orchestrating agent synthesize across them.
+Parallel agents are the default. Each agent digs into one area — a codebase region, a data source, an external system — without needing to hold the full picture. The human and orchestrating agent synthesize across them.
 
 Bound each agent's context to what it needs. An agent investigating database query patterns doesn't need to know about the frontend architecture. The bounded context makes the agent more productive — depth within a limited area surfaces connections that broad focus misses.
 
@@ -51,7 +51,7 @@ When accumulated knowledge gets heavy, [condense it](../method.md#knowledge-accu
 
 Research is a conversation between the human's directed attention and the agent's ability to find connections across large bodies of material. The human often has an intuition about where to look or what matters but isn't an expert in every area the research touches. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
 
-This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition.
+This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition. The correction sharpens both sides.
 
 ## Convergence
 

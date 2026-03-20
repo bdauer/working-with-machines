@@ -6,9 +6,9 @@ nav_order: 2
 
 # Workflow: Planning
 
-Decomposition — turning what research surfaced into steps that can be executed. Applies the [method](../method.md) with an emphasis on assumption surfacing and iterative refinement.
+Turning what research surfaced into steps that can be executed. The emphasis is on assumption surfacing and iterative refinement — the [method's](../method.md) planning phase applied to decomposition work.
 
-Planning is also a phase within every other workflow. [Documentation](documentation.md#draft-and-shape) includes structure negotiation.
+Planning is also a phase within every other workflow.
 
 ## Starting conditions
 

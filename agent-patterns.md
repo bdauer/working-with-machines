@@ -35,13 +35,9 @@ These mechanisms are individually documented in AI research. The combined effect
 
 ## Over-escalation
 
-Agents default to surfacing decisions rather than making them, even when the decision is within their competence.
+Agents default to surfacing decisions rather than making them, even when the decision is within their competence. The agent presents four options and asks which one to pursue when the evidence clearly favors one. It defers on straightforward engineering tradeoffs it could resolve from available evidence.
 
-**What it looks like:** The agent presents four options and asks which one to pursue when the evidence clearly favors one. It defers to the human on technical questions and straightforward engineering tradeoffs it could resolve from available evidence.
-
-**Why it happens:** A combination of locality bias (the agent doesn't realize it has enough information) and training incentives (human preference data rewards deference over confidence in ambiguous situations). The agent's uncertainty about what the human cares about makes escalation feel safer than deciding.
-
-**What to do about it:** Set expectations in the agent's context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does.
+This comes from locality bias (the agent doesn't realize it has enough information) and training incentives (human preference data rewards deference). Set expectations in context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does.
 
 ## Triadic lists
 
@@ -67,13 +63,9 @@ Over extended conversations, agents become increasingly agreeable — confirming
 
 ## Self-correction decay
 
-Agents' ability to meaningfully critique and improve their own output drops sharply after 2-3 iterations.
+Agents' ability to meaningfully critique and improve their own output drops sharply after 2-3 iterations. The first self-review catches real issues. The second catches minor ones. By the third, the agent declares the output satisfactory regardless of remaining problems.
 
-**What it looks like:** The first self-review catches real issues. The second catches minor ones. By the third, the agent declares the output satisfactory regardless of remaining problems.
-
-**Why it happens:** Self-preference bias compounds with each iteration — the output becomes more "in-distribution" for the model. The agent's evaluation mechanism is biased toward its own generations, and this bias grows with each revision cycle.
-
-**What to do about it:** Don't rely on the same agent for more than 2-3 rounds of self-review. After that, a fresh reviewer agent or a human pass is needed. The method's multi-round review with different perspectives is designed around this — each round uses agents that haven't seen prior versions.
+Self-preference bias compounds with each iteration — the output becomes more "in-distribution" for the model, and the evaluation mechanism grows more favorable with each revision cycle. Don't rely on the same agent for more than 2-3 rounds of self-review. After that, a fresh reviewer agent or a human pass is needed.
 
 ## Scope completion bias
 
