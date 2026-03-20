@@ -6,9 +6,7 @@ nav_order: 5
 
 # Workflow: Producing Documents
 
-The [method](../method.md) applied to research-and-write tasks — investigation reports, architecture docs, evaluation documents, anything where the output is a written artifact shaped by research.
-
-What makes documentation distinct: the act of drafting is itself a structuring activity. Writing reveals gaps that research didn't surface, and the structure of the document often shifts during writing. Planning and implementation overlap more here than in code — a draft is the plan being tested.
+Research-and-write tasks — investigation reports, architecture docs, evaluation documents — where the output is a written artifact shaped by research. Applies the [method](../method.md) with a distinctive overlap between planning and implementation: drafting structures the material, reveals gaps that research didn't surface, and shifts the document's shape during writing. A draft is the plan being tested.
 
 ## Gather context
 
@@ -18,13 +16,17 @@ Start with what exists. Point agents at source material — existing docs, code,
 
 Sometimes the document's scope is clear from the start. Sometimes it emerges from what the research surfaces. The [dialogical loop](research.md#the-dialogical-loop) handles either.
 
-[Findings and assumptions](../method.md#research) accumulate. What's expected but missing becomes the next round of directed research. The phase is done when the material is sufficient for drafting — [convergence](../method.md#convergence).
+[Findings and assumptions](../method.md#research) accumulate. What's expected but missing becomes the next round of directed research. The phase is done when the material is sufficient for drafting — convergence.
 
 ## Draft and shape
 
-Course-correct on structure early — structural changes before editorial polish are cheap; after, they waste the polish. Sometimes you propose a specific structure; sometimes you give the agent constraints (doc type, audience, qualities) and let it determine structure from those; sometimes you give it a free hand.
+Course-correct on structure early — structural changes before editorial polish are cheap; after, they waste the polish. The human can propose a specific structure, provide constraints (doc type, audience, qualities) and let the agent determine structure, or leave it open.
 
-When your instinct says a structure doesn't fit but you can't articulate why, ask the agent to evaluate the choice against the content. Agents won't reliably volunteer structural objections, but they're good at evaluating a specific proposal when asked. The result is often something neither of you started with — productive friction applied to structure.
+Structuring decisions depend on who will consume the document. A high-level summary meant as a human entry point has different priorities than a detailed investigation report that agents will primarily consume. For human-facing documents, structure serves the reader — earning its length, matching the level of detail to the audience. The existing guidance in this workflow assumes this case.
+
+For agent-consumable documents, structure serves retrieval and parseability. Each finding should carry what question produced it, what was assumed, what evidence supports it — the [provenance](../method.md#knowledge-accumulation) that lets an agent locate and use a specific finding without processing the whole document. Many documents serve both audiences: a human-readable summary layer over detailed findings that agents can dig into. The structural challenge is making both layers work without one degrading the other.
+
+When a structure feels wrong but the reason is hard to articulate, asking the agent to evaluate the choice against the content often resolves it. Agents won't reliably volunteer structural objections, but they're good at evaluating a specific proposal when asked. The result is often something neither party started with — see [productive friction](../formation.md).
 
 Drafting surfaces gaps that gathering didn't. A section that seemed well-supported turns out to rest on a single source. A transition between sections reveals a logical dependency that hadn't been mapped. These are signals to loop back to research for targeted fills — specific questions the draft raised, not a restart of the research phase.
 
@@ -34,9 +36,11 @@ The human drives quality during drafting. The agent produces volume and coverage
 
 The [review workflow](review.md) applies here — multiple passes from different angles, each perspective entered deeply. Spin up reviewer agents with specific briefs (e.g., conciseness, technical accuracy) rather than asking one agent to evaluate everything.
 
+For agent-consumable documents, the review concern shifts. The cold reader perspective evaluates whether a human can engage with the artifact. For documents primarily consumed by agents, the question is whether an agent can retrieve and use specific findings — whether provenance is attached, whether the structure supports targeted queries rather than sequential reading.
+
 Agent-drafted prose has characteristic patterns worth watching for during review — [triadic lists and contrast constructions](../agent-patterns.md#triadic-lists) in particular.
 
-Review is done when passes produce diminishing findings — the document has [converged](../method.md#convergence). Once findings are minor, stop. Targeted fixes at this stage; don't reopen structure.
+Review is done when passes produce diminishing findings — the document has converged. Once findings are minor, stop. Targeted fixes at this stage; don't reopen structure.
 
 ## Building a collection
 

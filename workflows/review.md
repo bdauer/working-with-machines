@@ -6,9 +6,9 @@ nav_order: 4
 
 # Workflow: Review
 
-The [method](../method.md) applied to evaluating artifacts — code, documents, plans, research outputs. Each pass changes the artifact, so subsequent passes operate on different material.
+Evaluating artifacts — code, documents, plans, research outputs — through bounded perspectives applied in rounds. Applies the [method](../method.md) with the key distinction that each pass changes the artifact, so subsequent passes operate on different material.
 
-Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes; [implementation](implementation.md) includes multi-round code review. This document describes review as a general practice and as the pattern those phases draw from.
+Review is also a phase within every other workflow. The [documentation workflow](documentation.md) ends with review passes; [implementation](implementation.md) includes multi-round code review.
 
 ## Perspectives
 
@@ -32,7 +32,7 @@ Repeated passes of the same perspective have value. A correctness review applied
 
 Review produces findings — must-fix, discussion, and minor. The standard triage applies: must-fix gets addressed before the next round, minor accumulates for a cleanup pass or gets skipped.
 
-The critical classification in agentic review is **discussion** — findings where the agent recognizes a question it can't answer. Agents default to resolving everything with high confidence. The valuable behavior is the opposite: surfacing a trade-off the agent can see but can't evaluate, because the right response depends on context outside its window. These don't get auto-fixed. The reviewer surfaces the question; the human holds the context to answer it.
+The critical classification in agentic review is **discussion** — findings where the agent recognizes a question it can't answer. Agents default to resolving everything with high confidence. What matters more is surfacing a trade-off the agent can see but can't evaluate, because the right response depends on context outside its window. These don't get auto-fixed. The reviewer surfaces the question; the human holds the context to answer it.
 
 ## Where findings go
 
@@ -45,9 +45,9 @@ A finding's nature determines where it routes. Not every finding is a fix to the
 
 ## The investigative character
 
-Review is investigative, like [research](research.md) — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
+Review is investigative, like research — looking for what's there, what's missing, what doesn't cohere. The difference is the starting point: research begins with an open question; review begins with an artifact and asks whether it holds up.
 
-This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence. The artifact made gaps visible that weren't apparent before the material took shape.
+This means review can surface findings that the original research missed. A reviewer reading a document may notice that a claim isn't supported, that an assumption wasn't verified, or that two sections draw on contradictory evidence.
 
 ## Convergence
 
@@ -66,3 +66,5 @@ Once passes are producing minor findings only, stop.
 The human makes the final call on whether review is complete. The agent can propose that convergence has been reached; the human verifies. This is true for code review, document review, and plan review alike.
 
 The human also decides which discussion findings to accept, defer, or dismiss. When delivering feedback on review findings, [batch it](../method.md#the-human-role) — the agent produces better revisions when it sees the full pattern rather than individual corrections.
+
+The depth of review is itself a judgment call. Some artifacts warrant multiple rounds of detailed review from several perspectives. Others — where the process is trusted and the scope is well-understood — warrant checking the high-level output and the process that produced it. The level of scrutiny varies by what's at stake and how much the intermediate steps have already been validated.

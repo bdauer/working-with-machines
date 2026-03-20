@@ -6,15 +6,15 @@ has_children: true
 
 # Method
 
-A method for orchestrating complex work with AI agents. The primary instrument is the human's qualitative attention — what to notice, when to push, where to direct. Phases give that attention structure, and the transitions between them are governed by judgment.
+A method for orchestrating complex work with AI agents. The work runs on the human's qualitative attention — what to notice, when to push. Phases give that attention structure, and judgment determines the transitions.
 
-The method works with how agents reason and is fractal: each phase can contain any other phase, and at every scale the judgment of what to invoke is as important as the phases themselves.
+The method works with how agents reason and is fractal: each phase can contain any other phase, and at every scale choosing what to invoke matters as much as the phases themselves.
 
 For concrete techniques without the framework, see the [quick start](quick-start.md). For background, see [how this developed](formation.md).
 
 ## Phases
 
-The method has four phases — research, plan, implement, review — that loop into each other. Any phase can loop back to any other, and at any given scale some may not be needed at all. The judgment of when to loop back, when to skip, and when to move forward is part of the method. Phases catch mismatches between the human's mental model and reality.
+The method has four phases — research, plan, implement, review — that loop into each other. Any phase can loop back to any other, and at any given scale some may not be needed at all. Deciding when to loop back and when to move forward is part of the method. Phases catch mismatches between the human's mental model and reality.
 
 ```mermaid
 stateDiagram-v2
@@ -33,7 +33,7 @@ stateDiagram-v2
 *Each phase contains this same cycle at a smaller scale.*
 {: .note }
 
-The human brings domain knowledge and organizational context. The [workflow docs](workflows/) are reference material for when you're starting a specific type of work — not required reading after this page.
+The human brings domain knowledge and organizational context. The [workflow docs](workflows/) are reference material for starting a specific type of work — not required reading after this page.
 
 ### Research
 
@@ -62,7 +62,7 @@ Planning is where the fractal structure is most visible — the plan determines 
 
 Execute the plan. Implementation has higher agent autonomy, but it contains its own cycles of research, planning, and review as the work reveals things the plan didn't anticipate.
 
-As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These findings need to flow back to the orchestration level. The agent surfaces what it's found at defined breakpoints:
+As the agent works, it encounters things the research didn't surface — edge cases, unexpected couplings, assumptions that don't hold in practice. These findings need to flow back to the human or coordinating agent. The agent surfaces what it's found at defined breakpoints:
 
 - When something is **load-bearing** — the plan depends on it, or other decisions cascade from it
 - When it's **cheap to verify now** and expensive to fix later
@@ -84,34 +84,41 @@ At a given scale, some phases may not be needed: a well-understood task might sk
 
 ## Working with how agents reason
 
-The workflow is structured to leverage how agents reason in practice — making connections across their context in ways that don't follow linear paths. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
+The workflow is structured around how agents reason in practice — connecting material across their context non-linearly. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
-- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task. Unnecessary context creates anchoring; insufficient context creates blind spots.
+- **Scoping agent context deliberately.** Each agent gets the specific context it needs for its task. Unnecessary context creates anchoring; insufficient context creates blind spots. Context scoping also has a security dimension — agents with unnecessary context have unnecessary access.
 - **Letting findings accumulate before structuring.** Research and early review give agents room to surface unexpected connections before planning and implementation impose structure.
 - **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings cross-pollinate at synthesis time in ways sequential execution misses.
 
 ## Knowledge accumulation
 
-As findings and assumptions accumulate, they create two problems. Agents spend more effort processing noise than doing useful work — accumulated material degrades focus within a session. And findings need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
+As findings and assumptions accumulate, they create two problems.
+
+Agents spend more effort processing noise than doing useful work — accumulated material degrades focus within a session.
+
+Findings also need to survive context boundaries — passed between agents, carried across sessions, loaded into fresh agents that have no history with the work.
 
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.
 
-When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed — simplify, reduce noise, highlight the larger overarching concerns. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
+When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed — simplify, reduce noise, and highlight the overarching concerns. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
 
 ## The human role
 
 The human brings domain knowledge, experience, and organizational context. The core of the role is directing attention — recognizing where the work needs to go and what's getting in the way:
 
 - **Gap recognition.** Noticing what's missing — sometimes as a specific observation, sometimes as a pre-articulable sense that something isn't right.
-  - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. The capacity sharpens with experience. See [background](formation.md) for more on how this attention develops.
-- **Calibration.** Agents are biased toward what's local — what's visible in their current context.
+  - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. See [background](formation.md) for more on how this attention develops.
+- **Calibration.** Agents are biased toward what's local — what's visible in their current context. See [locality bias](agent-patterns.md#locality-bias) and [over-escalation](agent-patterns.md#over-escalation) for why.
   - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
   - This bias has a temporal dimension: the more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
-- **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space.
+- **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. See [sycophancy amplification](agent-patterns.md#sycophancy-amplification) for why this matters.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
 - **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.
+- **Sustainability.** Directing attention across multiple parallel workstreams degrades judgment when the human can't keep pace with the throughput. Unstructured time away from the work — letting the back burner process what's accumulated — is part of keeping that attention sharp.
+
+The method is scoped to a single practitioner and their agents. It doesn't address how the practitioner's judgment is evaluated by others, how trust is established within a team, or how the method interacts with organizational process gates. These are open questions — see [what's changing](whats-changing.md) for one perspective.
 
 ## Convergence
 

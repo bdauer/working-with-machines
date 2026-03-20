@@ -6,9 +6,9 @@ nav_order: 2
 
 # Workflow: Planning
 
-The [method](../method.md) applied to decomposition — turning what research surfaced into steps that can be executed.
+Decomposition — turning what research surfaced into steps that can be executed. Applies the [method](../method.md) with an emphasis on assumption surfacing and iterative refinement.
 
-Planning is also a phase within every other workflow. [Implementation](implementation.md) includes a design stage; [documentation](documentation.md#draft-and-shape) includes structure negotiation. This document describes planning as a standalone activity and as the general pattern those phases draw from.
+Planning is also a phase within every other workflow. [Implementation](implementation.md) includes a design stage; [documentation](documentation.md#draft-and-shape) includes structure negotiation.
 
 ## Starting conditions
 
@@ -26,13 +26,13 @@ The human's role during planning is recognizing which of these is happening. An 
 
 ## What a plan contains
 
-Agents fill ambiguity with assumptions silently. A useful plan has the agents surface the assumptions they're making so the human can investigate the ones that matter and catch the ones that are wrong before they're baked into the work.
+A useful plan has the agents surface the assumptions they're making so the human can investigate the ones that matter and catch the ones that are wrong before they're baked into the work.
 
 Planning both surfaces new assumptions — from the decomposition work itself — and pressure-tests assumptions carried forward from research.
 
 ## Planning as conversation
 
-Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold, adds context the agent can't see, and validates the direction. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
+Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold and adds context the agent can't see. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
 
 Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously, or having agents draft competing decompositions when the best approach isn't clear.
 
@@ -40,4 +40,4 @@ Planning is more serial than other phases — the human and agent iterate on a s
 
 Sometimes planning doesn't need its own phase. The research itself reveals what to do, and the path is clear enough that formalizing a plan adds nothing. A bug investigation that surfaces the root cause often produces the fix as a byproduct — stopping to write a plan would be ceremony.
 
-Recognizing when planning is implicit is part of the method's judgment. The signal: if structuring the steps would produce a document that says what everyone already knows, skip it. If the work involves coordination across agents, unknown dependencies, or scope that could expand, make the plan explicit.
+The signal: if structuring the steps would produce a document that says what everyone already knows, skip it. If the work involves coordination across agents, unknown dependencies, or scope that could expand, make the plan explicit.

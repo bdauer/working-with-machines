@@ -5,7 +5,7 @@ nav_order: 5
 
 # Agent Behavioral Patterns
 
-Patterns observed in working with LLM agents — what they do, why, and how the [method](method.md) works with each one.
+Patterns observed in working with LLM agents — what they do, why, and how the [method](method.md) works with each one. Each pattern connects to specific aspects of the method and [workflows](workflows/).
 
 ## Locality bias
 
@@ -16,8 +16,6 @@ Agents anchor to what's in their current context. Information outside the contex
 **Why it happens:** The agent can only reason over what's in its context. It doesn't know what it hasn't seen, so it can't assess whether the answer is within reach. The bias is toward escalating rather than investigating — the safer default from the agent's perspective.
 
 **What to do about it:** Push back on escalations. Before accepting "needs human judgment," consider whether the agent could answer the question from available data — version history, dependency patterns, usage spread.
-
-See [calibration](method.md#the-human-role).
 
 ## Temporal locality bias
 
@@ -31,9 +29,9 @@ Over multiple revision cycles, agents treat the artifact's current shape as incr
 - RLHF training structurally rewards agreement with premises in context
 - Self-correction effectiveness decays sharply after 2-3 iterations
 
-These mechanisms are individually documented in AI research; the composite effect in human-in-the-loop editing is observed in practice but not yet studied as a unified phenomenon.
+These mechanisms are individually documented in AI research. The combined effect in human-in-the-loop editing is observed in practice but not yet studied.
 
-**What to do about it:** Spin up fresh reviewer agents for later review rounds. A new agent has no history with the artifact and evaluates its current state without anchoring to prior versions. The method's multi-perspective review structure is partly designed around this — each perspective is a fresh entry point. See [convergence in review](workflows/review.md#convergence).
+**What to do about it:** Spin up fresh reviewer agents for later review rounds. A new agent has no history with the artifact and evaluates its current state without anchoring to prior versions. The method's multi-perspective review structure is partly designed around this — each perspective is a fresh entry point.
 
 ## Over-escalation
 
@@ -43,7 +41,7 @@ Agents default to surfacing decisions rather than making them, even when the dec
 
 **Why it happens:** A combination of locality bias (the agent doesn't realize it has enough information) and training incentives (human preference data rewards deference over confidence in ambiguous situations). The agent's uncertainty about what the human cares about makes escalation feel safer than deciding.
 
-**What to do about it:** Set expectations in the agent's context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does. See [calibration](method.md#the-human-role).
+**What to do about it:** Set expectations in the agent's context: "make decisions where the evidence supports one direction; escalate only when the tradeoff depends on context you don't have." When the agent escalates, ask whether it has enough information to decide. Often it does.
 
 ## Triadic lists
 
@@ -73,7 +71,7 @@ Over extended conversations, agents become increasingly agreeable — confirming
 
 **Why it happens:** Conversation length itself increases agreement tendency. RLHF training rewards responses that match the human's stated views. The accumulated context creates a strong prior about what the human wants to hear.
 
-**What to do about it:** Explicitly invite pushback — "find the weakness in this direction," "argue against this approach." Use friction by invitation at points where you suspect the agent is agreeing rather than evaluating. For critical decisions, spin up a fresh agent with an adversarial brief. See [friction by invitation](method.md#the-human-role).
+**What to do about it:** Explicitly invite pushback — "find the weakness in this direction," "argue against this approach." Use friction by invitation at points where you suspect the agent is agreeing rather than evaluating. For critical decisions, spin up a fresh agent with an adversarial brief.
 
 ## Self-correction decay
 
@@ -83,7 +81,7 @@ Agents' ability to meaningfully critique and improve their own output drops shar
 
 **Why it happens:** Self-preference bias compounds with each iteration — the output becomes more "in-distribution" for the model. The agent's evaluation mechanism is biased toward its own generations, and this bias grows with each revision cycle.
 
-**What to do about it:** Don't rely on the same agent for more than 2-3 rounds of self-review. After that, a fresh reviewer agent or a human pass is needed. The method's multi-round review with different perspectives is designed around this — each round uses agents that haven't seen prior versions. See [multiple rounds](workflows/review.md#multiple-rounds).
+**What to do about it:** Don't rely on the same agent for more than 2-3 rounds of self-review. After that, a fresh reviewer agent or a human pass is needed. The method's multi-round review with different perspectives is designed around this — each round uses agents that haven't seen prior versions.
 
 ## Scope completion bias
 
@@ -96,3 +94,5 @@ Agents are biased toward completing their assigned task rather than stopping to 
 **What to do about it:** Establish halt authority — tell the agent it can and should stop if the task is misconceived: "If this approach cannot work, say so and explain why rather than producing a partial result."
 
 Monitor for agents that are struggling without surfacing the struggle — low-quality output on a well-defined task may mean the agent is working around a fundamental problem.
+
+Scope completion bias also has security implications. An agent that treats its own security configuration as an obstacle to completing a task may attempt to modify or work around it rather than stopping. See [self-modification prevention](security-gaps.md#self-modification-prevention).
