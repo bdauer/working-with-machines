@@ -2,6 +2,8 @@
 title: What's changing
 parent: Articles
 nav_order: 1
+redirect_from:
+  - /whats-changing/
 ---
 
 # What's changing

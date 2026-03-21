@@ -2,6 +2,8 @@
 title: The security gap in agentic tooling
 parent: Articles
 nav_order: 2
+redirect_from:
+  - /security-gaps/
 ---
 
 # The security gap in agentic tooling
