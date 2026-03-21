@@ -121,4 +121,6 @@ The author's feedback can go anywhere:
 - Back to Conversation if a thread needs developing
 - Small edits applied directly
 
+When iteration produces substantive new content (a new paragraph, a nuance being added, a section rewrite), run it through editorial review before presenting. The same tics that affect full drafts affect individual additions.
+
 Follow the author's direction on where to go.

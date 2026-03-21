@@ -24,6 +24,7 @@ Determine what to review from the arguments:
 - **`all`:** Review all published `.md` files in the project root and `workflows/` (exclude dotfiles and `open-questions.md`)
 - **No argument:** Review files changed since the last commit (`git diff --name-only HEAD~1` filtered to published `.md` files). If nothing changed, ask the user what to review.
 - **From article-drafting:** Review the provided draft text. All reviewers treat the draft as article voice. Do not pass the approved structure to reviewers — it creates anchoring toward checking compliance rather than evaluating independently. Reviewers also check for employer-specific content that should have been generalized.
+- **`cross-cutting`:** Review all method-related docs as a unit (method.md, formation.md, quick-start.md, agent-patterns.md, workflows/*). Run after per-page reviews are resolved. Check concept consistency across files, duplication vs. cross-reference, foundational ordering, workflow self-sufficiency, cross-reference quality, gaps (concepts referenced but never defined, terms used downstream but not grounded where they originate), and structural consistency across workflow pages.
 
 ## Setup
 
@@ -75,6 +76,7 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > You are reviewing for structure, flow, and information architecture. Check:
 > - Cross-reference quality (links placed where readers need them, no gratuitous links, no broken links)
 > - Redundancy (cross-reference don't duplicate; restating with specific texture is fine, verbatim repetition is not)
+> - Absence (concepts that belong in a file's scope but aren't covered — a technique described in method.md should appear in the relevant workflow if it's within that workflow's scope)
 > - Self-sufficiency (each doc stands alone for its scope)
 > - Foundational ordering (earlier docs inform later ones)
 > - Workflows lead with what's unique, not method recap
@@ -97,6 +99,9 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > - Em dash density (check at the paragraph level — if every paragraph in a section has one, the pattern needs breaking even if each individual use is justified)
 > - Summative verdicts ("The tradeoff is real," "That's the clearest gain" — clean conclusions where the author would let the observation stand)
 > - Syntactic repetition across consecutive sentences (same grammatical structure three times in a row)
+> - Section-level rhythm (every section in a document following the same internal structure or opening with the same grammatical pattern)
+> - Formulaic cross-references (three consecutive "See [X] for why" or "→ [Link]" in the same format)
+> - Subtler contrast constructions ("X matters, but for Y, not Z" or "not every X, but not zero X either")
 > - Any pattern that appears because the agent defaults to it rather than because the content needs it
 >
 > Read the voice samples to understand the author's natural rhythm — short declarative punches, longer exploratory sentences, fragments. The fix is restoring that rhythm, not mechanical variation. For each finding: file, line range, the text, what pattern, your recommendation. Report findings only, no edits.
