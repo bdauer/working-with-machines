@@ -36,6 +36,7 @@ Determine what to review from the arguments:
    - `formation.md` → background voice
    - `index.md` → method/reference voice
    - `about.md` → article voice (brief, warm, personal)
+   - `whats-new.md` → article voice (terse, dated entries)
 
 Articles may contain blockquotes of the author's raw, unedited voice. These should NOT be reviewed for agentic tics or voice drift — they are the author's actual writing, unprocessed.
 
