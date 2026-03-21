@@ -116,4 +116,4 @@ Agent configurations themselves (system prompts, skill definitions, hook files, 
 
 I ended up building solutions for each of these gaps from parts that weren't designed to work together. Container isolation, capability dropping, secrets management, outbound filtering as building blocks.
 
-Whether the patterns emerging from practice inform the standards that get written is an open question.
+It's an open question whether any of this feeds back into standard practice.
