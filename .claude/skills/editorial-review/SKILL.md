@@ -34,6 +34,7 @@ Determine what to review from the arguments:
    - `security-gaps.md`, `whats-changing.md` → article voice
    - `formation.md` → background voice
    - `index.md` → method/reference voice
+   - `about.md` → article voice (brief, warm, personal)
 
 Articles may contain blockquotes of the author's raw, unedited voice. These should NOT be reviewed for agentic tics or voice drift — they are the author's actual writing, unprocessed.
 
@@ -99,6 +100,19 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > - Any pattern that appears because the agent defaults to it rather than because the content needs it
 >
 > Read the voice samples to understand the author's natural rhythm — short declarative punches, longer exploratory sentences, fragments. The fix is restoring that rhythm, not mechanical variation. For each finding: file, line range, the text, what pattern, your recommendation. Report findings only, no edits.
+
+### 4. Cold reader (optional)
+
+**Brief:** No guide sections needed — this reviewer works from reader instinct, not editorial rules.
+
+**Instructions:**
+> You are a senior practitioner who was sent a link and has limited patience. You haven't been in the weeds of this project. Read the content fresh and report:
+> - Where your interest dies and you'd stop reading
+> - What's unclear without context you don't have
+> - Where explanation is redundant or length isn't earning its keep
+> - What you'd want to see that isn't there
+>
+> Be blunt. For each finding: file, where you disengaged or got confused, why. Report findings only, no edits.
 
 ## Consolidation
 

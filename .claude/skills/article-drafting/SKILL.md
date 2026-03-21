@@ -59,7 +59,7 @@ The author provides one piece of writing that needs to become a full article.
 
 ## Structure
 
-Get structure solid before any drafting.
+For short-form content (an about page, a brief note), structure can be implicit — go straight from conversation to drafting. For anything with sections, get structure solid before drafting.
 
 1. Propose sections and ordering. Include where blockquotes of the author's raw voice fit — from provided samples or as places where the author could write something new.
 2. For each section, one sentence on what it does.
@@ -80,6 +80,8 @@ Draft against the approved structure.
 - Blockquotes placed per structure, unedited.
 - Track assumptions as you draft (see Assumption Report below).
 - Ask the author whether they want sections individually or as a complete draft.
+- When the content is short or the direction is uncertain, draft multiple options with different balances (e.g. warmth vs. discoverability, minimal vs. detailed). Send them through editorial review together — comparative review reveals what works by contrast across options. Identify best elements and propose hybrids.
+- Evaluate the author's own proposals with the same critical eye as the agent's drafts. The author expects genuine assessment, not deference.
 
 ## Assumption Report
 
