@@ -29,7 +29,7 @@ When a structure feels wrong but the reason is hard to articulate, asking the ag
 
 Drafting surfaces gaps that gathering didn't. A section that seemed well-supported turns out to rest on a single source. A transition between sections reveals a logical dependency that hadn't been mapped. These are signals to loop back to research for targeted fills — specific questions the draft raised, not a restart of the research phase.
 
-The human drives quality during drafting. The agent produces volume and coverage; the human evaluates whether the structure serves the reader, whether the level of detail is right, whether the document is worth the length. This is where [batch feedback](../method.md#the-human-role) is most productive — accumulate observations across the draft, then deliver them together so the agent sees the pattern.
+The agent produces volume and coverage. The human evaluates whether the structure serves the reader, whether the level of detail is right, whether the document is worth the length. This is where [batch feedback](../method.md#the-human-role) is most productive — accumulate observations across the draft, then deliver them together so the agent sees the pattern.
 
 ## Review and refine
 
@@ -39,7 +39,7 @@ For agent-consumable documents, the review concern shifts. The cold reader persp
 
 Agent-drafted prose has characteristic patterns worth watching for during review — [triadic lists and contrast constructions](../agent-patterns.md#triadic-lists) in particular.
 
-Review is done when passes produce diminishing findings — the document has converged. Once findings are minor, stop. Targeted fixes at this stage; don't reopen structure.
+Review is done when passes produce diminishing findings. At this stage, fix what's there; don't reopen structure.
 
 ## Building a collection
 

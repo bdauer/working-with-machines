@@ -30,9 +30,9 @@ Repeated passes of the same perspective have value. A correctness review applied
 
 ## Findings
 
-Review produces findings — must-fix, discussion, and minor. The standard triage applies: must-fix gets addressed before the next round, minor accumulates for a cleanup pass or gets skipped.
+Review produces findings: must-fix, discussion and minor. Must-fix gets addressed before the next round. Minor accumulates for a cleanup pass or gets skipped.
 
-The critical classification in agentic review is **discussion** — findings where the agent recognizes a question it can't answer. Agents default to resolving everything with high confidence. What matters more is surfacing a trade-off the agent can see but can't evaluate, because the right response depends on context outside its window. These don't get auto-fixed. The reviewer surfaces the question; the human holds the context to answer it.
+The critical classification in agentic review is **discussion** — findings where the agent recognizes a question it can't answer. Agents default to resolving everything with high confidence. The agent surfaces a trade-off it can see but can't evaluate because the right response depends on context outside its window. These don't get auto-fixed. The reviewer surfaces the question; the human holds the context to answer it.
 
 ## Where findings go
 
@@ -57,7 +57,7 @@ The review-specific risk is mistaking fatigue for convergence. A reviewer who ha
 
 Agents have their own version of this — [temporal locality bias](../agent-patterns.md#temporal-locality-bias). After many rounds, agents anchor to the artifact's current shape and produce fewer structural suggestions, independent of whether the structure is right.
 
-Fresh perspectives are the defense — if a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
+Fresh perspectives are the defense. If a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
 
 Once passes are producing minor findings only, stop.
 

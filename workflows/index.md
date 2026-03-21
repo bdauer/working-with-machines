@@ -13,4 +13,4 @@ Reference material for practitioners. Each page describes how the method applies
 - **[Review](review.md)** — Evaluating artifacts through bounded perspectives
 - **[Documentation](documentation.md)** — Investigation reports and architecture docs
 
-These pages expand on the [method](../method.md) for specific contexts. The method page is helpful context.
+These pages expand on the [method](../method.md) for specific contexts.

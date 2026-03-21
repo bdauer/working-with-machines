@@ -31,7 +31,7 @@ Determine what to review from the arguments:
 2. Read the voice samples: `.voice-samples.md`
 3. Identify each file's doc type from its path and frontmatter:
    - `method.md`, `quick-start.md`, `agent-patterns.md`, `workflows/*` → method/reference voice
-   - `security-gaps.md`, `whats-changing.md` → article voice
+   - `articles/*` → article voice
    - `formation.md` → background voice
    - `index.md` → method/reference voice
    - `about.md` → article voice (brief, warm, personal)

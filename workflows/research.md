@@ -41,7 +41,7 @@ Directing the agent to look for what's missing is often more productive than ask
 
 ## Synthesis
 
-Parallel findings need integration. This happens at the orchestration level — the human or orchestrating agent reads across agent outputs and identifies where findings connect, conflict, or leave gaps.
+Parallel findings need integration. This happens at the orchestration level — the human or orchestrating agent reads across agent outputs and identifies where findings connect, conflict or leave gaps.
 
 The agents produce findings; the human recognizes which connections are significant and which are noise. Two agents may independently surface related observations without recognizing the relationship — the human sees the pattern because they hold the broader context.
 
@@ -51,8 +51,7 @@ When accumulated knowledge gets heavy, [condense it](../method.md#knowledge-accu
 
 Research is a conversation between the human's directed attention and the agent's ability to find connections across large bodies of material. The human often has an intuition about where to look or what matters. The agent fills domain knowledge gaps. What the agent finds changes the human's intuitions; the human's intuitions sharpen what the agent investigates next.
 
-This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition. The correction sharpens both sides.
-
+This loop is where [productive friction](../formation.md) operates — the agent's attempt, even when it misses, gives the human something to push against. [Friction by invitation](../method.md#the-human-role) is particularly useful here: explicitly asking the agent to challenge an emerging hypothesis keeps the research from converging prematurely on the human's initial intuition. 
 ## Convergence
 
 Research follows the general [convergence](../method.md#convergence) pattern — new passes confirm rather than extend.

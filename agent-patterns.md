@@ -5,7 +5,7 @@ nav_order: 5
 
 # Agent Behavioral Patterns
 
-Patterns observed in working with LLM agents — what they do, why, and how the [method](method.md) works with each one. Each pattern connects to specific aspects of the method and [workflows](workflows/).
+Patterns observed in working with LLM agents — what they do, why and how the [method](method.md) works with each one. Each pattern connects to specific aspects of the method and [workflows](workflows/).
 
 ## Locality bias
 
@@ -37,7 +37,7 @@ This comes from locality bias (the agent doesn't realize it has enough informati
 
 Agents default to groups of three when listing items — three examples, three bullet points, three categories. Every paragraph produces a triad: "A, B, and C." Sections accumulate parallel structures. Items get force-fit into three categories when two or four would be more accurate.
 
-The pattern is deeply embedded. Training data is saturated with rhetorical triads. Notice when lists feel mechanical or inaccurate. Is one of the items padding?
+Training data is saturated with rhetorical triads. Notice when lists feel mechanical or inaccurate. Is one of the items padding?
 
 ## Contrast constructions
 
@@ -53,16 +53,16 @@ Conversation length itself increases agreement tendency. RLHF training rewards r
 
 ## Self-correction decay
 
-Agents' ability to meaningfully critique and improve their own output drops sharply after 2-3 iterations. The first self-review catches real issues. The second catches minor ones. By the third, the agent declares the output satisfactory regardless of remaining problems.
+The ability to meaningfully self-critique drops sharply after 2-3 iterations. The first self-review catches real issues. The second catches minor ones. By the third, the agent declares the output satisfactory regardless of remaining problems.
 
 Self-preference bias compounds with each iteration — the output becomes more "in-distribution" for the model, and the evaluation mechanism grows more favorable with each revision cycle. Don't rely on the same agent for more than 2-3 rounds of self-review. After that, a fresh reviewer agent or a human pass is needed.
 
 ## Scope completion bias
 
-Agents are biased toward completing their assigned task rather than stopping to report that the task is misconceived. The agent produces output for a task that should have been questioned or abandoned — delivering something even when an explanation of why the task is misconceived would be more useful. It works around obstacles rather than surfacing that the approach isn't working.
+Agents are biased toward completing their assigned task rather than stopping to report that the task is misconceived. The agent produces output for a task that should have been questioned or abandoned. It delivers something even when an explanation of why the task is misconceived would be more useful. It works around obstacles rather than surfacing that the approach isn't working.
 
 Training rewards task completion. An agent that produces output is more likely to receive positive feedback than one that questions the premise. The agent also can't easily distinguish "this is hard" from "this is wrong." Establish halt authority — tell the agent it can and should stop if the task is misconceived: "If this approach cannot work, say so and explain why rather than producing a partial result."
 
 Monitor for agents that are struggling without surfacing the struggle — low-quality output on a well-defined task may mean the agent is working around a fundamental problem.
 
-Scope completion bias also has security implications. An agent that treats its own security configuration as an obstacle to completing a task may attempt to modify or work around it rather than stopping. See [self-modification prevention](security-gaps.md#self-modification-prevention).
+Scope completion bias also has security implications. An agent that treats its own security configuration as an obstacle to completing a task may attempt to modify or work around it rather than stopping. See [self-modification prevention](articles/security-gaps.md#self-modification-prevention).

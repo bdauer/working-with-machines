@@ -1,13 +1,14 @@
 ---
 title: What's changing
-nav_order: 7
+parent: Articles
+nav_order: 1
 ---
 
 # What's changing
 
 > As we become more agentic my theory is, for those with high enough seniority to be trusted, we become more like principals or staff eng consulting on multiple teams working on different projects simultaneously. That's in direct conflict with the business-as-usual pre-agentic gates. It means we need to shift the gates where person-to-person consultation is needed up some levels to avoid significant slowdown. This is one perspective, I'm convinced we're in a radical paradigm shift and our profession is changing. We are not augmenting existing processes. They are becoming obsolete, but their shape hints at the outline of the future reality, with higher order analysis to recognize those procedural steps that can be codified into agentic workflows. The outcome once we've all made the leap looks very different than what we do today. This is not the only perspective, but if it is the correct one, what human touchpoints remain to ensure we have the right input there? Does a higher order review process meet our certification needs, instead of line-by-line, which is the language of the old world? How do we establish trust in outcomes on a per-peer basis to know what level of being hands-off is correct? Many unanswered questions that need input.
 
-That was a message to colleagues. What follows is what happened when I put it through the [method](method.md).
+That was a message to colleagues. What follows is what happened when I put it through the [method](../method.md).
 
 ## The shift
 
@@ -19,7 +20,7 @@ Existing processes are breaking down. But their shape hints at the outline of wh
 
 ## Where the gates move
 
-The question is whether a higher-order review process meets the same needs as line-by-line reading. Does reviewing the agent's process, the test coverage, the architectural decisions and the review cascade produce equivalent or better confidence?
+The question is whether a higher-order review process meets the same needs as line-by-line reading. Does reviewing the agent's process, the test coverage, the architectural decisions produce equivalent or better confidence?
 
 I think it does, in many cases. The agent reviews more thoroughly than most humans — it doesn't skim, it can apply multiple specialized perspectives in sequence. What it can't do is judge whether the work should have been done at all, whether it fits the organizational context or whether the tradeoffs reflect the right priorities.
 
@@ -41,13 +42,13 @@ This changes what good documentation looks like. Structure still matters, but fo
 
 High-level summaries still need to work for humans. Someone jumping into a project needs an entry point they can read directly. But from there, the path is through an agent: absorbing the larger artifacts and answering specific questions against that context. The detailed documentation becomes a database the human queries through natural language.
 
-The [documentation workflow](workflows/documentation.md) describes the practical approach to producing these artifacts.
+The [documentation workflow](../workflows/documentation.md) describes the practical approach to producing these artifacts.
 
 ## Skills and individual voice
 
 Skills carry individual voice. Even a ticket-creation skill reflects how a specific person communicates: what gets called out and what context gets included. At the workflow level the variation is larger. Different people direct agents differently, and skills encode those differences.
 
-Some shared patterns will emerge, but the actual work happens in the interaction between a specific person and their agents. The dynamic is personal.
+Some shared patterns will emerge, but the actual work happens in the interaction between a specific person and their agents.
 
 ## Cognitive demands
 

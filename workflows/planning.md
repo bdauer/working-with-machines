@@ -18,7 +18,7 @@ The human provides direction: what the goal is, what constraints matter, what's 
 
 ## The decomposition loop
 
-Planning is itself a loop. A decomposition that looks clean on first pass often shifts when the steps are structured — dependencies surface, scope questions emerge, assumptions that seemed solid turn out to need validation.
+The decomposition is itself a loop. A decomposition that looks clean on first pass often shifts when the steps are structured — dependencies surface, scope questions emerge, assumptions that seemed solid turn out to need validation.
 
 When a decomposition doesn't hold, the response depends on why. If the research was insufficient — the plan reveals questions that should have been answered already — loop back to [research](research.md) for targeted investigation. If the scope is wrong — structuring reveals the task is larger or differently shaped than expected — reshape scope with the human before continuing. If the steps just need reordering or regrouping, iterate on the decomposition itself.
 
@@ -32,12 +32,12 @@ Planning both surfaces new assumptions — from the decomposition work itself �
 
 ## Planning as conversation
 
-Planning is a conversation. The agent drafts; the human pushes back on what doesn't hold and adds context the agent can't see. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
+This phase is a conversation. The agent drafts; the human pushes back on what doesn't hold and adds context the agent can't see. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
 
-Planning is more serial than other phases — the human and agent iterate on a shared decomposition rather than running independent streams. Where parallelism helps: validating assumptions simultaneously, or having agents draft competing decompositions when the best approach isn't clear.
+It's more serial than other phases. The human and agent iterate on a shared decomposition. Where parallelism helps: validating assumptions simultaneously, or having agents draft competing decompositions when the best approach isn't clear.
 
 ## When planning is implicit
 
-Sometimes planning doesn't need its own phase. The research itself reveals what to do, and the path is clear enough that formalizing a plan adds nothing. A bug investigation that surfaces the root cause often produces the fix as a byproduct — stopping to write a plan would be ceremony.
+Sometimes planning doesn't need its own phase. The research itself reveals what to do and the path is clear enough that a plan adds nothing. A bug investigation that surfaces the root cause often produces the fix as a byproduct.
 
 The signal: if structuring the steps would produce a document that says what everyone already knows, skip it. If the work involves coordination across agents, unknown dependencies, or scope that could expand, make the plan explicit.

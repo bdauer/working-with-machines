@@ -48,7 +48,7 @@ Agents generate assumptions silently as they work — filling gaps in their cont
 
 As findings and assumptions accumulate, they can be [condensed](#knowledge-accumulation).
 
-**Research is done when findings stop surprising.** It can also end because the scope doesn't warrant going deeper — the question is answered well enough for the work at hand.
+Research is done when findings stop surprising. It can also end because the scope doesn't warrant going deeper: the question is answered well enough for the work at hand.
 
 Sometimes the research itself produces the plan — the investigation reveals the fix, and a separate planning phase adds nothing.
 
@@ -80,7 +80,7 @@ Evaluative reviewers — those checking quality, correctness, maintainability �
 
 Repeated passes of the same type also have value: each review changes the artifact, so the same perspective applied to evolved material yields different results.
 
-Review can also surface findings that reshape the plan or reopen research — the finding's nature determines where it goes. Review is done when new passes produce diminishing findings.
+Review can also surface findings that reshape the plan or reopen research. The finding's nature determines where it goes. Review is done when new passes produce diminishing findings.
 
 ## Scale and judgment
 
@@ -90,7 +90,7 @@ At a given scale, some phases may not be needed: a well-understood task might sk
 
 The workflow is structured around how agents reason in practice — connecting material across their context non-linearly. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
 
-- **Scoping agent context deliberately.** Each agent gets what it needs for its task. Unnecessary context creates anchoring, insufficient context creates blind spots. Scoping also has a security dimension — agents with unnecessary context have unnecessary access.
+- **Scoping agent context deliberately.** Each agent gets what it needs for its task. Unnecessary context creates anchoring, insufficient context creates blind spots. Scoping also has a security dimension. Agents with unnecessary context have unnecessary access.
 - **Letting findings accumulate before structuring.** Research and early review give agents room to find unexpected connections before planning and implementation impose structure.
 - **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings connect at synthesis time in ways sequential execution misses.
 
@@ -101,7 +101,7 @@ As findings and assumptions accumulate, agents lose focus — spending more effo
 - **Assumptions are tracked across their lifecycle.** Some are verified, some invalidated, some absorbed into broader understanding. Assumption triage (investigate/defer/skip) keeps the signal-to-noise ratio manageable.
 - **Findings carry their context.** A finding without its provenance — what question it answered, what it assumed, what produced it — can't be usefully loaded into a fresh agent's context.
 
-When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed — simplify, reduce noise, and highlight the overarching concerns. What's condensed should preserve the reasoning behind each finding — a fresh agent needs that reasoning to work with the material.
+When accumulated knowledge gets heavy, the human notices and the agent helps identify what can be condensed. Simplify, reduce noise and highlight the key concerns. What's condensed should preserve the reasoning behind each finding. A fresh agent needs that reasoning to work with the material.
 
 ## The human role
 
@@ -109,17 +109,17 @@ The core of the human role is directing attention:
 
 - **Gap recognition.** Noticing what's missing — sometimes as a specific observation, sometimes as a pre-articulable sense that something isn't right.
   - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. See [background](formation.md) for more on how this attention develops.
-- **Calibration.** Agents are biased toward what's local — what's visible in their current context. See [locality bias](agent-patterns.md#locality-bias) and [over-escalation](agent-patterns.md#over-escalation) for why.
+- **Calibration.** Agents are biased toward what's local, what's visible in their current context. [Locality bias](agent-patterns.md#locality-bias) and [over-escalation](agent-patterns.md#over-escalation) are the patterns behind this.
   - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
   - The more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
-- **Friction by invitation.** Explicitly asking the agent to push back — counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. See [sycophancy amplification](agent-patterns.md#sycophancy-amplification) for why this matters.
+- **Friction by invitation.** Explicitly asking the agent to push back: counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. [Sycophancy amplification](agent-patterns.md#sycophancy-amplification) makes this necessary.
   - Calibration and friction by invitation are two directions of the same exchange. The human pushes back on the agent's anchoring; the agent gives the human's inarticulate sense something to push against.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.
 - **Batch feedback.** Accumulating observations and delivering them together at multiple scales.
   - This gives the agent the full pattern rather than individual instances.
-- **Sustainability.** Directing attention across multiple parallel workstreams degrades judgment when the human can't keep pace with the throughput. Unstructured time away from the work — letting the back burner process what's accumulated — is part of keeping that attention sharp.
+- **Sustainability.** It's necessary to take time away from specific workstreams to let the back burner simmer. Directing attention across multiple parallel workstreams degrades judgment when there's more coming in than the human can process.
 
-The method is scoped to a single practitioner and their agents. It doesn't address how the practitioner's judgment is evaluated by others, how trust is established within a team or how the method interacts with organizational process gates. These are open questions — see [what's changing](whats-changing.md) for one perspective.
+The method is scoped to a single practitioner and their agents. It doesn't address how the practitioner's judgment is evaluated by others, how trust is established within a team or how the method interacts with organizational process gates. These are open questions — see [what's changing](articles/whats-changing.md) for one perspective.
 
 ## Convergence
 

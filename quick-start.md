@@ -5,7 +5,7 @@ nav_order: 2
 
 # Quick Start
 
-Concrete techniques from the [method](method.md). Each links to the full treatment. For the behavioral patterns behind many of these techniques, see [agent patterns](agent-patterns.md).
+Techniques from the [method](method.md).
 
 ## Directing agents
 
@@ -52,7 +52,7 @@ Concrete techniques from the [method](method.md). Each links to the full treatme
   - When an instinct says a structure doesn't fit but the reason isn't clear, ask the agent to evaluate the choice against the content — it won't reliably volunteer objections, but it's good at evaluating a specific proposal when asked.
   - → [Draft and shape](workflows/documentation.md#draft-and-shape)
 
-**Batch feedback.** Accumulate observations across a draft and deliver them together so the agent sees the full pattern, not individual corrections. This produces better revisions than piecemeal feedback. → [Batch feedback](method.md#the-human-role)
+**Batch feedback.** Accumulate observations across a draft and deliver them together so the agent sees the full pattern. → [Batch feedback](method.md#the-human-role)
 
 ## Research
 

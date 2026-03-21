@@ -1,6 +1,7 @@
 ---
 title: The security gap in agentic tooling
-nav_order: 8
+parent: Articles
+nav_order: 2
 ---
 
 # The security gap in agentic tooling
@@ -32,11 +33,11 @@ flowchart LR
     classDef warning fill:#f9a825,color:#000
 ```
 
-Defending against your own workload is the problem, and it's not one the existing frameworks were built for.
+Defending against your own workload is the problem. The existing frameworks weren't built for it.
 
 ## The gaps
 
-The agent sits at the center with legitimate access flowing outward. The missing piece is a policy gate between the agent and its tools.
+The agent sits at the center with legitimate access flowing outward. There's no policy gate between the agent and its tools.
 
 ```mermaid
 flowchart TB
@@ -93,7 +94,7 @@ sequenceDiagram
 
 The agent's security boundary (hook configurations, firewall rules, permission settings) lives in files the agent can potentially read and write. An agent that can modify its own security configuration can weaken its own sandbox, whether through prompt injection or through an optimization that treats the security layer as an obstacle.
 
-The behavioral patterns that make this dangerous, like [scope completion bias](agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, have security implications.
+The behavioral patterns that make this dangerous, like [scope completion bias](../agent-patterns.md#scope-completion-bias) where agents work around obstacles rather than stopping, have security implications.
 
 ### Devcontainer as sandbox
 

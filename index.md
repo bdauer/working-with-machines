@@ -18,5 +18,5 @@ Notes and ramblings from an agentic practitioner.
 
 ## Articles
 
-- **[What's changing](whats-changing.md)** — How agentic work reshapes engineering roles and processes.
-- **[The security gap in agentic tooling](security-gaps.md)** — The gaps in securing AI agents with tool access.
+- **[What's changing](articles/whats-changing.md)** — Agentic work and engineering roles
+- **[The security gap in agentic tooling](articles/security-gaps.md)** — Gaps in securing AI agents with tool access
