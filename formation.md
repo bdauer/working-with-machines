@@ -12,4 +12,4 @@ The exchange works in the other direction too. Sometimes I'll have a felt sense 
 
 My earlier training was in a field that rewarded the opposite of decomposition — entering perspectives fully, holding contradictions without resolving them, thinking associatively across domains and letting structure emerge from sustained attention rather than imposing it from outside. Learning to decompose problems as an engineer gave me a second mode, and the flow between sitting with ambiguity and breaking problems down became where the work happened. Understanding accumulates as much through distinguishing as through adding.
 
-The practice came first. The patterns became visible through reflection. The [method](method.md) is the result.
+I started writing down what I was already doing. The [method](method.md) came out of that.
