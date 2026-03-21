@@ -5,6 +5,10 @@ nav_order: 7
 
 # What's changing
 
+> As we become more agentic my theory is, for those with high enough seniority to be trusted, we become more like principals or staff eng consulting on multiple teams working on different projects simultaneously. That's in direct conflict with the business-as-usual pre-agentic gates. It means we need to shift the gates where person-to-person consultation is needed up some levels to avoid significant slowdown. This is one perspective, I'm convinced we're in a radical paradigm shift and our profession is changing. We are not augmenting existing processes. They are becoming obsolete, but their shape hints at the outline of the future reality, with higher order analysis to recognize those procedural steps that can be codified into agentic workflows. The outcome once we've all made the leap looks very different than what we do today. This is not the only perspective, but if it is the correct one, what human touchpoints remain to ensure we have the right input there? Does a higher order review process meet our certification needs, instead of line-by-line, which is the language of the old world? How do we establish trust in outcomes on a per-peer basis to know what level of being hands-off is correct? Many unanswered questions that need input.
+
+That was a message to colleagues. What follows is what happened when I put it through the [method](method.md).
+
 ## The shift
 
 As engineers become more agentic, orchestrating multiple agents across multiple projects simultaneously, the role starts to resemble a principal or staff engineer consulting across teams. The constraint moves from how fast you can write code to how many concurrent workstreams you can hold in your head and direct well.
@@ -52,6 +56,14 @@ This is hard to keep up with.
 When multiple workstreams are running in parallel, each producing findings and requiring direction, the person's ability to hold context and make good judgments is the bottleneck.
 
 I've found that unstructured time away from the work is part of the process. Days where I do entirely unrelated things, sometimes still agentically, to let the back burner catch up. The conscious mind can't always keep pace with the throughput. The [method](method.md#the-human-role) captures this as sustainability — a necessary part of keeping qualitative attention sharp.
+
+## What the expansion changed
+
+The original says "we are not augmenting existing processes. They are becoming obsolete." The expansion doesn't say that. It softened to "existing processes are breaking down," less committed. The original's conditional — "this is not the only perspective, but if it is the correct one" — disappeared entirely. The expansion just works from the premise without owning that it's a bet.
+
+The documentation-as-signal thread was already sharp before it went through the method. I'd been repeating myself enough to know it needed to be integrated somewhere. Same with the open questions. They'd already been worked through. The method helped me figure out where to put them.
+
+The original has "the language of the old world," comma splices, a paragraph that builds through accumulation. Something was lost there. The conviction is real and the original carries it better. But I also couldn't have sent the expansion as a message to colleagues, it needed the structure to become something other people could engage with and push back on.
 
 ## Open questions
 

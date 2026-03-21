@@ -7,7 +7,7 @@ nav_order: 1
 
 Notes and ramblings from an agentic practitioner.
 
-*Written through the described method.*
+> The articles on this site are an experiment in applying the described method to different types of writing. My unfiltered voice appears in blockquotes.
 
 ## Framework
 
