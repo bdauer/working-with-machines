@@ -14,7 +14,7 @@ This is the method's [research phase](../method.md#research) with documentation-
 
 Start with what exists. Point agents at source material — existing docs, code, conversations, external references — and let them report back. Parallel agents are the default here: each focuses on one area, and synthesis happens at the orchestration level. One agent reads the codebase for how something actually works; another reads existing documentation for what's been said about it.
 
-Sometimes the document's scope is clear from the start. Sometimes it emerges from what the research surfaces. The [dialogical loop](research.md#the-dialogical-loop) handles either.
+Sometimes the document's scope is clear from the start. Sometimes it emerges from what the research surfaces. The back-and-forth between directed attention and what the agent finds ([the dialogical loop](research.md#the-dialogical-loop)) handles either.
 
 [Findings and assumptions](../method.md#research) accumulate. What's expected but missing becomes the next round of directed research. The phase is done when the material is sufficient for drafting — convergence.
 

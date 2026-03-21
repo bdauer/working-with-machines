@@ -18,9 +18,7 @@ Techniques from the [method](method.md).
   - A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent.
   - → [Context scoping](method.md#working-with-how-agents-reason)
 
-**Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem.
-  - The agent's attempt gives that inarticulate sense something concrete to push against.
-  - The correction often crystallizes a sharper distinction than either side started with.
+**Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The correction often crystallizes a sharper distinction than either side started with.
   - → [Productive friction](formation.md)
 
 **Invite the agent to push back.** Explicitly ask the agent to counter intuitions, find weaknesses in the direction, or challenge assumptions. The exchange is more productive when bidirectional, and the human controls when to open that space. → [Friction by invitation](method.md#the-human-role)
@@ -35,7 +33,7 @@ Techniques from the [method](method.md).
 
 ## Planning
 
-**Have agents surface their assumptions.** Agents fill ambiguity with assumptions silently. Tell them to surface the assumptions they're making — investigate the ones that matter and catch the ones that are wrong before they're baked into the work. → [What a plan contains](workflows/planning.md#what-a-plan-contains)
+**Have agents surface their assumptions.** Agents fill ambiguity with assumptions silently. Tell them to surface the assumptions they're making — investigate the ones that matter and catch the ones that are wrong before they're baked into the work. → [Assumption surfacing](workflows/planning.md#assumption-surfacing)
 
 ## Review
 
@@ -44,6 +42,8 @@ Techniques from the [method](method.md).
 **Hide the implementation plan from evaluative reviewers.** Reviewers checking code quality should see the code and the problem being solved, not the design decisions. The plan creates anchoring — evaluation shifts from what the code does to whether it matches intent.
   - Alignment reviews ("did we build what we planned?") are different — those need the plan.
   - → [Review](method.md#review)
+
+**Spin up a cold reader.** A fresh agent simulating someone encountering the artifact for the first time with limited patience. This catches where engagement drops or explanation is redundant. → [Cold reader](workflows/review.md#perspectives)
 
 ## Documentation
 

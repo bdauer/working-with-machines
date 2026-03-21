@@ -24,7 +24,7 @@ When a decomposition doesn't hold, the response depends on why. If the research 
 
 The human's role during planning is recognizing which of these is happening. An agent may keep trying to force a decomposition that isn't working rather than surfacing that the inputs are insufficient — an instance of [scope completion bias](../agent-patterns.md#scope-completion-bias).
 
-## What a plan contains
+## Assumption surfacing
 
 A useful plan has the agents surface the assumptions they're making so the human can investigate the ones that matter and catch the ones that are wrong before they're baked into the work.
 
@@ -35,6 +35,10 @@ Planning both surfaces new assumptions — from the decomposition work itself �
 This phase is a conversation. The agent drafts; the human pushes back on what doesn't hold and adds context the agent can't see. This is where the human's organizational context matters — constraints that aren't in the code or visible to the agent.
 
 It's more serial than other phases. The human and agent iterate on a shared decomposition. Where parallelism helps: validating assumptions simultaneously, or having agents draft competing decompositions when the best approach isn't clear.
+
+## Convergence
+
+The decomposition is ready when the steps hold under scrutiny, the assumptions have been triaged and the scope is bounded enough to execute against. If pushing on any part of the plan reopens questions, the loop continues.
 
 ## When planning is implicit
 

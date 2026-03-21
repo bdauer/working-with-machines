@@ -16,7 +16,9 @@ Review works through perspectives — bounded angles of evaluation, each entered
 
 The perspectives emerge from the work. A change that touches authentication suggests a security perspective. A document that synthesizes multiple sources suggests a consistency perspective. The human selects perspectives based on what the artifact does and what prior passes may have missed. Predefined catalogs of perspectives are useful as starting points, not as checklists to exhaust.
 
-Each perspective is scoped tightly. A reviewer agent assigned to evaluate test quality doesn't need to assess architectural fit. The bounded scope makes the review more productive — the agent goes deeper into its assigned concern without diluting attention across everything.
+Each perspective is scoped tightly. A reviewer agent assigned to evaluate test quality doesn't need to assess architectural fit. The bounded scope makes the review more productive.
+
+Evaluative reviewers (quality, correctness, maintainability) should not see the implementation plan. The plan creates anchoring, shifting evaluation from what the code does to whether it matches intent. Alignment reviews ("did we build what we planned?") are different; those need the plan.
 
 The **cold reader** — a fresh agent simulating someone encountering the artifact for the first time, often with limited patience. Cold readers catch where engagement drops, where explanation is redundant and where the length isn't justified. Particularly valuable for documents and any artifact that will be read by humans, because iterative refinement tends to add material without removing what the additions made obsolete.
 

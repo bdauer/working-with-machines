@@ -70,7 +70,7 @@ As the agent works, it encounters things the research missed — edge cases, une
 > Surprises during implementation are a signal to widen the review scope — what else did the plan miss?
 {: .important }
 
-An agent that encounters fundamental problems should stop and surface them rather than work around them. See [scope completion bias](agent-patterns.md#scope-completion-bias) for why agents tend toward the opposite. What implementation discovers — assumptions invalidated, coupling not in the design — should inform how review is scoped.
+An agent that encounters fundamental problems should stop and surface them rather than work around them. Establishing this halt authority explicitly matters. See [scope completion bias](agent-patterns.md#scope-completion-bias) for why agents tend toward the opposite. What implementation discovers — assumptions invalidated, coupling not in the design — should inform how review is scoped.
 
 ### Review
 
