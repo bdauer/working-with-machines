@@ -113,6 +113,6 @@ Agent configurations themselves (system prompts, skill definitions, hook files, 
 
 ## Where this leaves me
 
-I ended up building solutions for each of these gaps from parts that weren't designed to work together. Container isolation, capability dropping, secrets management, outbound filtering as building blocks, but the assembly is entirely custom.
+I ended up building solutions for each of these gaps from parts that weren't designed to work together. Container isolation, capability dropping, secrets management, outbound filtering as building blocks.
 
 Whether the patterns emerging from practice inform the standards that get written is an open question.
