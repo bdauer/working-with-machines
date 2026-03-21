@@ -25,7 +25,7 @@ The gates shift up. The human focuses on bigger-picture concerns: does this fit,
 
 This creates a per-peer calibration problem. How much hands-off is correct depends on the person — their judgment, their experience with agentic workflows, their track record with the specific codebase.
 
-Pre-agentic trust was built up by reviewing someone's code over time. The code is still there, but how agentic trust develops is less clear. Possibly through the higher-level gated conversations, with outputs gradually releasing earlier gates as confidence builds. This needs more thought.
+Pre-agentic trust was built up by reviewing someone's code over time. The code artifacts are still there and still reviewable. The ramp is probably the same shape — start small, prove yourself, earn more scope — but what's being evaluated shifts. Not just whether someone writes good code, but how much you trust them to direct agents across workstreams. The gated conversations, the judgment calls, the impact on the org all still function as evidence. Possibly the gates release as confidence builds, the way a new principal joining an org starts constrained and ramps. *[Still working this out.]*
 
 ## Documentation as signal
 
