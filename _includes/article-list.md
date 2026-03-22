@@ -1,2 +1,3 @@
 - **[What's changing]({% link articles/whats-changing.md %})** — Agentic work and engineering roles
 - **[The security gap in agentic tooling]({% link articles/security-gaps.md %})** — Gaps in securing AI agents with tool access
+- **[Creating skills]({% link articles/skill-creation.md %})** — Recognizing process patterns and encoding them

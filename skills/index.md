@@ -8,7 +8,7 @@ nav_order: 8
 
 Claude Code skills that encode specific workflows. Each skill captures a process so an agent can execute it consistently.
 
-Skills are published as directories containing a SKILL.md and any supporting files. Download from GitHub and place in `~/.claude/skills/` to use. Skills from production workflows are generalized; infrastructure-specific details are excluded or replaced with templates.
+Skills are published as directories containing a SKILL.md and any supporting files. Download from GitHub and place in `~/.claude/skills/` to use. Skills from production workflows are generalized; infrastructure-specific details are excluded or replaced with templates. For the thinking behind skill creation, see [Creating skills](../articles/skill-creation.md).
 
 ## Adapting skills
 

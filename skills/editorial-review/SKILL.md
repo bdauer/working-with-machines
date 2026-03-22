@@ -105,6 +105,7 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > - Section-level rhythm (every section in a document following the same internal structure or opening with the same grammatical pattern)
 > - Formulaic cross-references (three consecutive "See [X] for why" or "→ [Link]" in the same format)
 > - Subtler contrast constructions ("X matters, but for Y, not Z" or "not every X, but not zero X either")
+> - Deferred-subject constructions ("When X happened, this created Y" — flatten to "X created Y" or lead with the consequence)
 > - Any pattern that appears because the agent defaults to it rather than because the content needs it
 >
 > Read the voice samples to understand the author's natural rhythm — short declarative punches, longer exploratory sentences, fragments. The fix is restoring that rhythm, not mechanical variation. For each finding: file, line range, the text, what pattern, your recommendation. Report findings only, no edits.
