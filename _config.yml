@@ -18,3 +18,7 @@ relative_links:
 exclude:
   - open-questions.md
   - "*.log"
+  - "skills/*/SKILL.md"
+  - "skills/*/references"
+  - "skills/*/scripts"
+  - "skills/*/assets"

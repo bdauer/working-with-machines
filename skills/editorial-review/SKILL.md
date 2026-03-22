@@ -21,7 +21,7 @@ When a finding conflicts with the voice samples, check whether the samples cover
 Determine what to review from the arguments:
 
 - **Specific files:** Review those files
-- **`all`:** Review all published `.md` files in the project root and `workflows/` (exclude dotfiles and `open-questions.md`)
+- **`all`:** Review all published `.md` files in the project root, `workflows/`, and `skills/` summary pages (exclude dotfiles, `open-questions.md`, and `skills/*/` directories which are agent-consumable artifacts)
 - **No argument:** Review files changed since the last commit (`git diff --name-only HEAD~1` filtered to published `.md` files). If nothing changed, ask the user what to review.
 - **From article-drafting:** Review the provided draft text. All reviewers treat the draft as article voice. Do not pass the approved structure to reviewers — it creates anchoring toward checking compliance rather than evaluating independently. Reviewers also check for employer-specific content that should have been generalized.
 - **`cross-cutting`:** Review all method-related docs as a unit (method.md, formation.md, quick-start.md, agent-patterns.md, workflows/*). Run after per-page reviews are resolved. Check concept consistency across files, duplication vs. cross-reference, foundational ordering, workflow self-sufficiency, cross-reference quality, gaps (concepts referenced but never defined, terms used downstream but not grounded where they originate), and structural consistency across workflow pages.
@@ -37,6 +37,8 @@ Determine what to review from the arguments:
    - `index.md` → method/reference voice
    - `about.md` → article voice (brief, warm, personal)
    - `whats-new.md` → article voice (terse, dated entries)
+   - `skills/index.md` → method/reference voice
+   - `skills/*.md` (summary pages) → skill summary voice (impersonal, declarative, under 60 lines content)
 
 Articles may contain blockquotes of the author's raw, unedited voice. These should NOT be reviewed for agentic tics or voice drift — they are the author's actual writing, unprocessed.
 
