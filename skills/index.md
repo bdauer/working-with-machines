@@ -8,11 +8,12 @@ nav_order: 8
 
 Claude Code skills that encode specific workflows. Each skill captures a process so an agent can execute it consistently.
 
-Skills are published as directories containing a SKILL.md and any supporting files. Download from GitHub and place in `~/.claude/skills/` to use.
+Skills are published as directories containing a SKILL.md and any supporting files. Download from GitHub and place in `~/.claude/skills/` to use. Skills from production workflows are generalized; infrastructure-specific details are excluded or replaced with templates.
 
 ## General
 
-- **[PR Review](review-pr.md)** — Comprehensive pull request review combining impact analysis with code-level correctness, security and refactoring review
+- **[PR Review](review-pr.md)** — Pull request review combining impact analysis with code-level correctness, security and refactoring review
+- **[Incident Triage](incident-triage.md)** — Structured production incident investigation with classification-first routing and parallel subagents
 - **[Personalize](personalize.md)** — Adapt a skill built for someone else's workflow to how you work
 
 ## Personal

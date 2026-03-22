@@ -27,7 +27,7 @@ This skill is personalized to the author's workflow, including employer IP filte
 ## How it works
 
 1. **Mode selection** — determine the starting point: synthesis (multiple samples), conversation (unwritten idea) or expansion (single fragment)
-2. **Input processing** — map threads across samples, draw out the idea through questions, or identify gaps in the fragment. Capture raw phrases as potential blockquote material.
+2. **Input processing** — map threads across samples, draw out the idea through questions, or identify gaps in the fragment
 3. **Structure** — propose sections, ordering and where the author's raw voice fits. Iterate until approved.
 4. **Draft** — write against the approved structure with voice calibrated from samples. Track assumptions (author intent, audience knowledge, connections drawn, gaps filled).
 5. **Internal review** — run editorial review against the draft before presenting. Integrate findings, flag items needing author judgment.

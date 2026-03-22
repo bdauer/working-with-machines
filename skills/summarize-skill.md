@@ -6,7 +6,7 @@ nav_order: 5
 
 # Summarize Skill
 
-Generate a human-readable summary page for a Claude Code skill. Reads the skill directory, produces a Jekyll page following the site's skill summary voice and structure, including a GitHub download link.
+Generate a human-readable summary page for a Claude Code skill. Reads the skill directory, checks for proprietary content, produces a Jekyll page following the site's skill summary voice and structure, including a GitHub download link.
 
 This skill is personalized to the Working With Machines site structure (Jekyll frontmatter, GitHub repo path, editorial voice). It is published as a demonstration of what a personalized operational skill looks like. Use the [personalize](personalize.md) skill to adapt it to your own site, repo and editorial conventions.
 
@@ -26,9 +26,10 @@ This skill is personalized to the Working With Machines site structure (Jekyll f
 ## How it works
 
 1. **Read the skill** — SKILL.md plus any references, scripts and assets
-2. **Generate the summary** — one paragraph on what it does, when to use / not use, how it works (phases only, not implementation) and what it assumes (specific tools and integrations)
-3. **Handle personal skills** — if the skill is tailored to a specific author's workflow, note this and frame it as a starting point for personalization
-4. **Write the page** — Jekyll frontmatter, GitHub link, structured sections
+2. **Proprietary analysis** — classify each file as generic workflow (safe to publish), parameterized configuration (replace with template) or proprietary reasoning (generalize or exclude). Report classification to the user before proceeding.
+3. **Generate the summary** — one paragraph on what it does, when to use / not use, how it works (phases only, not implementation) and what it assumes (specific tools and integrations)
+4. **Handle special cases** — personal skills get framed as personalization demonstrations. Template skills get a Setup section listing which files need populating.
+5. **Write the page** — Jekyll frontmatter, GitHub link, structured sections
 
 ## What it assumes
 

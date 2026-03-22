@@ -6,7 +6,7 @@ nav_order: 1
 
 # PR Review
 
-Comprehensive pull request review combining narrative impact analysis with code-level correctness, security and refactoring review. Produces a written analysis covering what changed, why it matters, how it fits into ongoing work and what to do about it.
+Pull request review combining narrative impact analysis with code-level correctness, security and refactoring review. Produces a written analysis covering what changed, why it matters, how it fits into ongoing work and what to do about it.
 
 [View and download on GitHub](https://github.com/bdauer/working-with-machines/tree/main/skills/review-pr)
 {: .btn }

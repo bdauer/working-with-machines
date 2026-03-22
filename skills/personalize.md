@@ -26,7 +26,7 @@ Adapt a skill built for someone else's workflow to how you work. Takes a source 
 1. **Analyze** — read the source skill and map what's structural (phases, decision points) versus personal (tool references, reviewer perspectives, hardcoded conventions)
 2. **Interview** — present the skill map as targeted questions about your tools, workflow, output needs and review perspectives. All questions frontloaded in one message. Follow-ups only for ambiguity.
 3. **Confirm** — summarize what will change and what will be preserved before modifying anything
-4. **Adapt** — produce a personalized version. Swap tool references, adjust phases, update reviewer briefs, replace the source author's conventions with yours. Core workflow structure preserved unless explicitly changed. Source skill specificity (detailed reviewer checklists, concrete anti-patterns) carried forward rather than diluted.
+4. **Adapt** — produce a personalized version. Swap tool references, adjust phases, update reviewer briefs, replace the source author's conventions with yours. Core workflow structure and specificity preserved unless explicitly changed.
 5. **Review** — check the result for coherence (phases still connect), tool consistency (no remnants of the source author's setup) and completeness (every interview answer reflected)
 6. **Deliver** — write to `~/.claude/skills/` with a summary of changes, preserved elements and any gaps to fill
 

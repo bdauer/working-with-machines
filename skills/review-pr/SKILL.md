@@ -2,7 +2,7 @@
 name: review-pr
 description: >-
 
-  Comprehensive PR review combining narrative impact analysis with code-level review.
+  PR review combining narrative impact analysis with code-level review.
   Produces a written analysis covering what changed, why it matters, how it fits into
   ongoing work, correctness issues, edge cases, and recommended actions. Frontloads
   clarifying questions, gathers all sources in parallel, drafts analysis with parallel
@@ -15,7 +15,7 @@ argument-hint: "<PR URL or repo/number> [optional focus areas]"
 
 # PR Review
 
-Comprehensive PR review: narrative impact analysis plus code-level correctness review.
+PR review: narrative impact analysis plus code-level correctness review.
 
 ## Process
 
@@ -25,7 +25,7 @@ Ask all applicable questions in a single message:
 
 1. **Knowledge gaps** — "Areas touched by this PR where you'd like extra explanation?" Tailor depth to stated gaps.
 2. **Cross-references** — "Tickets, epics, or initiatives to compare against? Other repos whose code is affected?"
-3. **Usage paths** — "How do you and the team interact with the code this PR changes? (e.g., VS Code, CLI, CI, scripts)" Ensures analysis covers all relevant workflows, not just the PR author's assumed path.
+3. **Usage paths** — "How do you and the team interact with the code this PR changes? (e.g., VS Code, CLI, CI, scripts)"
 4. **Focus** — "Anything specific to watch for? (security, performance, breaking changes, alignment with a plan)"
 5. **Output** — "Markdown file with Mermaid charts, or inline? Length constraint?"
 
