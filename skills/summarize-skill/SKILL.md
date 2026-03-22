@@ -65,23 +65,15 @@ nav_order: <next available>
 [Bullets: tools, integrations, access, workflow context the skill expects. Be specific — "GitHub CLI (`gh`) installed" not "GitHub access."]
 ```
 
-## Voice
+## Voice and guidelines
 
-Method/reference voice per the editorial guide: impersonal, declarative, no "I" or forced "you." Confident without prescriptive. The summary helps a practitioner decide if the skill fits — it doesn't sell.
+Follow [Editorial Guide § Skill summaries](.editorial-guide.md#skill-summaries) for voice rules (impersonal, declarative, honest about assumptions, under 60 lines). The summary helps a practitioner decide if the skill fits — it doesn't sell.
 
-## Guidelines
-
-- The summary is **not** a mechanical extraction of SKILL.md. It's a curated presentation of the skill for someone who hasn't read it.
-- "How it works" should convey the workflow shape in 4-8 items. Collapse implementation details. A reader should finish this section knowing whether the skill's approach matches how they want to work.
-- "What it assumes" is where friction lives. Be honest about dependencies. If the skill references Jira MCP, say so. If it assumes `gh` CLI, say so.
-- Keep the full page under 60 lines of content (excluding frontmatter). If it's longer, compress.
-- Do not include the skill's anti-patterns, internal review prompts, or output templates — those are implementation details for the agent, not for the human evaluating the skill.
-- **No significance claims.** Don't bolt on "while maintaining X" or "designed to ensure Y" after describing what the skill does. The description is the value proposition; restating it as a claim inflates.
-- **No inflated labels for lists.** If a list of concrete items follows a label, the items do the work. "Epistemic discipline: timestamp ordering, single-source cap" → just list the items, drop the label.
-- **"How it works" is phases, not reasoning.** "Verify causality using timestamp ordering and single-source confidence cap" is implementation. "Verify causality" is a phase. Keep steps at the phase level; the SKILL.md on GitHub has the details.
-- **"Checks for proprietary content"** not "runs a proprietary content analysis." Plain verbs over nominalized processes.
-- **Personal skills:** Some skills are tailored to a specific author's workflow (e.g., editorial review calibrated to one person's voice, a drafting skill with employer IP filtering). When summarizing these, add a note after the opening paragraph explaining that the skill is published as a demonstration of what a personalized skill looks like. Frame it as a starting point — readers should use the personalize-skill process to adapt it to their own workflow. Do not hide or downplay the personal nature; it's the point.
-- **Template skills:** Some skills have reference files replaced with templates because the originals contained proprietary configuration. When summarizing these, add a "Setup" section after "What it assumes" explaining which files need to be populated before the skill will work. List each template file with a one-sentence description of what it configures. Frame the templates as a feature — the skill separates generic orchestration from environment-specific configuration, so practitioners bring their own infrastructure details.
+- **Not a mechanical extraction.** Curated presentation for someone who hasn't read SKILL.md.
+- **"How it works" conveys workflow shape (4-8 items).** Keep at the phase level — "Verify causality" not "Verify causality using timestamp ordering and single-source confidence cap." The SKILL.md on GitHub has the details.
+- **Skip implementation details** — anti-patterns, internal prompts, output templates. Those are for SKILL.md.
+- **Personal skills:** Add a note after the opening paragraph that the skill is published as a demonstration of what personalize-skill produces — a starting point, not a universal tool.
+- **Template skills:** Add a "Setup" section after "What it assumes" listing each template file with a one-sentence description of what it configures. Frame the templates as a feature — generic orchestration separated from environment-specific configuration.
 
 ## After writing
 

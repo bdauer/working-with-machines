@@ -88,11 +88,7 @@ At a given scale, some phases may not be needed: a well-understood task might sk
 
 ## Working with how agents reason
 
-The workflow is structured around how agents reason in practice — connecting material across their context non-linearly. See [agent patterns](agent-patterns.md) for the specific behavioral patterns behind these choices:
-
-- **Scoping agent context deliberately.** Each agent gets what it needs for its task. Unnecessary context creates anchoring, insufficient context creates blind spots. Scoping also has a security dimension. Agents with unnecessary context have unnecessary access.
-- **Letting findings accumulate before structuring.** Research and early review give agents room to find unexpected connections before planning and implementation impose structure.
-- **Parallel execution as default.** When two investigations don't depend on each other, they run simultaneously. Findings connect at synthesis time in ways sequential execution misses.
+The phases are structured around how agents reason in practice — connecting material across their context non-linearly. The [agent patterns](agent-patterns.md) behind these choices shape specific decisions: what context each agent gets (unnecessary context creates anchoring and blind spots), when to let findings accumulate before structuring, when to run agents in parallel. Context scoping is also a security boundary — agents with unnecessary context have unnecessary access.
 
 ## Knowledge accumulation
 
@@ -109,9 +105,9 @@ The core of the human role is directing attention:
 
 - **Gap recognition.** Noticing what's missing — sometimes as a specific observation, sometimes as a pre-articulable sense that something isn't right.
   - This includes directing the agent to look for gaps the human suspects but can't yet pinpoint. See [background](formation.md) for more on how this attention develops.
-- **Calibration.** Agents are biased toward what's local, what's visible in their current context. [Locality bias](agent-patterns.md#locality-bias) and [over-escalation](agent-patterns.md#over-escalation) are the patterns behind this.
-  - They may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
+- **Calibration.** Agents may flag things as needing human judgment when their tools could resolve the question. Before accepting an escalation, consider whether available evidence could resolve it.
   - The more revision cycles an artifact has been through, the more the agent treats its current shape as load-bearing, even when feedback says otherwise.
+  - [Locality bias](agent-patterns.md#locality-bias), [over-escalation](agent-patterns.md#over-escalation) and [temporal locality bias](agent-patterns.md#temporal-locality-bias) are the patterns behind this.
 - **Friction by invitation.** Explicitly asking the agent to push back: counter an intuition, find weakness in a direction, challenge an assumption. The human controls when to open that space. [Sycophancy amplification](agent-patterns.md#sycophancy-amplification) makes this necessary.
   - Calibration and friction by invitation are two directions of the same exchange. The human pushes back on the agent's anchoring; the agent gives the human's inarticulate sense something to push against.
 - **Phase authority.** Deciding when research is sufficient, when the plan is ready, when implementation should stop, when review has converged.

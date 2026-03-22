@@ -79,7 +79,7 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > You are reviewing for structure, flow, and information architecture. Check:
 > - Cross-reference quality (links placed where readers need them, no gratuitous links, no broken links)
 > - Redundancy (cross-reference don't duplicate; restating with specific texture is fine, verbatim repetition is not)
-> - Cross-article restatement (when an article restates passages from other site articles in nearly the same language instead of cross-referencing and advancing — check against other published articles if the content feels familiar)
+> - Cross-article restatement (when an article covers ground an existing article already owns — same argument, same examples, same conceptual arc, even in different language. Check the ideas, not just the phrasing. Articles synthesized from overlapping source material are especially prone to this. The draft should cross-reference or advance, not restate)
 > - Absence (concepts that belong in a file's scope but aren't covered — a technique described in method.md should appear in the relevant workflow if it's within that workflow's scope)
 > - Self-sufficiency (each doc stands alone for its scope)
 > - Foundational ordering (earlier docs inform later ones)

@@ -18,14 +18,13 @@ Draft articles for Working With Machines from the author's raw input.
 
 ## Employer IP
 
-The author's raw input may contain proprietary information — tool names, architecture details, internal processes, team structures, specific product features. This content must never reach the site, the commit history, or any published artifact. This includes the author's blockquotes.
+Follow the policy in [Editorial Guide § Employer IP](.editorial-guide.md#employer-ip). When processing author input:
 
-When processing any input:
 1. Scan for employer-specific content: product names, internal tool names, team or project names, architecture specifics, customer details, internal metrics.
-2. Generalize before drafting. Describe the class of problem and category of solution, not the specific implementation. "A container security tool" not the tool's name. "A Django monolith" not the product name.
+2. Generalize before drafting. "A container security tool" not the tool's name. "A Django monolith" not the product name.
 3. Report what was generalized and why in the assumption report. The author confirms the generalization is sufficient before any content is written to files.
 
-If uncertain whether something is proprietary, flag it. Err toward caution.
+If uncertain, flag it.
 
 ## Modes
 
@@ -36,8 +35,8 @@ Determine the mode from the input or ask.
 The author provides several pieces of writing. These may cover the same topic from different angles or different topics that connect.
 
 1. Read all samples. Map the threads — what ideas appear, where they overlap, where they're in tension.
-2. Present the thread map. Ask what's missing, what connects these that isn't stated, which threads are central.
-3. When source material includes other articles from the site, note which ideas already exist in published form. The draft should cross-reference or advance those ideas, not restate them. The reader has access to the other articles.
+2. Read existing site articles (`articles/*.md`). Check whether any threads in the source material cover ground an existing article already owns. Note which ideas already have a home and where.
+3. Present the thread map, including overlaps with existing articles. Ask what's missing, what connects these that isn't stated, which threads are central.
 4. Carry the thread map and all raw samples forward to Structure.
 
 ### Conversation
@@ -45,27 +44,29 @@ The author provides several pieces of writing. These may cover the same topic fr
 The author has an idea but hasn't written it out.
 
 1. Ask the author to describe the idea. Listen for threads, positions, unresolved questions.
-2. Follow up with questions that help the author articulate what they already know. "What made you notice this?" "Where does this break down?"
-3. Capture raw phrases and formulations the author produces — these are potential blockquote material.
-4. When the conversation appears to be nearing convergence — the author's responses reinforcing what's already been said rather than opening new threads — propose moving to Structure. The author decides when the conversation is done.
+2. Read existing site articles (`articles/*.md`). Check whether the emerging threads cover ground an existing article already owns. Surface overlaps early — the author may want to extend an existing article rather than write a new one.
+3. Follow up with questions that help the author articulate what they already know. "What made you notice this?" "Where does this break down?"
+4. Capture raw phrases and formulations the author produces — these are potential blockquote material.
+5. When the conversation appears to be nearing convergence — the author's responses reinforcing what's already been said rather than opening new threads — propose moving to Structure. The author decides when the conversation is done.
 
 ### Expansion
 
 The author provides one piece of writing that needs to become a full article.
 
 1. Read the sample. Identify what's there and what's left unsaid.
-2. Ask the author what they want expanded. The sample might become a blockquote with expansion around it, or a starting point the article grows from.
-3. Identify gaps a full article would need. Present them. Fill through conversation where needed.
-4. Carry the sample, gap analysis, and any new material forward to Structure.
+2. Read existing site articles (`articles/*.md`). Check whether the sample's ideas overlap with ground an existing article already owns.
+3. Ask the author what they want expanded. The sample might become a blockquote with expansion around it, or a starting point the article grows from. Surface any overlaps with existing articles.
+4. Identify gaps a full article would need. Present them. Fill through conversation where needed.
+5. Carry the sample, gap analysis, and any new material forward to Structure.
 
 ## Structure
 
-For short-form content (an about page, a brief note), structure can be implicit — go straight from conversation to drafting. For anything with sections, get structure solid before drafting.
+For short-form content (an about page, a brief note), structure can be implicit — go straight from conversation to drafting. For anything with sections, do not draft until the author has approved a structure.
 
 1. Propose sections and ordering. Include where blockquotes of the author's raw voice fit — from provided samples or as places where the author could write something new.
 2. For each section, one sentence on what it does.
 3. Note what the article doesn't cover.
-4. Present to the author. Iterate until approved.
+4. Present to the author. Iterate until approved. Do not proceed to drafting without explicit approval — even if the conversation implies a structure, confirm it.
 
 Structural elements to propose if the material calls for them:
 - Audience framing
@@ -79,7 +80,7 @@ Draft against the approved structure.
 
 - Voice calibrated from samples and guide.
 - Trust the reader. Don't expand terms with parenthetical definitions, "because" clauses that restate the point, or colon-lists that unpack what the sentence already implies. The author's voice compresses; the reader meets it halfway. When you catch yourself scaffolding for comprehension, cut the scaffold.
-- Blockquote density: one or two per article unless the piece is structured around raw voice (like whats-changing.md). Each blockquote must be load-bearing — the article needs the author's unfiltered voice at that point, not just variety. When the structure calls for more, flag it and let the author decide. When a blockquote makes the point, the surrounding prose advances — don't paraphrase what the quote already said.
+- Blockquotes are load-bearing per [Editorial Guide § Readability](.editorial-guide.md#readability). When the structure calls for more than two, flag it and let the author decide.
 - Blockquotes placed per structure. Preserve the author's raw voice — use `[...]` and `...` to trim for fit when a full quote doesn't land cleanly, as long as the meaning is preserved. An imperfect-fit blockquote trimmed to its core is better than leaving it out.
 - Track assumptions as you draft (see Assumption Report below).
 - Ask the author whether they want sections individually or as a complete draft.

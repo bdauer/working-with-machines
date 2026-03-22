@@ -15,7 +15,7 @@ Techniques from the [method](method.md).
   - → [Calibration](method.md#the-human-role)
 
 **Scope agent context to what the task needs.** Unnecessary context creates anchoring; insufficient context creates blind spots.
-  - A reviewer evaluating code quality shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent.
+  - Evaluative reviewers shouldn't see the implementation plan — it shifts evaluation from what the code does to whether it matches intent. Alignment reviews ("did we build what we planned?") are different.
   - → [Context scoping](method.md#working-with-how-agents-reason)
 
 **Use wrong answers productively.** When something feels off but you can't articulate it, ask the agent to characterize the problem. The correction often crystallizes a sharper distinction than either side started with.
@@ -39,11 +39,7 @@ Techniques from the [method](method.md).
 
 **Use fresh agents for later review rounds.** After many revision cycles, agents treat the artifact's current shape as fixed — producing fewer structural suggestions even when structural changes are warranted. Spin up fresh reviewer agents for later rounds to counteract this. → [Convergence in review](workflows/review.md#convergence)
 
-**Hide the implementation plan from evaluative reviewers.** Reviewers checking code quality should see the code and the problem being solved, not the design decisions. The plan creates anchoring — evaluation shifts from what the code does to whether it matches intent.
-  - Alignment reviews ("did we build what we planned?") are different — those need the plan.
-  - → [Review](method.md#review)
-
-**Spin up a cold reader.** A fresh agent simulating someone encountering the artifact for the first time with limited patience. This catches where engagement drops or explanation is redundant. → [Cold reader](workflows/review.md#perspectives)
+**Spin up a cold reader.** A fresh agent simulating someone encountering the artifact for the first time with limited patience. Catches where engagement drops or explanation is redundant. → [Cold reader](workflows/review.md#perspectives)
 
 ## Documentation
 
