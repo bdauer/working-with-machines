@@ -1,14 +1,14 @@
 ---
 title: Article Drafting
 parent: Skills
-nav_order: 3
+nav_order: 5
 ---
 
 # Article Drafting
 
 Draft articles from raw input — samples, ideas or single pieces to expand. Handles mode selection, structural planning, voice calibration against author samples, assumption tracking and internal editorial review before presenting the draft.
 
-This skill is personalized to the author's workflow, including employer IP filtering and voice calibration against specific writing samples. It is published as a demonstration of what a personalized drafting skill looks like. Use the [personalize](personalize.md) skill to adapt it to your own voice, editorial standards and publication context.
+This skill is personalized to the author's workflow, including employer IP filtering and voice calibration against specific writing samples. It is published as a demonstration of what a personalized drafting skill looks like. Use [personalize-skill](personalize-skill.md) to adapt it to your own voice, editorial standards and publication context.
 
 [View and download on GitHub](https://github.com/bdauer/working-with-machines/tree/main/skills/article-drafting)
 {: .btn }

@@ -15,8 +15,8 @@ Notes and ramblings from an agentic practitioner.
 - **[Method](method.md)** — The full framework ([background](formation.md))
 - **[Agent patterns](agent-patterns.md)** — Behavioral patterns in LLM agents and how to work with them
 - **[Workflows](workflows/)** — Reference material for specific types of work
+- **[Skills](skills/)** — Downloadable Claude Code skills for specific workflows
 
 ## Articles
 
-- **[What's changing](articles/whats-changing.md)** — Agentic work and engineering roles
-- **[The security gap in agentic tooling](articles/security-gaps.md)** — Gaps in securing AI agents with tool access
+{% include article-list.md %}

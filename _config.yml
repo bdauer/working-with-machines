@@ -15,6 +15,16 @@ plugins:
 relative_links:
   enabled: true
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      has_toc: false
+  - scope:
+      path: "articles"
+    values:
+      has_toc: true
+
 exclude:
   - open-questions.md
   - "*.log"
@@ -22,3 +32,4 @@ exclude:
   - "skills/*/references"
   - "skills/*/scripts"
   - "skills/*/assets"
+  - "skills/shared"

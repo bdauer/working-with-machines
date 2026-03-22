@@ -1,14 +1,14 @@
 ---
 title: Editorial Review
 parent: Skills
-nav_order: 4
+nav_order: 6
 ---
 
 # Editorial Review
 
 Run parallel editorial reviewers against site content, each with a focused brief and calibrated against the author's actual voice samples. Catches voice drift, structural issues and agentic writing patterns that the drafting agent introduced.
 
-This skill is personalized to the author's editorial guide, voice samples and doc-type system. It is published as a demonstration of what a personalized review skill looks like. Use the [personalize](personalize.md) skill to adapt it to your own editorial standards, voice and content types.
+This skill is personalized to the author's editorial guide, voice samples and doc-type system. It is published as a demonstration of what a personalized review skill looks like. Use [personalize-skill](personalize-skill.md) to adapt it to your own editorial standards, voice and content types.
 
 [View and download on GitHub](https://github.com/bdauer/working-with-machines/tree/main/skills/editorial-review)
 {: .btn }
@@ -22,7 +22,7 @@ This skill is personalized to the author's editorial guide, voice samples and do
 ## When not to use
 
 - Code review or technical review of non-editorial content
-- Reviewing content for a different site or editorial standard (personalize first)
+- Reviewing content for a different site or editorial standard (run personalize-skill first)
 
 ## How it works
 

@@ -1,18 +1,19 @@
 ---
-name: personalize
+name: personalize-skill
 description: >-
-  Adapt a Claude Code skill built for someone else's workflow to how you work.
-  Walks through understanding the source skill, identifying what's personal vs.
-  structural, gathering your context through targeted questions, and producing a
-  personalized version. Use when given a skill (SKILL.md or directory) with a
-  request to personalize, adapt, customize, or "make it work for me."
+  Adapt a Claude Code skill to how you work. Works on both generic skills
+  (published, team-shared) and already-personalized skills (another author's
+  setup). Identifies what's structural vs. what needs adapting, gathers your
+  context through targeted questions, and produces a personalized version.
+  Use when given a skill (SKILL.md or directory) with a request to personalize,
+  adapt, customize, or "make it work for me."
 user-invocable: true
 argument-hint: "<path to skill directory or SKILL.md>"
 ---
 
 # Personalize Skill
 
-Adapt a skill built for someone else's workflow to how you work. The output is a modified skill directory ready to drop into `~/.claude/skills/`.
+Adapt a skill to how you work. The source may be a generic skill (published or team-shared) or an already-personalized skill (another author's setup). Either way, the process is the same: understand what's structural, identify what needs adapting, gather your context, produce a version that fits. The output is a modified skill directory ready to drop into `~/.claude/skills/`.
 
 ## Process
 
@@ -25,10 +26,19 @@ Produce a **skill map** (not shown to the user yet — used to drive Phase 2):
 - **Core workflow** — the phases and their ordering. This is structural and usually preserved.
 - **Decision points** — where the skill branches based on context (e.g., "select reviewers based on what the PR touches"). These are structural but the options may change.
 - **Tool assumptions** — specific tools, CLIs, MCP servers, integrations the skill expects. These are the most common personalization targets.
+- **Tool-specific procedures** — investigation steps, API call sequences, query patterns that are written for a specific tool's data model. Distinct from tool names: swapping "Sentry" for "Datadog" in a tool reference is a name change, but rewriting Sentry investigation steps for Datadog's API is a procedure rewrite. Flag these separately — the user needs to describe their tool's workflow, not just its name.
 - **Audience/voice assumptions** — who the skill's output is written for and in what style. May need adjusting.
 - **Reviewer perspectives** — if the skill spawns review agents, what perspectives does it use? The user may want different or additional perspectives.
 - **Output structure** — sections, formats, templates. The user may want different sections or emphasis.
-- **Hardcoded values** — anything baked in that looks like it came from the original author's context (specific tools, team conventions, file paths, naming patterns).
+- **Hardcoded values** — anything baked in that looks like it came from a specific context (tools, team conventions, file paths, naming patterns). In already-personalized skills, these are the previous author's choices. In generic skills, these may be absent — look for template files or "[configure per environment]" placeholders instead.
+- **Templates and placeholders** — if the source is a generic skill, it may have template reference files or placeholder values that the user needs to populate. These are personalization targets just as much as hardcoded values — the user needs to fill them with their specifics.
+- **Mixed-content files** — reference files that interleave structural logic (diagnostic reasoning, decision trees) with tool-specific or system-specific details (SQL queries, API calls, known failure patterns). The structural parts should be preserved; the specific parts need adapting. Note which parts are which.
+
+**Complexity assessment.** After completing the skill map, classify the personalization effort:
+
+- **Light** — SKILL.md changes plus a few value swaps. One interview round suffices.
+- **Medium** — SKILL.md changes plus reference file updates. One interview round, but questions about reference files need to be specific.
+- **Heavy** — templates that require authoring (not just filling), or many reference files with embedded tool-specific procedures. Phase the interview (see below).
 
 ### Phase 2: Interview
 
@@ -50,7 +60,11 @@ Present the skill map to the user as a structured set of questions. Group by cat
 
 6. **Your conventions** — if the skill has hardcoded values: "The skill uses [specific conventions]. What are yours?" Only ask about values that are clearly personal, not structural.
 
-Ask everything in **one message**. The user's answers drive all the changes. Follow up only if an answer is ambiguous or reveals a workflow difference that wasn't covered.
+7. **Your infrastructure** — if the skill has template files or placeholders: "The skill has templates for [list what needs populating]. What are your specifics for each?" List each template with a one-sentence description of what it configures.
+
+**For light and medium complexity:** Ask everything in **one message**. The user's answers drive all the changes. Follow up only if an answer is ambiguous or reveals a workflow difference that wasn't covered.
+
+**For heavy complexity:** Phase the interview. First round: SKILL.md-level concerns (tools, workflow, output). Second round: walk through reference files by category, asking about each template or procedure-heavy file. For templates that require design work (e.g., "describe your causality decision tree"), offer to draft content based on the user's tool answers rather than asking them to compose it from scratch.
 
 ### Phase 3: Adapt
 
@@ -66,9 +80,11 @@ Produce the personalized skill. Work from the source skill directory, modifying 
 - Update the argument-hint if inputs changed
 
 **Reference/script changes:**
-- If references contain tool-specific content, update or remove
+- If references contain tool-specific procedures (API call sequences, query patterns, investigation steps), rewrite for the user's tools — don't just swap names. "List Sentry issue events" becomes a different set of steps for Datadog or Honeybadger.
+- If references mix structural logic with tool-specific details, preserve the structural parts and rewrite the specific parts. A causality decision tree's structure (ordered checks, escalation rules) is structural; the specific checks ("run this SQL query") are tool-specific.
 - If scripts assume specific tools or paths, update
 - If the user's workflow needs a new reference the source didn't have, note it but don't fabricate — flag it as a gap the user should fill
+- For templates the user needs to populate: offer to draft content based on their interview answers. "I'll draft investigation steps for Datadog based on its API — review and adjust" is more useful than leaving the template empty.
 
 **Preserve:**
 - The core workflow structure unless the user explicitly changed it
@@ -116,4 +132,5 @@ If a reviewer brief says "check for off-by-one errors, null handling, race condi
 
 - Don't ask about things the user can't meaningfully customize. Phase ordering in most skills is structural — don't ask "would you like to review before drafting?" unless the source skill's phases are genuinely modular.
 - When the user says "I don't use X," don't just delete X — understand what they do instead. "I don't use Jira" might mean "I use Linear" or "I don't track tickets at all." The adaptation is different.
+- If the source is a generic skill with templates, filling templates is personalization — don't skip Phase 2 just because the skill looks "ready to use."
 - If the user's workflow is fundamentally different from the source skill's approach (not just different tools, but different phases or philosophy), say so. The skill may not be the right starting point.

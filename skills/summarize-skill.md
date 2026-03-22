@@ -1,14 +1,14 @@
 ---
 title: Summarize Skill
 parent: Skills
-nav_order: 5
+nav_order: 7
 ---
 
 # Summarize Skill
 
 Generate a human-readable summary page for a Claude Code skill. Reads the skill directory, checks for proprietary content, produces a Jekyll page following the site's skill summary voice and structure, including a GitHub download link.
 
-This skill is personalized to the Working With Machines site structure (Jekyll frontmatter, GitHub repo path, editorial voice). It is published as a demonstration of what a personalized operational skill looks like. Use the [personalize](personalize.md) skill to adapt it to your own site, repo and editorial conventions.
+This skill is personalized to the Working With Machines site structure (Jekyll frontmatter, GitHub repo path, editorial voice). It is published as a demonstration of what a personalized operational skill looks like. Use [personalize-skill](personalize-skill.md) to adapt it to your own site, repo and editorial conventions.
 
 [View and download on GitHub](https://github.com/bdauer/working-with-machines/tree/main/skills/summarize-skill)
 {: .btn }

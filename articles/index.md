@@ -7,3 +7,5 @@ has_children: true
 # Articles
 
 Standalone pieces on agentic work.
+
+{% include article-list.md %}
