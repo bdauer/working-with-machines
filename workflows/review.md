@@ -55,11 +55,9 @@ This means review can surface findings that the original research missed. A revi
 
 [Convergence](../method.md#convergence) in review has specific indicators: findings shifting from structural to minor, perspectives agreeing with each other, the artifact stabilizing across rounds.
 
-The review-specific risk is mistaking fatigue for convergence. A reviewer who has been through several rounds may produce fewer findings because they're tired, not because the artifact is complete.
+The review-specific risk is mistaking fatigue for convergence. A reviewer who has been through several rounds may produce fewer findings because they're tired, not because the artifact is complete. Agents have their own version — [temporal locality bias](../agent-patterns.md#temporal-locality-bias). After many rounds, agents anchor to the artifact's current shape and produce fewer structural suggestions, independent of whether the structure is right.
 
-Agents have their own version of this — [temporal locality bias](../agent-patterns.md#temporal-locality-bias). After many rounds, agents anchor to the artifact's current shape and produce fewer structural suggestions, independent of whether the structure is right.
-
-Fresh perspectives are the defense. If a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
+A fresh perspective breaks both patterns. If a new angle finds significant issues, the work continues regardless of how many prior rounds came back clean.
 
 Once passes are producing minor findings only, stop.
 

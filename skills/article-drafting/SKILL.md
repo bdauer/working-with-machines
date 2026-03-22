@@ -37,7 +37,8 @@ The author provides several pieces of writing. These may cover the same topic fr
 
 1. Read all samples. Map the threads — what ideas appear, where they overlap, where they're in tension.
 2. Present the thread map. Ask what's missing, what connects these that isn't stated, which threads are central.
-3. Carry the thread map and all raw samples forward to Structure.
+3. When source material includes other articles from the site, note which ideas already exist in published form. The draft should cross-reference or advance those ideas, not restate them. The reader has access to the other articles.
+4. Carry the thread map and all raw samples forward to Structure.
 
 ### Conversation
 
@@ -77,7 +78,9 @@ Structural elements to propose if the material calls for them:
 Draft against the approved structure.
 
 - Voice calibrated from samples and guide.
-- Blockquotes placed per structure, unedited.
+- Trust the reader. Don't expand terms with parenthetical definitions, "because" clauses that restate the point, or colon-lists that unpack what the sentence already implies. The author's voice compresses; the reader meets it halfway. When you catch yourself scaffolding for comprehension, cut the scaffold.
+- Blockquote density: one or two per article unless the piece is structured around raw voice (like whats-changing.md). Each blockquote must be load-bearing — the article needs the author's unfiltered voice at that point, not just variety. When the structure calls for more, flag it and let the author decide. When a blockquote makes the point, the surrounding prose advances — don't paraphrase what the quote already said.
+- Blockquotes placed per structure. Preserve the author's raw voice — use `[...]` and `...` to trim for fit when a full quote doesn't land cleanly, as long as the meaning is preserved. An imperfect-fit blockquote trimmed to its core is better than leaving it out.
 - Track assumptions as you draft (see Assumption Report below).
 - Ask the author whether they want sections individually or as a complete draft.
 - When the content is short or the direction is uncertain, draft multiple options with different balances (e.g. warmth vs. discoverability, minimal vs. detailed). Send them through editorial review together — comparative review reveals what works by contrast across options. Identify best elements and propose hybrids.

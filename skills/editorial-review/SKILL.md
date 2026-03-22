@@ -79,12 +79,15 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > You are reviewing for structure, flow, and information architecture. Check:
 > - Cross-reference quality (links placed where readers need them, no gratuitous links, no broken links)
 > - Redundancy (cross-reference don't duplicate; restating with specific texture is fine, verbatim repetition is not)
+> - Cross-article restatement (when an article restates passages from other site articles in nearly the same language instead of cross-referencing and advancing — check against other published articles if the content feels familiar)
 > - Absence (concepts that belong in a file's scope but aren't covered — a technique described in method.md should appear in the relevant workflow if it's within that workflow's scope)
 > - Self-sufficiency (each doc stands alone for its scope)
 > - Foundational ordering (earlier docs inform later ones)
 > - Workflows lead with what's unique, not method recap
 > - Readability rules: two-sentence bullet rule (but prose enumerations are fine in articles), bold lead-ins, callout density, breaks after diagrams
-> - Hameivin yavin: references as naming/framing only, docs work for readers who catch zero resonances
+> - Blockquote density (more than two blockquotes in an article is a flag unless the piece is structured around raw voice — each one should be load-bearing, not decorative) and blockquote-prose redundancy (prose immediately restating what the blockquote already said)
+> - Duplicate links (two links to the same anchor in proximity — consolidate into one)
+> - Hameivin yavin: references as naming/framing only, docs work for readers who catch zero resonances. Naming the referencing practice itself ("hameivin yavin" as a standalone sentence) violates the principle.
 >
 > For each finding: file, line range, the text, what's wrong, your recommendation. Report findings only, no edits.
 
@@ -104,8 +107,10 @@ Set `mode: "bypassPermissions"` on each agent so they can read files without app
 > - Syntactic repetition across consecutive sentences (same grammatical structure three times in a row)
 > - Section-level rhythm (every section in a document following the same internal structure or opening with the same grammatical pattern)
 > - Formulaic cross-references (three consecutive "See [X] for why" or "→ [Link]" in the same format)
-> - Subtler contrast constructions ("X matters, but for Y, not Z" or "not every X, but not zero X either")
+> - Subtler contrast constructions ("X matters, but for Y, not Z," "not every X, but not zero X either," qualifying-with-negation like "not an oversight") — flag when "not A" / "A, not B" patterns cluster in a piece
 > - Deferred-subject constructions ("When X happened, this created Y" — flatten to "X created Y" or lead with the consequence)
+> - Over-elaboration (parenthetical expansions that define a term the reader can follow, "because" clauses restating what the sentence already showed, inline colon-lists unpacking a single word — the agent scaffolding for comprehension where the author would compress)
+> - Frequency distortion of adopted voice features (the agent learns the author uses comma splices, then produces them in every paragraph — voice matching is about proportion, not maximizing)
 > - Any pattern that appears because the agent defaults to it rather than because the content needs it
 >
 > Read the voice samples to understand the author's natural rhythm — short declarative punches, longer exploratory sentences, fragments. The fix is restoring that rhythm, not mechanical variation. For each finding: file, line range, the text, what pattern, your recommendation. Report findings only, no edits.
